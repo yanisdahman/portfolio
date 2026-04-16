@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd.exe /c \"dir /b \\\\\"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\\\\docs\\\\\"\")",
+      "Bash(cmd.exe /c \"dir \\\\\"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\\\\docs\\\\\" /b 2>&1\")",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\\\\ /b\")",
+      "Bash(dir C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis:*)",
+      "Bash(dir \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\" /s /b)",
+      "Bash(dir C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\\\\img:*)",
+      "Bash(grep -E \"\\\\.\\(jpg|jpeg|png|gif|webp|svg\\)$\")",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "Bash(powershell:*)",
+      "Bash(az --version)",
+      "Bash(func --version)",
+      "Bash(npm --version)",
+      "Read(//c/Users/yanis/OneDrive/Images/**)",
+      "Read(//c/Users/yanis/**)"
+    ]
+  }
+}
