@@ -1,0 +1,110 @@
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     COMPREHENSIVE MOBILE RESPONSIVE
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ── Tablette (≤ 1024px) ──────────────────────────────────────── */
+  @media (max-width:1024px) {
+    .nav-center { display:none; }
+    .nav-logo { display:block; font-family:'Oswald',sans-serif; font-weight:700; font-size:1.05rem; letter-spacing:.05em; color:var(--accent); }
+    .nav-inner { display:flex; justify-content:space-between; align-items:center; }
+    .burger { display:flex; }
+    .section { padding:80px 0; }
+    .doc-gallery { grid-template-columns:repeat(2,1fr); }
+  }
+
+  /* ── Mobile (≤ 768px) ─────────────────────────────────────────── */
+  @media (max-width:768px) {
+    /* Hide dock on mobile — burger menu handles nav */
+    .macos-dock { display:none; }
+    /* Cacher le logo YD dans la navbar */
+    .nav-logo { display:none !important; }
+    /* About profile card: center */
+    .ap-profile { display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .ap-contacts li { justify-content:center; }
+    .ap-avatar-ring { margin-left:auto; margin-right:auto; }
+    /* Sections */
+    .section { padding:60px 0; }
+    /* Hero */
+    #accueil {
+      padding-top: calc(var(--nav-h) + 40px);
+      padding-bottom: 2rem;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .hero-inner {
+      gap: 1.6rem;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-cta .btn {
+      width: 100%;
+      justify-content: center;
+    }
+    .hero-badge { font-size:.6rem; }
+    .hero-title { font-size:clamp(2.8rem,10vw,4rem); }
+    .hero-role-line { font-size:.9rem; margin-bottom:1.5rem; }
+    .hero-desc { max-width:100%; }
+    /* Parcours */
+    .parcours-new { gap:1.5rem; }
+    .parc-col-head { padding:1rem 1.2rem; }
+    /* Contact */
+    .pf-contact-inner { padding:60px 20px; gap:40px; }
+    /* Footer */
+    .footer-inner { gap:20px; }
+    /* Morph overlay on mobile */
+    .mo-hero { height:18vh; min-height:100px; }
+    .mo-body { padding:1rem; }
+    .mo-viewer { min-height:320px; }
+    .mo-iframe { min-height:320px; }
+    /* Doc gallery */
+    .doc-filters { flex-wrap:wrap; gap:.4rem; }
+    .doc-filter-btn { font-size:.62rem; padding:.3rem .7rem; }
+    /* Nav CTA: hide on small screens to avoid overflow */
+    .nav-cta { display:none; }
+  }
+  @media (max-width:480px) {
+    .hero-title { font-size:2.8rem; }
+    .hero-cta { flex-direction:column; align-items:center; }
+    .btn { width:100%; justify-content:center; }
+    .about-stats { grid-template-columns:1fr 1fr; }
+    .ap-avatar-ring { width:155px; height:155px; }
+    .ap-bottom { grid-template-columns:1fr; }
+    .footer-inner { grid-template-columns:1fr; }
+    .footer-bottom { flex-direction:column; gap:6px; text-align:center; }
+    .doc-gallery { grid-template-columns:1fr; }
+    .veille-grid { grid-template-columns:1fr; gap:1.2rem; }
+    .pf-contact-inner { padding:50px 16px; }
+    .certif-li-card { flex-direction:column; }
+    .certif-li-logo { width:38px; height:38px; }
+  }
+
+  /* ── Très petit mobile (≤ 390px) ──────────────────────────────── */
+  @media (max-width:390px) {
+    .hero-title { font-size:2.4rem; }
+    .hero-badge { font-size:.55rem; }
+    .section { padding:48px 0; }
+    .footer-inner { grid-template-columns:1fr; }
+    .pf-contact-inner { padding:44px 14px; }
+    .hero-techrow { gap:.5rem; }
+  }
+
+  /* ── Accessibilité : mouvement réduit ─────────────────────────── */
+  @media (prefers-reduced-motion:reduce) {
+    *, *::before, *::after {
+      animation-duration:.01ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.01ms !important;
+    }
+  }

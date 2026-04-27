@@ -1,0 +1,129 @@
+﻿    /* â”€â”€ LOADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    #loader {
+      position:fixed; inset:0; z-index:9999;
+      background:#F5F5F0;
+      display:flex; align-items:center; justify-content:center;
+      transition:opacity 1s cubic-bezier(0.22,1,0.36,1), visibility 1s;
+      overflow:hidden;
+    }
+    #loader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+
+    /* Moving grid */
+    #loader::before {
+      content:''; position:absolute; inset:-50px;
+      background-image:
+        linear-gradient(rgba(26,26,28,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,26,28,0.04) 1px, transparent 1px);
+      background-size:60px 60px;
+      animation:ld-grid 6s linear infinite;
+    }
+    @keyframes ld-grid { from{transform:translateY(0)} to{transform:translateY(60px)} }
+
+    /* Hex particle canvas */
+    #ld-canvas { position:absolute; inset:0; width:100%; height:100%; opacity:.3; }
+
+    /* Center content */
+    .loader-content {
+      position:relative; z-index:1;
+      display:flex; flex-direction:column; align-items:center; gap:2.2rem;
+    }
+
+    /* Name reveal */
+    .loader-monogram { position:relative; padding:1.4rem 2.2rem; }
+    .loader-name { display:flex; flex-direction:column; align-items:center; gap:.1rem; }
+    .loader-name-line {
+      font-family:'Oswald',sans-serif; font-weight:700; line-height:1.05;
+      letter-spacing:.04em; text-transform:uppercase;
+    }
+    .ln1 {
+      font-size:clamp(2.4rem,6vw,3.6rem);
+      color:#1A1A1C;
+    }
+    .ln2 {
+      font-size:clamp(2.4rem,6vw,3.6rem);
+      color:transparent;
+      -webkit-text-stroke:1.8px #1A1A1C;
+      clip-path:inset(0 100% 0 0);
+      animation:ld-reveal .75s cubic-bezier(0.22,1,0.36,1) .2s forwards;
+    }
+    @keyframes ld-reveal { to { clip-path:inset(0 0% 0 0); } }
+
+    /* Glow halo */
+    .loader-halo {
+      position:absolute; inset:-30px; border-radius:50%;
+      background:radial-gradient(circle, rgba(26,26,28,.05) 0%, transparent 68%);
+      opacity:0; animation:ld-halo 2s ease-in-out 1.2s infinite alternate;
+    }
+    @keyframes ld-halo { from{opacity:0;transform:scale(.9)} to{opacity:1;transform:scale(1.1)} }
+
+    /* Corner brackets */
+    .loader-bracket {
+      position:absolute; width:16px; height:16px;
+      border-color:rgba(26,26,28,.18); border-style:solid;
+    }
+    .lb-tl { top:0; left:0;  border-width:2px 0 0 2px; }
+    .lb-tr { top:0; right:0; border-width:2px 2px 0 0; }
+    .lb-bl { bottom:0; left:0;  border-width:0 0 2px 2px; }
+    .lb-br { bottom:0; right:0; border-width:0 2px 2px 0; }
+
+    /* Terminal status line */
+    .loader-terminal {
+      font-family:'JetBrains Mono',monospace; font-size:.72rem;
+      color:#888; letter-spacing:.1em; min-height:1.3em;
+      display:flex; align-items:center; gap:2px;
+    }
+    .loader-status-text { color:#AAA; }
+    .ld-cursor {
+      display:inline-block; width:7px; height:.85em;
+      background:#1A1A1C; margin-left:2px;
+      animation:ld-blink .7s step-end infinite;
+    }
+    @keyframes ld-blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* Progress row */
+    .loader-progress-row {
+      display:flex; align-items:center; gap:1rem; width:220px;
+    }
+    .loader-bar-track {
+      flex:1; height:1px; background:rgba(26,26,28,.08);
+      position:relative; overflow:visible;
+    }
+    .loader-bar-fill {
+      height:100%; width:0%;
+      background:linear-gradient(90deg, rgba(26,26,28,.4), #1A1A1C);
+      box-shadow:none;
+      transition:width .08s linear;
+    }
+    .loader-pct {
+      font-family:'JetBrains Mono',monospace; font-size:.62rem;
+      color:var(--accent); opacity:.75; min-width:2.8em; text-align:right;
+    }
+
+
+    /* ── BACKGROUND PARTICLES ─────────────────────────────────────────── */
+    #bg-particles {
+      position:fixed; inset:0; z-index:0;
+      pointer-events:none; overflow:hidden;
+      background:var(--bg);
+    }
+    .particle {
+      position:absolute;
+      bottom:-10px;
+      border-radius:50%;
+      background:rgba(160,155,145,0.45);
+      animation:particle-rise linear infinite;
+      pointer-events:none;
+    }
+    @keyframes particle-rise {
+      0%   { transform:translateY(0);                    opacity:0; }
+      6%   { opacity:1; }
+      92%  { opacity:0.55; }
+      100% { transform:translateY(calc(-100vh - 20px));  opacity:0; }
+    }
+
+    /* â”€â”€ SCROLL PROGRESS (override) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    #spb {
+      position:fixed; top:0; left:0; height:2px;
+      background:var(--accent);
+      z-index:9997; width:0%; pointer-events:none;
+    }
