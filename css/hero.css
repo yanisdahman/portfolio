@@ -84,6 +84,14 @@
 }
 
 .hero-cta { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; }
+.hero-cta-bottom { margin-top: .75rem; }
+
+.hero-cta .hero-cta-btn {
+  padding: .85rem 2.2rem;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
 
 .hero-right { display:none; }
 

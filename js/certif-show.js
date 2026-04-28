@@ -61,7 +61,7 @@
       imgBg: 'none'
     },
     {
-      img: 'img/CertifMOOC.jpg', alt: 'MOOC Cybersécurité ANSSI',
+      img: 'img/CertifMOOC.webp', alt: 'MOOC Cybersécurité ANSSI',
       title: 'MOOC Cybersécurité',
       title_en: 'Cybersecurity MOOC',
       issuer: 'ANSSI — Agence nationale · janv. 2026',
@@ -69,7 +69,7 @@
       desc: 'Formation cybersécurité de référence en France — fondamentaux, menaces et bonnes pratiques de sécurité des systèmes.',
       desc_en: 'France\'s reference cybersecurity training — fundamentals, threats and system security best practices.',
       link: 'img/MOOC.jpg',
-      imgBg: 'rgba(255,255,255,0.92)'
+      imgBg: 'none'
     },
     {
       img: 'img/CertifPIX.jpg', alt: 'Certification Pix',
@@ -260,4 +260,50 @@
 
   applyContent(0);
   window.certifRefresh = () => applyContent(current);
+
+  /* ── Autoplay — démarre dès que le carousel est visible ──────── */
+  const DELAY = 3500;
+  let autoTimer  = null;
+  let isHovered  = false;
+
+  function startAutoplay() {
+    if (stage.classList.contains('is-grid') || isHovered) return;
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => {
+      if (!animating) goTo((current + 1) % CERTIFS.length, 'next');
+    }, DELAY);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  // Pause au survol
+  stage.addEventListener('mouseenter', () => { isHovered = true;  stopAutoplay(); });
+  stage.addEventListener('mouseleave', () => { isHovered = false; startAutoplay(); });
+
+  // Reset du timer sur interaction manuelle
+  prevBtn.addEventListener('click', () => { stopAutoplay(); startAutoplay(); });
+  nextBtn.addEventListener('click', () => { stopAutoplay(); startAutoplay(); });
+  dotsEl.addEventListener('click',  () => { stopAutoplay(); startAutoplay(); });
+  stage.addEventListener('touchend', () => { stopAutoplay(); startAutoplay(); }, { passive: true });
+
+  // Pause en vue grille, reprise en vue carrousel
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      if (stage.classList.contains('is-grid')) stopAutoplay();
+      else startAutoplay();
+    });
+  }
+
+  // Démarre dès que le carousel entre dans le champ de vision
+  const visibilityObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) startAutoplay();
+      else stopAutoplay();
+    });
+  }, { threshold: 0.4 });
+
+  visibilityObserver.observe(stage);
 })();

@@ -443,6 +443,21 @@
      ALTERNANCE PACO — sections sombres / claires (inversé)
   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
+  /* ── Certifications : certif-show sur fond sombre */
+  #certifications .certif-show {
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 4px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.06);
+  }
+  #certifications .certif-meta-row {
+    background: rgba(255,255,255,.04);
+    border-color: rgba(255,255,255,.08);
+  }
+  #certifications .certif-issuer-card {
+    background: rgba(255,255,255,.04);
+    border-color: rgba(255,255,255,.07);
+  }
+
   /* Sections sombres : apropos, certifications, documentation, tableau */
   #apropos,
   #certifications,

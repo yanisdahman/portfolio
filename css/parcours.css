@@ -94,7 +94,7 @@
     }
     .exp-meta {
       display:flex; align-items:center; gap:.9rem; flex-wrap:wrap;
-      font-size:.68rem; color:var(--text-3);
+      font-size:.72rem; color:var(--text-2); font-weight:600;
       margin-bottom:.8rem; padding-bottom:.72rem;
       border-bottom:1px solid var(--border-2);
     }
@@ -136,10 +136,15 @@
 
     .exp-missions { list-style:none; display:flex; flex-direction:column; gap:.45rem; }
     .exp-missions li {
-      display:flex; align-items:flex-start; gap:.45rem;
+      display:block;
+      padding-left:1rem;
+      position:relative;
       font-size:.76rem; color:var(--text-2); line-height:1.5;
     }
-    .exp-missions li::before { content:'›'; color:var(--accent); font-weight:700; flex-shrink:0; }
+    .exp-missions li::before {
+      content:'›'; color:var(--accent); font-weight:700;
+      position:absolute; left:0; top:.05em;
+    }
     .exp-chips { display:flex; flex-wrap:wrap; gap:.35rem; }
 
     /* Timeline académique */
@@ -204,15 +209,22 @@
       letter-spacing:.1em; text-transform:uppercase;
       white-space:nowrap; flex-shrink:0; margin-top:.08rem;
     }
-    .acad-school { font-size:.7rem; font-weight:500; color:var(--text-3); margin-bottom:0; }
+    .acad-school { font-size:.72rem; font-weight:600; color:var(--text-2); margin-bottom:0; }
+    /* Date badge déplacé dans acad-head-info (bachelor) — alignement gauche */
+    .acad-head-info .acad-date { align-self:flex-start; margin-top:.3rem; }
     .acad-body { padding:1.1rem 1.4rem 1.15rem; display:flex; flex-direction:column; gap:0; }
     .acad-desc { font-size:.8rem; color:var(--text-2); line-height:1.78; margin-bottom:.85rem; }
     .acad-list { list-style:none; display:flex; flex-direction:column; gap:.38rem; }
     .acad-list li {
-      display:flex; align-items:flex-start; gap:.45rem;
+      display:block;
+      padding-left:1rem;
+      position:relative;
       font-size:.75rem; color:var(--text-2); line-height:1.45;
     }
-    .acad-list li::before { content:'›'; color:var(--accent); font-weight:700; flex-shrink:0; }
+    .acad-list li::before {
+      content:'›'; color:var(--accent); font-weight:700;
+      position:absolute; left:0; top:.05em;
+    }
 
     .acad-sep {
       font-family:'Oswald',sans-serif;
@@ -256,11 +268,46 @@
       pointer-events:none; user-select:none;
     }
 
-    /* ── Novarina : carte "projet phare" mise en avant ───────────── */
+    /* ── Expériences pro — même design BTS SIO / Bac STMG ───────── */
+    .parc-col.reveal-l .exp-card:first-child,
+    .parc-col.reveal-l .exp-card:last-child {
+      border: 1px solid rgba(26,26,28,.16);
+      /* inset shadow = ligne noire gauche garantie, sans conflit border */
+      box-shadow: inset 3px 0 0 var(--accent), 0 4px 24px rgba(0,0,0,.07), var(--shadow-glow);
+    }
+    .parc-col.reveal-l .exp-card:first-child .exp-head,
+    .parc-col.reveal-l .exp-card:last-child .exp-head {
+      background: linear-gradient(155deg, rgba(26,26,28,.07) 0%, rgba(26,26,28,.02) 100%);
+      border-bottom-color: rgba(26,26,28,.1);
+    }
+    .parc-col.reveal-l .exp-card:first-child .exp-logo,
+    .parc-col.reveal-l .exp-card:last-child .exp-logo {
+      background: #ffffff;
+      border: none;
+      box-shadow: 0 3px 12px rgba(0,0,0,.14);
+    }
+    .parc-col.reveal-l .exp-card:first-child .exp-badge,
+    .parc-col.reveal-l .exp-card:last-child .exp-badge {
+      background: var(--accent);
+      color: var(--btn-text);
+      border: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,.14);
+    }
+
+    /* ── Novarina spécifique ────────────────────────────────────── */
     .parc-col.reveal-l .exp-card:first-child {
-      border-color:rgba(26,26,28,.16);
-      box-shadow:0 4px 28px rgba(0,0,0,.08), var(--shadow-glow);
-      position:relative;
+      position: relative;
+      border-top: 2px solid var(--accent);
+    }
+    /* Ligne noire gauche via ::after — border-radius + overflow:hidden
+       clippait le border CSS. ::after à l'intérieur est clipé proprement. */
+    .parc-col.reveal-l .exp-card:first-child::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: var(--accent);
+      z-index: 3;
     }
     .parc-col.reveal-l .exp-card:first-child::before {
       content:'Projet phare';
@@ -272,33 +319,62 @@
       border-radius:0 0 6px 6px;
       z-index:2;
     }
-    .parc-col.reveal-l .exp-card:first-child .exp-head {
-      background:linear-gradient(155deg, rgba(26,26,28,.07) 0%, rgba(26,26,28,.02) 100%);
-      border-bottom-color:rgba(26,26,28,.1);
-    }
     .parc-col.reveal-l .exp-card:first-child .exp-logo {
       width:50px; height:50px; border-radius:13px;
-      background:var(--accent); color:var(--btn-text);
-      box-shadow:0 4px 16px rgba(26,26,28,.28);
-      font-size:.8rem;
+    }
+    .parc-col.reveal-l .exp-card:first-child .exp-head {
+      background: linear-gradient(155deg, rgba(26,26,28,.12) 0%, rgba(26,26,28,.03) 100%);
     }
 
-    /* ── Prodhys : carte secondaire, ton plus sobre ──────────────── */
-    .parc-col.reveal-l .exp-card:last-child { opacity:.93; }
+    /* ── Prodhys spécifique ─────────────────────────────────────── */
+    .parc-col.reveal-l .exp-card:last-child {
+      border-top: 2px solid rgba(26,26,28,.22);
+      opacity: .93;
+    }
     .parc-col.reveal-l .exp-card:last-child .exp-head {
-      background:var(--bg-card-2);
+      background: linear-gradient(155deg, rgba(26,26,28,.05) 0%, rgba(26,26,28,.01) 100%);
     }
-    .parc-col.reveal-l .exp-card:last-child .exp-logo {
-      background:var(--bg-card);
-      color:var(--text-2);
-      border:1px solid var(--border);
-      box-shadow:none; font-size:.65rem;
+    .exp-stage-badge {
+      margin-top: .85rem;
+      padding-top: .85rem;
+      border-top: 1px solid var(--border-2);
     }
-    .parc-col.reveal-l .exp-card:last-child .exp-badge {
-      background:var(--accent-dim);
-      color:var(--accent);
-      border:1px solid var(--border);
-      box-shadow:none;
+
+    /* ── Stats strip (Novarina) ─────────────────────────────────── */
+    .exp-stats {
+      display: flex;
+      align-items: center;
+      margin-bottom: .85rem;
+      padding: .65rem 0;
+      border-top: 1px solid var(--border-2);
+      border-bottom: 1px solid var(--border-2);
+    }
+    .exp-stat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .12rem;
+    }
+    .exp-stat-val {
+      font-family: 'Oswald', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+    }
+    .exp-stat-lbl {
+      font-size: .57rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+    .exp-stat-sep {
+      width: 1px;
+      height: 26px;
+      background: var(--border-2);
+      flex-shrink: 0;
     }
 
     /* ── Timeline académique : gradient vert→accent→estompé ──────── */
@@ -326,29 +402,42 @@
 
     /* Date "à venir" (Bachelor) */
     .acad-date-future {
-      background:rgba(34,197,94,.12);
-      color:#16a34a;
-      border-color:rgba(34,197,94,.25);
+      background: var(--accent);
+      color: var(--btn-text);
+      border-color: var(--accent);
+    }
+    /* Date badge dans acad-head-info — nettoyage résidu ancienne règle */
+    .acad-head-info .acad-date { align-self: flex-start; margin-top: 0; }
+    /* Titre bachelor : légèrement réduit pour éviter trop de retours à la ligne */
+    .acad-item:nth-child(2) .acad-title { font-size: .82rem; }
+
+    /* Bachelor / Saint-Michel (1er acad-item = nth-child(2) car acad-tl-line est le 1er enfant) */
+    .acad-item:nth-child(2) .acad-logo {
+      background: #ffffff;
+    }
+    .acad-item:nth-child(2) .acad-card {
+      border-left: 3px solid rgba(34,197,94,.55);
     }
 
-    /* BTS SIO (2ème item) — formation en cours, mise en avant ─────── */
-    .acad-item:nth-child(2) .acad-card {
+    /* BTS SIO (2ème acad-item = nth-child(3)) — formation en cours, mise en avant ─────── */
+    .acad-item:nth-child(3) .acad-card {
       border-color:rgba(26,26,28,.16);
+      border-left: 3px solid var(--accent);
       box-shadow:0 4px 24px rgba(0,0,0,.07), var(--shadow-glow);
     }
-    .acad-item:nth-child(2) .acad-card-head {
+    .acad-item:nth-child(3) .acad-card-head {
       background:linear-gradient(155deg, rgba(26,26,28,.07) 0%, rgba(26,26,28,.02) 100%);
       border-bottom-color:rgba(26,26,28,.1);
     }
-    .acad-item:nth-child(2) .acad-logo {
+    .acad-item:nth-child(3) .acad-logo {
       background:var(--accent); color:var(--btn-text);
       box-shadow:0 4px 16px rgba(26,26,28,.28);
     }
-    .acad-item:nth-child(2) .acad-date {
+    .acad-item:nth-child(3) .acad-date {
       background:var(--accent); color:var(--btn-text);
       border-color:var(--accent);
     }
-    .acad-item:nth-child(2) .acad-dot {
+    .acad-item:nth-child(3) .acad-dot {
       animation:dot-current 2.5s ease-in-out infinite;
     }
     @keyframes dot-current {
@@ -356,24 +445,28 @@
       50%      { box-shadow:0 0 0 5px rgba(26,26,28,.04); }
     }
 
-    /* BAC STMG (3ème item) — diplôme obtenu, état "complété" ───────── */
-    .acad-item:nth-child(3) .acad-card { opacity:.78; }
-    .acad-item:nth-child(3) .acad-card-head { background:var(--bg-card-2); }
-    .acad-item:nth-child(3) .acad-dot {
-      background:var(--text-3);
-      box-shadow:none;
-      border-color:var(--bg-card-2);
+    /* BAC STMG (3ème acad-item = nth-child(4)) — même design que BTS SIO */
+    .acad-item:nth-child(4) .acad-card {
+      border-color: rgba(26,26,28,.16);
+      border-left: 3px solid var(--accent);
+      box-shadow: 0 4px 24px rgba(0,0,0,.07), var(--shadow-glow);
     }
-    .acad-item:nth-child(3) .acad-logo {
-      background:var(--bg-card);
-      color:var(--text-3);
-      border:1px solid var(--border);
-      box-shadow:none;
+    .acad-item:nth-child(4) .acad-card-head {
+      background: linear-gradient(155deg, rgba(26,26,28,.07) 0%, rgba(26,26,28,.02) 100%);
+      border-bottom-color: rgba(26,26,28,.1);
     }
-    .acad-item:nth-child(3) .acad-date {
-      background:transparent;
-      color:var(--text-3);
-      border-color:var(--border-2);
+    .acad-item:nth-child(4) .acad-dot {
+      background: var(--accent);
+      box-shadow: 0 0 8px rgba(0,0,0,.20);
+      border-color: var(--bg-card);
+    }
+    .acad-item:nth-child(4) .acad-logo-img {
+      background: #ffffff;
+    }
+    .acad-item:nth-child(4) .acad-date {
+      background: var(--accent);
+      color: var(--btn-text);
+      border-color: var(--accent);
     }
 
     /* Séparateur visuel entre les items académiques ─────────────── */
@@ -1182,20 +1275,17 @@
     }
     .sw-item img.sw-img-blend { mix-blend-mode: multiply; }
 
-    /* Indicateur doc cliquable */
+    /* Indicateur doc cliquable — flèche toujours visible */
     .sw-item[data-doc] { cursor: pointer; }
     .sw-item[data-doc]::after {
-      content: '';
+      content: '↗';
       position: absolute;
-      top: 4px; right: 4px;
-      width: 7px; height: 7px;
-      background: var(--accent);
-      border-radius: 50%;
-      opacity: 0;
-      transition: opacity .22s var(--ease);
+      top: 3px; right: 4px;
+      font-size: 8px; line-height: 1; font-weight: 700;
+      color: var(--accent);
+      opacity: 1;
       pointer-events: none;
     }
-    .sw-item[data-doc]:hover::after { opacity: 1; }
     .sw-item img.sw-img-lg { transform: scale(1.25); }
     .sw-item img.sw-img-xl { transform: scale(1.45); }
     .sw-item img.sw-img-xxl { transform: scale(1.65); }
@@ -1249,4 +1339,220 @@
       .sw-item:hover {
         transform: rotateY(calc(var(--i) * (360deg / 27))) translateZ(246px) scale(1.15);
       }
+    }
+
+    /* ── Logo Lycée Gabriel Fauré (BTS SIO) — fond blanc forcé ──────
+       nth-child(3) applique background:var(--accent) sur .acad-logo
+       avec spécificité (0,2,0). On surcharge avec (0,2,0) en ciblant
+       .acad-logo-img spécifiquement pour cet item.               ── */
+    .acad-item:nth-child(3) .acad-logo-img {
+      background: #ffffff;
+    }
+
+    /* ── Status badges (EN COURS / OBTENU) ───────────────────────── */
+    .acad-status-badge {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      font-size: .67rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      margin-top: .85rem;
+      padding-top: .85rem;
+      border-top: 1px solid var(--border-2);
+    }
+    .acad-status-en-cours {
+      color: var(--accent);
+    }
+    .acad-status-en-cours .seeking-dot {
+      background: var(--accent);
+      animation: seek-pulse 2s ease-in-out infinite;
+    }
+    .acad-status-obtenu {
+      color: #16a34a;
+    }
+    .acad-status-obtenu svg {
+      stroke: #16a34a;
+      flex-shrink: 0;
+    }
+
+    /* ── Progress bar ─────────────────────────────────────────────── */
+    .acad-progress-wrap {
+      margin-top: .6rem;
+    }
+    .acad-progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: .59rem;
+      color: var(--text-3);
+      font-weight: 600;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      margin-bottom: .3rem;
+    }
+    .acad-progress-bar {
+      height: 3px;
+      background: var(--border-2);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .acad-progress-fill {
+      height: 100%;
+      width: var(--pct);
+      border-radius: 2px;
+      background: var(--accent);
+    }
+    .acad-progress-fill--done {
+      background: rgba(34,197,94,.7);
+    }
+
+    /* ── Lien localisation cliquable (→ Google Maps) ─────────────── */
+    .loc-link {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      opacity: .75;
+      transition: opacity .18s;
+    }
+    .loc-link:hover {
+      opacity: 1;
+    }
+
+    /* ══ CERTIFICATIONS — contenu autour du carousel ════════════════ */
+
+    /* Bande de stats */
+    .certif-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.2rem 2rem;
+      margin-bottom: 1rem;
+    }
+    .certif-meta-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .1rem;
+    }
+    .certif-meta-val {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+    }
+    .certif-meta-lbl {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+    .certif-meta-sep {
+      width: 1px;
+      height: 36px;
+      background: var(--border-2);
+      flex-shrink: 0;
+    }
+
+    /* Tags domaines */
+    .certif-domains {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+    .certif-domain-tag {
+      padding: .32rem .85rem;
+      background: var(--accent-dim);
+      border: 1px solid var(--border);
+      border-radius: var(--r-pill);
+      font-size: .68rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: .04em;
+    }
+
+    /* Cards émetteurs */
+    .certif-issuers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .8rem;
+      margin-top: 1.2rem;
+    }
+    .certif-issuer-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-2);
+      border-radius: var(--r);
+      padding: .9rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      transition: border-color .25s, box-shadow .25s, transform .25s var(--ease);
+    }
+    .certif-issuer-card:hover {
+      border-color: var(--border);
+      box-shadow: 0 4px 18px rgba(0,0,0,.07);
+      transform: translateY(-2px);
+    }
+    .certif-issuer-logo {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .certif-issuer-logo--img {
+      background: var(--bg-card-2);
+      border: 1px solid var(--border-2);
+      overflow: hidden;
+    }
+    .certif-issuer-logo--img img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+    }
+    /* Cisco — crop centré sur le globe, ignore les décorations périphériques */
+    .certif-issuer-logo--cisco img {
+      object-fit: cover;
+      object-position: center 38%;
+      transform: scale(1.1);
+    }
+    /* ANSSI — logo rond autonome, pas de fond ni de bordure */
+    .certif-issuer-logo--bare {
+      background: transparent;
+      border: none;
+    }
+    .certif-issuer-info {
+      display: flex;
+      flex-direction: column;
+      gap: .12rem;
+      min-width: 0;
+    }
+    .certif-issuer-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .certif-issuer-count {
+      font-size: .62rem;
+      color: var(--text-3);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .certif-issuers { grid-template-columns: repeat(2, 1fr); }
+      .certif-meta-row { padding: .9rem 1rem; }
+      .certif-meta-val { font-size: 1.3rem; }
+    }
+    @media (max-width: 480px) {
+      .certif-issuers { grid-template-columns: 1fr 1fr; }
     }

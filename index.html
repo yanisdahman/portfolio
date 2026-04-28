@@ -13,7 +13,6 @@
   <meta name="keywords" content="Yanis Dahman, Yanis DAHMAN, portfolio BTS SIO SISR, administrateur systèmes réseaux Annecy, BTS SIO option SISR, cybersécurité Annecy, épreuve E5, Lycée Gabriel Fauré, alternance administrateur réseaux 2026, stage informatique Haute-Savoie, yanisdahman" />
   <meta name="author" content="Yanis Dahman" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="subject" content="Portfolio de Yanis Dahman, administrateur systèmes et réseaux BTS SIO SISR" />
   <meta name="classification" content="Portfolio, Informatique, Réseaux, Cybersécurité" />
   <meta name="coverage" content="France, Annecy, Haute-Savoie" />
@@ -28,7 +27,6 @@
   <meta name="geo.region" content="FR-ARA" />
   <meta name="geo.placename" content="Annecy, Haute-Savoie, France" />
   <meta name="geo.position" content="45.8992;6.1294" />
-  <meta name="ICBM" content="45.8992, 6.1294" />
 
   <!-- ═══ Open Graph (profil personne) ═══════════════════════════════════ -->
   <meta property="og:type" content="profile" />
@@ -70,6 +68,7 @@
         "alternateName": ["Yanis DAHMAN", "yanisdahman", "Yanis Dahman BTS SIO", "Yanis Dahman Annecy", "Y. Dahman", "Yanis Dahman administrateur réseaux"],
         "url": "https://yanisdahman.fr/",
         "email": "mailto:yanisdahman0@gmail.com",
+        "telephone": "+33769541830",
         "image": {
           "@type": "ImageObject",
           "@id": "https://yanisdahman.fr/#personimage",
@@ -336,11 +335,14 @@
 
 
           <div class="hero-cta">
-            <a href="#apropos" class="btn btn-primary" data-i18n="hero.btn.profile">
+            <a href="#apropos" class="nav-cta hero-cta-btn" data-i18n="hero.btn.profile">
               Découvrir mon profil
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#documentation" class="btn btn-outline" data-i18n="hero.btn.docs">Mes documents</a>
+            <a href="#documentation" class="nav-cta hero-cta-btn" data-i18n="hero.btn.docs">Mes documents</a>
+          </div>
+          <div class="hero-cta hero-cta-bottom">
+            <button class="btn btn-primary" onclick="openCvModal()" data-i18n="hero.cv">Voir mon CV</button>
           </div>
         </div>
 
@@ -379,6 +381,10 @@
             <li>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <a href="https://mail.google.com/mail/?view=cm&to=yanisdahman0@gmail.com" target="_blank" rel="noopener">yanisdahman0@gmail.com</a>
+            </li>
+            <li>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 5.55 5.55l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+              <a href="tel:+33769541830">+33 07 69 54 18 30</a>
             </li>
             <li>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -420,17 +426,18 @@
               <div class="ap-who-icon">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
-              <h2 data-i18n="ap.who.title">Qui suis-je ?</h2>
+              <h2 data-i18n="ap.who.title">Mon profil</h2>
             </div>
             <p data-i18n="ap.p1">
-              Je suis fortement intéressé par l'informatique. Actuellement en <strong>BTS SIO option SISR</strong>
-              au <strong>Lycée Gabriel Fauré — Annecy</strong>, je continuerai mon cursus à la rentrée prochaine
-              avec un <strong>Bachelor ASRC au Lycée Saint-Michel — Annecy</strong>.
+              Étudiant en <strong>BTS SIO option SISR</strong> au <strong>Lycée Gabriel Fauré — Annecy</strong>,
+              je me spécialise en administration systèmes, réseaux et cybersécurité. Passionné par la sécurité des
+              infrastructures et l'intelligence artificielle, j'ai obtenu <strong>9 certifications</strong> auprès
+              de <strong>Cisco</strong>, l'<strong>ANSSI</strong> et <strong>Anthropic</strong>.
             </p>
             <p data-i18n="ap.p2">
-              J'ai consolidé mon expertise lors de deux stages — chez <strong>Prodhys</strong>
-              et chez <strong>Novarina</strong> — et je me donne pour ambition de bâtir
-              des <strong>infrastructures réseau robustes et sécurisées</strong>.
+              Mes deux stages — chez <strong>Prodhys</strong> puis chez <strong>Novarina</strong> où j'ai déployé
+              <strong>Bitwarden Enterprise en totale autonomie</strong> — m'ont permis de confronter mes compétences
+              à des environnements professionnels réels. Je poursuis avec un <strong>Bachelor ASRC</strong> à la rentrée 2026.
             </p>
           </div>
 
@@ -451,6 +458,15 @@
                 <li data-i18n="ap.li.ctf">CTF &amp; Labs pratiques</li>
                 <li data-i18n="ap.li.sport">Sport &amp; Football</li>
                 <li data-i18n="ap.li.travel">Voyager</li>
+              </ul>
+            </div>
+            <div class="ap-card reveal" style="--d:.58s; grid-column: 1 / -1;">
+              <div class="ap-card-title">Objectif</div>
+              <ul class="ap-list">
+                <li><strong>Bachelor ASRC</strong> — Administration Systèmes, Réseaux &amp; Cybersécurité</li>
+                <li>Lycée Saint-Michel — Annecy</li>
+                <li>Alternance · Rentrée <strong>Septembre 2026</strong></li>
+                <li>Secteur visé : infrastructure IT &amp; cybersécurité</li>
               </ul>
             </div>
           </div>
@@ -509,10 +525,22 @@
               </span>
               <span class="exp-meta-item">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Thonon-Les-Bains, France
+                <a href="https://www.google.com/maps/search/Thonon-Les-Bains+France" target="_blank" rel="noopener" class="loc-link">Thonon-Les-Bains, France</a>
               </span>
             </div>
             <p class="exp-desc" data-i18n="nov.desc">Déploiement <strong>Bitwarden Enterprise</strong> en <strong>totale autonomie</strong> — projet couvrant la gestion de projet, l'infrastructure <strong>SSO/SCIM</strong>, la <strong>gouvernance sécurité</strong> et le déploiement de masse via <strong>GPO</strong> sur le parc Novarina.</p>
+
+            <div class="exp-stats">
+              <div class="exp-stat">
+                <span class="exp-stat-val">3 mois</span>
+                <span class="exp-stat-lbl">Durée</span>
+              </div>
+              <div class="exp-stat-sep"></div>
+              <div class="exp-stat">
+                <span class="exp-stat-val">8</span>
+                <span class="exp-stat-lbl">Missions</span>
+              </div>
+            </div>
 
             <details class="exp-details">
               <summary>
@@ -553,16 +581,16 @@
               </div>
             </details>
 
-            <button class="exp-attest-link" onclick="openAttestModal('docs/Attestation%20stage%20BTSSIO2.pdf','docs/Attestation%20stage%20BTSSIO2.pdf')">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>
-              <span data-i18n="nov.attest">Attestation de stage</span>
-              <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
-            <button class="exp-attest-link" onclick="openDocModal('docs/YD-RAPPORTDESTAGE%20.pdf','Rapport de stage — Novarina')">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              <span data-i18n="nov.report">Rapport de stage</span>
-              <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
+            <div class="exp-actions">
+              <button class="exp-action-btn exp-action-btn--solid" onclick="openAttestModal('docs/Attestation%20stage%20BTSSIO2.pdf','docs/Attestation%20stage%20BTSSIO2.pdf')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>
+                <span data-i18n="nov.attest">Attestation</span>
+              </button>
+              <button class="exp-action-btn exp-action-btn--solid" onclick="openDocModal('docs/YD-RAPPORTDESTAGE%20.pdf','Rapport de stage — Novarina')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span data-i18n="nov.report">Rapport de stage</span>
+              </button>
+            </div>
             </div>
           </div>
 
@@ -586,10 +614,22 @@
               </span>
               <span class="exp-meta-item">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Ville-La-Grand, France
+                <a href="https://www.google.com/maps/search/Ville-La-Grand+France" target="_blank" rel="noopener" class="loc-link">Ville-La-Grand, France</a>
               </span>
             </div>
-            <p class="exp-desc" data-i18n="pro.desc">Stage de première année en <strong>BTS SIO SISR</strong>. <strong>Installation de postes</strong> avec <strong>suite Office</strong>, rédaction de <strong>documentation</strong> et <strong>dépannage</strong> d'une <strong>imprimante réseau</strong>.</p>
+            <p class="exp-desc" data-i18n="pro.desc">Première immersion professionnelle en environnement IT — <strong>configuration de postes</strong> sous Windows avec déploiement de la <strong>suite Office</strong>, rédaction de <strong>documentation technique</strong> et diagnostic d'un incident <strong>réseau imprimante</strong>.</p>
+
+            <div class="exp-stats">
+              <div class="exp-stat">
+                <span class="exp-stat-val">1 mois</span>
+                <span class="exp-stat-lbl">Durée</span>
+              </div>
+              <div class="exp-stat-sep"></div>
+              <div class="exp-stat">
+                <span class="exp-stat-val">3</span>
+                <span class="exp-stat-lbl">Missions</span>
+              </div>
+            </div>
 
             <details class="exp-details">
               <summary>
@@ -623,11 +663,12 @@
               </div>
             </details>
 
-            <button class="exp-attest-link" onclick="openAttestModal('docs/Attestation%20de%20stage%20BTSSIO%201.pdf','docs/Attestation%20de%20stage%20BTSSIO%201.pdf')">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>
-              <span data-i18n="pro.attest">Attestation de stage</span>
-              <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
+            <div class="exp-actions">
+              <button class="exp-action-btn exp-action-btn--solid" onclick="openAttestModal('docs/Attestation%20de%20stage%20BTSSIO%201.pdf','docs/Attestation%20de%20stage%20BTSSIO%201.pdf')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>
+                <span data-i18n="pro.attest">Attestation de stage</span>
+              </button>
+            </div>
             </div>
           </div>
 
@@ -655,7 +696,7 @@
                     <div class="acad-logo acad-logo-img"><img src="img/saintmichel.png" alt="Lycée Saint-Michel"></div>
                     <div class="acad-head-info">
                       <div class="acad-title" data-i18n="acad.bachelor.title">Bachelor ASRC — Administration des Systèmes, Réseaux &amp; Cybersécurité</div>
-                      <div class="acad-school" data-i18n="acad.bachelor.school">Lycée Saint-Michel — Annecy (74000)</div>
+                      <div class="acad-school" data-i18n="acad.bachelor.school">Lycée Saint-Michel — <a href="https://www.google.com/maps/search/Lycée+Saint-Michel+Annecy" target="_blank" rel="noopener" class="loc-link">Annecy (74000)</a></div>
                     </div>
                   </div>
                   <span class="acad-date acad-date-future" data-i18n="acad.bachelor.date">Sept. 2026</span>
@@ -676,10 +717,10 @@
               <div class="acad-card">
                 <div class="acad-card-head">
                   <div class="acad-card-left">
-                    <div class="acad-logo acad-logo-img"><img src="img/CertifPIX.jpg" alt="Lycée Gabriel Fauré"></div>
+                    <div class="acad-logo acad-logo-img"><img src="img/LyceeGabrielFaure.jpg" alt="Lycée Gabriel Fauré"></div>
                     <div class="acad-head-info">
                       <div class="acad-title" data-i18n="acad.bts.title">BTS SIO — Option SISR</div>
-                      <div class="acad-school" data-i18n="acad.bts.school">Lycée Gabriel Fauré — Annecy (74000)</div>
+                      <div class="acad-school" data-i18n="acad.bts.school">Lycée Gabriel Fauré — <a href="https://www.google.com/maps/search/Lycée+Gabriel+Fauré+Annecy" target="_blank" rel="noopener" class="loc-link">Annecy (74000)</a></div>
                     </div>
                   </div>
                   <span class="acad-date" data-i18n="acad.bts.date">2024 – 2026</span>
@@ -698,6 +739,14 @@
                   <li data-i18n="acad.bts.li9"><strong>Chiffrement &amp; PKI</strong> — certificats, algorithmes sym./asym.</li>
                   <li data-i18n="acad.bts.li10"><strong>Haute disponibilité</strong> &amp; équilibrage DHCP Windows</li>
                 </ul>
+                <div class="acad-status-badge acad-status-en-cours">
+                  <span class="seeking-dot"></span>
+                  <span>En cours — 2<sup>e</sup> année BTS</span>
+                </div>
+                <div class="acad-progress-wrap">
+                  <div class="acad-progress-label"><span>Progression</span><span>90%</span></div>
+                  <div class="acad-progress-bar"><div class="acad-progress-fill" style="--pct:90%"></div></div>
+                </div>
                 </div>
               </div>
             </div>
@@ -708,10 +757,10 @@
               <div class="acad-card">
                 <div class="acad-card-head">
                   <div class="acad-card-left">
-                    <div class="acad-logo acad-logo-img"><img src="img/PIX.jpg" alt="Lycée La Versoie"></div>
+                    <div class="acad-logo acad-logo-img"><img src="img/Versoie.png" alt="Lycée La Versoie"></div>
                     <div class="acad-head-info">
                       <div class="acad-title" data-i18n="acad.bac.title">Baccalauréat Technologique STMG</div>
-                      <div class="acad-school" data-i18n="acad.bac.school">Lycée La Versoie — Thonon-Les-Bains (74200)</div>
+                      <div class="acad-school" data-i18n="acad.bac.school">Lycée La Versoie — <a href="https://www.google.com/maps/search/Lycée+La+Versoie+Thonon-Les-Bains" target="_blank" rel="noopener" class="loc-link">Thonon-Les-Bains (74200)</a></div>
                     </div>
                   </div>
                   <span class="acad-date" data-i18n="acad.bac.date">2022 – 2024</span>
@@ -727,6 +776,14 @@
                   <li data-i18n="acad.bac.li2">Spécialité <strong>Ressources Humaines</strong></li>
                   <li data-i18n="acad.bac.li3"><strong>Droit &amp; Économie</strong></li>
                 </ul>
+                <div class="acad-status-badge acad-status-obtenu">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Diplôme obtenu</span>
+                </div>
+                <div class="acad-progress-wrap">
+                  <div class="acad-progress-label"><span>Complété</span><span>100%</span></div>
+                  <div class="acad-progress-bar"><div class="acad-progress-fill acad-progress-fill--done" style="--pct:100%"></div></div>
+                </div>
                 </div>
               </div>
             </div>
@@ -843,10 +900,31 @@
     <div class="container">
       <div class="section-eyebrow reveal" data-i18n="certs.eyebrow">Certifications</div>
       <h2 id="h2-certifications" class="section-title reveal" style="--d:.06s" data-i18n="certs.title">Certifications</h2>
-      <div class="section-divider reveal" style="--d:.1s"></div>
-      <p class="section-desc reveal" style="--d:.14s" data-i18n="certs.desc">
-        Certifications professionnelles en cybersécurité, administration systèmes et intelligence artificielle.
-      </p>
+      <p class="section-desc reveal" style="--d:.1s; margin-top:-.4rem; margin-bottom:.6rem;">Mes certifications</p>
+      <div class="section-divider reveal" style="--d:.12s"></div>
+
+      <!-- Stats -->
+      <div class="certif-meta-row reveal" style="--d:.15s">
+        <div class="certif-meta-item">
+          <span class="certif-meta-val">9</span>
+          <span class="certif-meta-lbl">Certifications</span>
+        </div>
+        <div class="certif-meta-sep"></div>
+        <div class="certif-meta-item">
+          <span class="certif-meta-val">4</span>
+          <span class="certif-meta-lbl">Organismes</span>
+        </div>
+        <div class="certif-meta-sep"></div>
+        <div class="certif-meta-item">
+          <span class="certif-meta-val">5</span>
+          <span class="certif-meta-lbl">Domaines</span>
+        </div>
+        <div class="certif-meta-sep"></div>
+        <div class="certif-meta-item">
+          <span class="certif-meta-val">2025</span>
+          <span class="certif-meta-lbl">– 2026</span>
+        </div>
+      </div>
 
       <!-- Carousel interactif -->
       <div class="certif-show reveal" id="cs-stage" style="--d:.18s" tabindex="0">
@@ -886,6 +964,38 @@
 
         <div class="cs-grid-view" id="cs-grid"></div>
 
+      </div>
+
+      <!-- Émetteurs -->
+      <div class="certif-issuers reveal" style="--d:.22s">
+        <div class="certif-issuer-card">
+          <div class="certif-issuer-logo certif-issuer-logo--img certif-issuer-logo--cisco"><img src="img/CISCO.png" alt="Cisco"></div>
+          <div class="certif-issuer-info">
+            <span class="certif-issuer-name">Cisco Networking Academy</span>
+            <span class="certif-issuer-count">6 certifications</span>
+          </div>
+        </div>
+        <div class="certif-issuer-card">
+          <div class="certif-issuer-logo certif-issuer-logo--img"><img src="img/AnthropicLogo.webp" alt="Anthropic"></div>
+          <div class="certif-issuer-info">
+            <span class="certif-issuer-name">Anthropic</span>
+            <span class="certif-issuer-count">8 certifications</span>
+          </div>
+        </div>
+        <div class="certif-issuer-card">
+          <div class="certif-issuer-logo certif-issuer-logo--img certif-issuer-logo--bare"><img src="img/CertifMOOC.webp" alt="ANSSI"></div>
+          <div class="certif-issuer-info">
+            <span class="certif-issuer-name">ANSSI</span>
+            <span class="certif-issuer-count">1 certification</span>
+          </div>
+        </div>
+        <div class="certif-issuer-card">
+          <div class="certif-issuer-logo certif-issuer-logo--img"><img src="img/LyceeGabrielFaure.jpg" alt="Lycée Gabriel Fauré"></div>
+          <div class="certif-issuer-info">
+            <span class="certif-issuer-name">Lycée Gabriel Fauré</span>
+            <span class="certif-issuer-count">1 certification</span>
+          </div>
+        </div>
       </div>
 
       <button id="openAnthropicModal" style="display:none;" aria-hidden="true"></button>
@@ -977,7 +1087,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Réseau</span><span class="dg-tag">Windows</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.remote.title">Accès à Distance</div>
@@ -993,7 +1102,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Linux</span><span class="dg-tag">Réseau</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.glpi.title">GLPI</div>
@@ -1009,7 +1117,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Linux</span><span class="dg-tag">Déploiement</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.fog.title">FOG Project</div>
@@ -1025,7 +1132,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Réseau</span><span class="dg-tag">Sécurité</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.vpn.title">VPN</div>
@@ -1041,7 +1147,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Windows</span><span class="dg-tag">Scripting</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.posh.title">PowerShell &amp; Active Directory</div>
@@ -1057,7 +1162,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Réseau</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.wifi.title">Borne WiFi</div>
@@ -1073,7 +1177,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Windows</span><span class="dg-tag">Réseau</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.dhcp.title">Équilibrage DHCP Windows</div>
@@ -1089,7 +1192,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Linux</span><span class="dg-tag">Réseau</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.ha.title">Haute Disponibilité</div>
@@ -1105,7 +1207,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Linux</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.samba.title">Samba, NFS &amp; Clonezilla</div>
@@ -1121,7 +1222,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Linux</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.docker.title">Docker</div>
@@ -1137,7 +1237,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Linux</span><span class="dg-tag">Sécurité</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.ssh.title">SSH &amp; Gestion des Clés</div>
@@ -1153,7 +1252,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Réseau</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.nas.title">NAS</div>
@@ -1169,7 +1267,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Projet</span><span class="dg-tag">Réseau</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.bms.title">Projet BMS</div>
@@ -1185,7 +1282,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Projet</span><span class="dg-tag">Windows</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.mdl.title">Projet MDL</div>
@@ -1201,7 +1297,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Sécurité</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.forum.title">Forum Cybersécurité</div>
@@ -1217,7 +1312,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Linux</span><span class="dg-tag">Windows</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.backup.title">Sauvegarde</div>
@@ -1233,7 +1327,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Linux</span><span class="dg-tag">Sécurité</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.crypt.title">TP Chiffrement</div>
@@ -1249,7 +1342,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Stage</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.report.title">Rapport de Stage — Novarina</div>
@@ -1265,7 +1357,6 @@
             <div class="dg-tags-overlay">
               <span class="dg-tag">Stage</span>
             </div>
-            <div class="dg-bkmk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           </div>
           <div class="dg-body">
             <div class="dg-title" data-i18n="dg.liv.title">Livrable de Stage</div>
@@ -1346,6 +1437,24 @@
         </div>
 
       </div>
+
+      <!-- Sources consultées -->
+      <div class="veille-sources-wrap reveal" style="--d:.3s">
+        <div class="veille-sources-head">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Sources consultées</span>
+        </div>
+        <div class="veille-sources">
+          <a class="veille-source" href="https://www.lemagit.fr" target="_blank" rel="noopener">LeMagIT</a>
+          <a class="veille-source" href="https://thehackernews.com" target="_blank" rel="noopener">The Hacker News</a>
+          <a class="veille-source" href="https://blogs.cisco.com" target="_blank" rel="noopener">Cisco Blog</a>
+          <a class="veille-source" href="https://www.bleepingcomputer.com" target="_blank" rel="noopener">BleepingComputer</a>
+          <a class="veille-source" href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>
+          <a class="veille-source" href="https://aws.amazon.com/blogs/aws/" target="_blank" rel="noopener">AWS Blog</a>
+          <a class="veille-source" href="https://www.lemondeinformatique.fr" target="_blank" rel="noopener">Le Monde Informatique</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1408,6 +1517,10 @@
           <div class="pf-cta-item">
             <div class="pf-cta-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
             <a href="https://www.linkedin.com/in/yanisdahman" target="_blank" rel="noopener">linkedin.com/in/yanisdahman</a>
+          </div>
+          <div class="pf-cta-item">
+            <div class="pf-cta-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 5.55 5.55l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg></div>
+            <a href="tel:+33769541830">+33 07 69 54 18 30</a>
           </div>
           <div class="pf-cta-item">
             <div class="pf-cta-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -1512,6 +1625,7 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="https://mail.google.com/mail/?view=cm&to=yanisdahman0@gmail.com" target="_blank" rel="noopener"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>yanisdahman0@gmail.com</a></li>
+            <li><a href="tel:+33769541830"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 5.55 5.55l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>+33 07 69 54 18 30</a></li>
             <li><a href="https://www.linkedin.com/in/yanisdahman" target="_blank"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></li>
           </ul>
         </div>
@@ -1624,21 +1738,17 @@
           <div class="pdf-dot"></div>
           <div class="pdf-dot"></div>
           <div class="pdf-dot"></div>
-          <span class="pdf-filename">YD-CV-Alternance.pdf</span>
+          <span class="pdf-filename">YD-CV (2).pdf</span>
         </div>
         <button class="cv-modal-close" onclick="closeCvModal()" title="Fermer">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
       <div class="cv-modal-body">
-        <iframe
-          id="cvModalIframe"
-          src=""
-          title="CV Yanis DAHMAN">
-        </iframe>
+        <iframe id="cvModalIframe" src="" title="CV Yanis DAHMAN"></iframe>
       </div>
       <div class="cv-modal-footer">
-        <a href="docs/YD-CV-Alternance.pdf" download class="pdf-dl">
+        <a href="docs/YD-CV%20%282%29.pdf" download class="pdf-dl">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Télécharger le CV
         </a>
@@ -1853,10 +1963,10 @@
         <div class="ai-head-left">
           <div class="ai-avatar" style="overflow:hidden;padding:0;background:none;border:1px solid rgba(245,244,240,.2);">
             <span class="ai-avatar-ring" aria-hidden="true"></span>
-            <img src="img/yanis.png" alt="Yanis Dahman" style="width:100%;height:100%;object-fit:cover;border-radius:10px;display:block;">
+            <img src="img/AssistantYanis.jpg" alt="Yanis Dahman" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px;display:block;">
           </div>
           <div class="ai-head-info">
-            <div class="ai-head-name">Yanis <em>IA</em></div>
+            <div class="ai-head-name">Assistant <em>Yanis</em></div>
             <div class="ai-head-status">
               <span class="ai-status-dot"></span>
               <span id="aiStatusText">En ligne — prêt à répondre</span>
@@ -1887,7 +1997,7 @@
     <button class="ai-reopen is-shown" id="aiReopen" type="button" aria-label="Ouvrir l'assistant">
       <span class="ai-reopen-dot"></span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-      <span>Yanis IA</span>
+      <span>Assistant Yanis</span>
     </button>
   </div>
 </body>

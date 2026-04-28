@@ -51,7 +51,7 @@
       ldStatus.textContent = 'Initialisation du portfolio...';
 
       /* — Progress bar — barre lente visible 0→100% */
-      const TOTAL = 1600;
+      const TOTAL = 1000;
       const TICK  = 20;
       let prog = 0;
       let pageLoaded = false;
@@ -73,7 +73,7 @@
         if (prog >= 100) {
           clearInterval(progIv);
           ldPct.textContent = '100%';
-          setTimeout(hideLoader, 300);
+          setTimeout(hideLoader, 180);
         }
       }, TICK);
 

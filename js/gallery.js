@@ -129,10 +129,10 @@
     });
 
     function openCvModal() {
-      if (window.innerWidth < 768) { window.open('docs/YD-CV-Alternance.pdf', '_blank'); return; }
+      if (window.innerWidth < 768) { window.open('docs/YD-CV%20%282%29.pdf', '_blank'); return; }
       const iframe = document.getElementById('cvModalIframe');
       if (!iframe.src.includes('.pdf')) {
-        iframe.src = 'docs/YD-CV-Alternance.pdf#toolbar=0&navpanes=0&view=Fit';
+        iframe.src = 'docs/YD-CV%20%282%29.pdf#toolbar=0&navpanes=0&view=Fit';
       }
       document.getElementById('cvModalOverlay').classList.add('open');
       document.body.style.overflow = 'hidden';

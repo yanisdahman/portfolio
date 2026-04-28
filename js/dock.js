@@ -10,33 +10,51 @@
     const PEAK  = 58;
     const RANGE = 140;
 
-    // K = stiffness/mass = 150/0.1 = 1500
-    // D = damping/mass   = 12/0.1  = 120
-    const K = 1500;
-    const D = 120;
+    const K = 700;
+    const D = 60;
 
     const springs = items.map(() => ({ cur: BASE, vel: 0 }));
 
     let mouseX     = Infinity;
     let isHovering = false;
     let lastTs     = 0;
+    let rafId      = null;
+
+    // Centres stockés en coordonnées RELATIVES au dock (pas viewport).
+    // Le dock est centré via translateX(-50%) : quand les icônes grossissent
+    // le conteneur se décale → les positions absolutes deviennent fausses → tremblement.
+    // En relatif, le décalage du dock s'annule automatiquement.
+    let iconCenters = new Array(items.length).fill(0);
+
+    function cacheIconCenters() {
+      const dockRect = dock.getBoundingClientRect();
+      iconWraps.forEach((wrap, i) => {
+        if (!wrap) return;
+        const rect = wrap.getBoundingClientRect();
+        iconCenters[i] = rect.left + rect.width / 2 - dockRect.left;
+      });
+    }
+
+    // Cache initial
+    cacheIconCenters();
 
     function targetFor(i) {
       if (!isHovering || mouseX === Infinity) return BASE;
-      const wrap = iconWraps[i];
-      if (!wrap) return BASE;
-      const rect   = wrap.getBoundingClientRect();
-      const center = rect.left + rect.width / 2;
-      const dist   = Math.abs(mouseX - center);
+      const dist = Math.abs(mouseX - iconCenters[i]);
       if (dist >= RANGE) return BASE;
       return BASE + (PEAK - BASE) * (1 - dist / RANGE);
     }
 
+    function isSettled() {
+      return springs.every(s => Math.abs(s.cur - BASE) < 0.15 && Math.abs(s.vel) < 0.15);
+    }
+
     function tick(ts) {
       if (!lastTs) lastTs = ts;
-      const dt = Math.min((ts - lastTs) * 0.001, 0.033);
+      const dt = Math.min((ts - lastTs) * 0.001, 0.016);
       lastTs = ts;
 
+      let needsUpdate = false;
       springs.forEach((s, i) => {
         const target = targetFor(i);
         const force  = (target - s.cur) * K - s.vel * D;
@@ -49,20 +67,40 @@
           iconWraps[i].style.width  = sz;
           iconWraps[i].style.height = sz;
         }
+        if (Math.abs(s.cur - BASE) > 0.15 || Math.abs(s.vel) > 0.15) needsUpdate = true;
       });
 
-      requestAnimationFrame(tick);
+      if (isHovering || needsUpdate) {
+        rafId = requestAnimationFrame(tick);
+      } else {
+        rafId = null;
+        lastTs = 0;
+      }
+    }
+
+    function startTick() {
+      if (!rafId) rafId = requestAnimationFrame(tick);
     }
 
     function resetSprings() {
       isHovering = false;
       mouseX = Infinity;
       springs.forEach(s => { s.cur = BASE; s.vel = 0; });
+      // NE PAS appeler cacheIconCenters() ici : le DOM montre encore les icônes
+      // grossies (tick n'a pas encore écrit les tailles BASE). Le cache serait stale.
     }
 
-    dock.addEventListener('mousemove', e => { mouseX = e.clientX; isHovering = true; });
+    dock.addEventListener('mouseenter', () => { cacheIconCenters(); startTick(); });
+    dock.addEventListener('mousemove',  e => {
+      const dockRect = dock.getBoundingClientRect();
+      mouseX = e.clientX - dockRect.left;
+      if (!isHovering) cacheIconCenters();
+      isHovering = true;
+      startTick();
+    });
     dock.addEventListener('mouseleave', resetSprings);
-    window.addEventListener('scroll', resetSprings, { passive: true });
+    window.addEventListener('scroll',  resetSprings, { passive: true });
+    window.addEventListener('resize',  cacheIconCenters, { passive: true });
 
     items.forEach(item => {
       item.addEventListener('click', () => {
@@ -132,5 +170,5 @@
     window.hideDock = () => { if (!dockHidden) _origHide(); };
     window.showDock = () => { if (!dockHidden) _origShow(); };
 
-    requestAnimationFrame(tick);
+    rafId = requestAnimationFrame(tick);
   })();
