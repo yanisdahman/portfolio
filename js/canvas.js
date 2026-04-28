@@ -2,7 +2,9 @@
   const container = document.getElementById('bg-particles');
   if (!container) return;
 
-  const COUNT    = 220;
+  const mem   = navigator.deviceMemory || 4;
+  const cores = navigator.hardwareConcurrency || 4;
+  const COUNT = (mem <= 2 || cores <= 2) ? 60 : (mem <= 4 || cores <= 4) ? 120 : 220;
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < COUNT; i++) {

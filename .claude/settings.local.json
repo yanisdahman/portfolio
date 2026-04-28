@@ -45,7 +45,29 @@
       "Bash(convert --version)",
       "Bash(netstat -ano)",
       "Bash(cp \"C:/Users/yanis/OneDrive/Bureau/logo/novarina.png\" \"C:/Users/yanis/OneDrive/Bureau/portfolio-yanis/logo/novarina.png\")",
-      "Bash(cp \"C:/Users/yanis/OneDrive/Bureau/logo/Prodhys.png\" \"C:/Users/yanis/OneDrive/Bureau/portfolio-yanis/logo/Prodhys.png\")"
+      "Bash(cp \"C:/Users/yanis/OneDrive/Bureau/logo/Prodhys.png\" \"C:/Users/yanis/OneDrive/Bureau/portfolio-yanis/logo/Prodhys.png\")",
+      "Bash(xargs wc *)",
+      "Bash(awk '{print $9, $5}')",
+      "WebFetch(domain:www.anssi.gouv.fr)",
+      "WebFetch(domain:www.lemagit.fr)",
+      "WebFetch(domain:thehackernews.com)",
+      "WebFetch(domain:www.zdnet.fr)",
+      "WebFetch(domain:blogs.cisco.com)",
+      "WebFetch(domain:www.bleepingcomputer.com)",
+      "WebFetch(domain:www.cnil.fr)",
+      "WebFetch(domain:aws.amazon.com)",
+      "WebFetch(domain:www.lemondeinformatique.fr)",
+      "WebFetch(domain:www.01net.com)",
+      "Bash(findstr \":80 \\\\|:3000\\\\|:5500\\\\|:8080\")",
+      "Bash(findstr \":5500\\\\|:5501\\\\|:3000\\\\|:8080\\\\|:8000\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(ls *.css *.js)",
+      "Bash(wc -l styles.css)",
+      "Bash(GIT_EDITOR=true git rebase --continue)",
+      "Bash(git stash *)",
+      "Bash(git rebase *)"
     ]
   }
 }

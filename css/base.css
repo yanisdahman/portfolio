@@ -41,6 +41,15 @@
       transition: background .45s var(--ease), color .45s var(--ease);
     }
     ::selection { background:var(--accent); color:#fff; }
+    /* Sections sombres : --accent est blanc → fond blanc sur fond blanc = invisible.
+       On surcharge avec un highlight semi-transparent lisible sur fond sombre. */
+    #apropos ::selection,
+    #certifications ::selection,
+    #documentation ::selection,
+    #tableau ::selection {
+      background: rgba(245,245,240,.28);
+      color: #F5F5F0;
+    }
     a { text-decoration:none; color:inherit; }
     img { display:block; max-width:100%; }
     ::-webkit-scrollbar { width:7px; }
