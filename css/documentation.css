@@ -473,6 +473,9 @@
     }
     .ap-who p:last-child { margin-bottom:0; }
     .ap-who strong { color:var(--text); font-weight:600; }
+    .ap-link { color:inherit; text-decoration:none; transition:color .18s; }
+    .ap-link:hover { color:var(--accent); }
+    .ap-list .ap-link { color:inherit; }
 
     /* Rangée bottom (2 cards) */
     .ap-bottom { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }

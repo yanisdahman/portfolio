@@ -235,7 +235,7 @@
           }, 400);
         });
       });
-    }, 300);
+    }, 330);
   }
 
   prevBtn.addEventListener('click', () => goTo((current - 1 + CERTIFS.length) % CERTIFS.length, 'prev'));

@@ -14,6 +14,7 @@ export default {
   'hero.role':         'BTS SIO SISR Student',
   'hero.btn.profile':  'Discover my profile <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
   'hero.btn.docs':     'My documents',
+  'hero.cv':           'View my CV',
   'hero.scroll':       'Scroll',
 
   /* ── ABOUT ── */
@@ -27,8 +28,8 @@ export default {
   'ap.stat4':      'Months of internship',
   'ap.cv':         'View my CV',
   'ap.who.title':  'Who am I?',
-  'ap.p1':         'I am deeply passionate about IT. Currently in <strong>BTS SIO option SISR</strong> at <strong>Lycée Gabriel Fauré — Annecy</strong>, I will continue my studies with a <strong>Bachelor ASRC at Lycée Saint-Michel — Annecy</strong>.',
-  'ap.p2':         'I consolidated my expertise through two internships — at <strong>Prodhys</strong> and <strong>Novarina</strong> — with the ambition of building <strong>robust and secure network infrastructures</strong>.',
+  'ap.p1':         'Currently in <strong>BTS SIO option SISR</strong> at <strong><a href="https://www.google.com/maps/search/Lycée+Gabriel+Fauré+Annecy" target="_blank" rel="noopener" class="ap-link">Lycée Gabriel Fauré — Annecy</a></strong>, I specialise in systems, network and cybersecurity administration. I will continue with a <strong><a href="#parcours" class="ap-link">Bachelor ASRC</a></strong> from September 2026.',
+  'ap.p2':         'My two internships — at <strong><a href="https://www.google.com/maps/search/Prodhys+Annecy" target="_blank" rel="noopener" class="ap-link">Prodhys</a></strong> and at <strong><a href="https://www.google.com/maps/search/Novarina+Thonon-Les-Bains" target="_blank" rel="noopener" class="ap-link">Novarina</a></strong> where I deployed <strong><a href="https://bitwarden.com" target="_blank" rel="noopener" class="ap-link">Bitwarden Enterprise</a></strong> independently — gave me real-world exposure to professional environments.',
   'ap.strengths':  'Strengths',
   'ap.interests':  'Interests',
   'ap.li.auto':    'Autonomy',
@@ -177,6 +178,8 @@ export default {
   'dg.report.desc':  'Second-year internship report at Novarina (Thonon-Les-Bains) — systems &amp; network administration, tasks and review.',
   'dg.liv.title':    'Deliverable — Novarina',
   'dg.liv.desc':     'Technical deliverable produced during the Novarina internship — Bitwarden Enterprise deployment.',
+  'dg.nagios.title': 'Nagios',
+  'dg.nagios.desc':  'Installation and configuration of Nagios for network monitoring — host and service supervision with real-time alerting.',
 
   /* ── VEILLE ── */
   'veille.eyebrow': 'Tech Watch',

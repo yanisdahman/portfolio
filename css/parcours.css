@@ -860,6 +860,7 @@
       overflow: visible;
       transition: transform .32s cubic-bezier(.4,0,.2,1), opacity .32s cubic-bezier(.4,0,.2,1);
       will-change: transform, opacity;
+      backface-visibility: hidden;
     }
     .certif-show-circle.cs-out-left {
       transform: translateX(-100px) scale(.85);
