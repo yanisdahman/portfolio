@@ -21,23 +21,13 @@
       imgBg: 'none'
     },
     {
-      img: 'img/EnglishForIT.png', alt: 'English for IT',
-      title: 'English for IT',
-      issuer: 'Cisco Networking Academy · avr. 2026',
-      issuer_en: 'Cisco Networking Academy · Apr. 2026',
-      desc: 'Certification en anglais technique pour l\'IT — vocabulaire professionnel, communication et terminologie des réseaux et de la cybersécurité.',
-      desc_en: 'Technical English certification for IT — professional vocabulary, communication and networking & cybersecurity terminology.',
-      link: 'https://www.credly.com/badges/333d8c11-5c17-4a01-869e-fb0e7d823fd2',
-      imgBg: 'none'
-    },
-    {
-      img: 'img/IntroductionToModernAI.png', alt: 'Introduction to Modern AI',
-      title: 'Introduction to Modern AI',
-      issuer: 'Cisco Networking Academy · nov. 2025',
-      issuer_en: 'Cisco Networking Academy · Nov. 2025',
-      desc: 'Fondamentaux de l\'intelligence artificielle moderne, machine learning et réseaux de neurones.',
-      desc_en: 'Fundamentals of modern artificial intelligence, machine learning and neural networks.',
-      link: 'https://www.credly.com/badges/35585322-858c-4cc6-bdf0-1aadeb6cd88f/linked_in_profile',
+      img: 'img/NetworkDefense.png', alt: 'Network Defense',
+      title: 'Network Defense',
+      issuer: 'Cisco Networking Academy · janv. 2026',
+      issuer_en: 'Cisco Networking Academy · Jan. 2026',
+      desc: 'Défense des infrastructures réseau, détection d\'intrusions, surveillance et réponse aux incidents.',
+      desc_en: 'Network infrastructure defense, intrusion detection, monitoring and incident response.',
+      link: 'https://www.credly.com/badges/de0a265f-71af-40af-b650-5cc5e428ec51/linked_in_profile',
       imgBg: 'none'
     },
     {
@@ -51,17 +41,17 @@
       imgBg: 'none'
     },
     {
-      img: 'img/NetworkDefense.png', alt: 'Network Defense',
-      title: 'Network Defense',
-      issuer: 'Cisco Networking Academy · janv. 2026',
-      issuer_en: 'Cisco Networking Academy · Jan. 2026',
-      desc: 'Défense des infrastructures réseau, détection d\'intrusions, surveillance et réponse aux incidents.',
-      desc_en: 'Network infrastructure defense, intrusion detection, monitoring and incident response.',
-      link: 'https://www.credly.com/badges/de0a265f-71af-40af-b650-5cc5e428ec51/linked_in_profile',
+      img: 'img/IntroductionToModernAI.png', alt: 'Introduction to Modern AI',
+      title: 'Introduction to Modern AI',
+      issuer: 'Cisco Networking Academy · nov. 2025',
+      issuer_en: 'Cisco Networking Academy · Nov. 2025',
+      desc: 'Fondamentaux de l\'intelligence artificielle moderne, machine learning et réseaux de neurones.',
+      desc_en: 'Fundamentals of modern artificial intelligence, machine learning and neural networks.',
+      link: 'https://www.credly.com/badges/35585322-858c-4cc6-bdf0-1aadeb6cd88f/linked_in_profile',
       imgBg: 'none'
     },
     {
-      img: 'img/IntroductionauxSciencesdeDonnées.png', alt: 'Introduction aux Sciences de Données',
+      img: 'img/IntroductionauxSciencesdeDonn%C3%A9es.png', alt: 'Introduction aux Sciences de Données',
       title: 'Introduction aux Sciences de Données',
       title_en: 'Introduction to Data Science',
       issuer: 'Cisco Networking Academy · avr. 2026',
@@ -69,6 +59,16 @@
       desc: 'Fondamentaux de la science des données — collecte, analyse et visualisation de données, introduction au machine learning et à l\'IA.',
       desc_en: 'Data science fundamentals — data collection, analysis and visualisation, introduction to machine learning and AI.',
       link: 'https://www.credly.com/badges/53d9ee79-bee8-475e-99da-92879bb482b9',
+      imgBg: 'none'
+    },
+    {
+      img: 'img/EnglishForIT.png', alt: 'English for IT',
+      title: 'English for IT',
+      issuer: 'Cisco Networking Academy · avr. 2026',
+      issuer_en: 'Cisco Networking Academy · Apr. 2026',
+      desc: 'Certification en anglais technique pour l\'IT — vocabulaire professionnel, communication et terminologie des réseaux et de la cybersécurité.',
+      desc_en: 'Technical English certification for IT — professional vocabulary, communication and networking & cybersecurity terminology.',
+      link: 'https://www.credly.com/badges/333d8c11-5c17-4a01-869e-fb0e7d823fd2',
       imgBg: 'none'
     },
     {
