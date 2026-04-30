@@ -41,12 +41,8 @@
     }
     .ln2 {
       font-size:clamp(2.4rem,6vw,3.6rem);
-      color:transparent;
-      -webkit-text-stroke:1.8px #1A1A1C;
-      clip-path:inset(0 100% 0 0);
-      animation:ld-reveal .75s cubic-bezier(0.22,1,0.36,1) .2s forwards;
+      color:#1A1A1C;
     }
-    @keyframes ld-reveal { to { clip-path:inset(0 0% 0 0); } }
 
     /* Glow halo */
     .loader-halo {
