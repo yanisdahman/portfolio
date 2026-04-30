@@ -61,6 +61,17 @@
       imgBg: 'none'
     },
     {
+      img: 'img/IntroductionauxSciencesdeDonnées.png', alt: 'Introduction aux Sciences de Données',
+      title: 'Introduction aux Sciences de Données',
+      title_en: 'Introduction to Data Science',
+      issuer: 'Cisco Networking Academy · avr. 2026',
+      issuer_en: 'Cisco Networking Academy · Apr. 2026',
+      desc: 'Fondamentaux de la science des données — collecte, analyse et visualisation de données, introduction au machine learning et à l\'IA.',
+      desc_en: 'Data science fundamentals — data collection, analysis and visualisation, introduction to machine learning and AI.',
+      link: 'https://www.credly.com/badges/53d9ee79-bee8-475e-99da-92879bb482b9',
+      imgBg: 'none'
+    },
+    {
       img: 'img/CertifMOOC.webp', alt: 'MOOC Cybersécurité ANSSI',
       title: 'MOOC Cybersécurité',
       title_en: 'Cybersecurity MOOC',
