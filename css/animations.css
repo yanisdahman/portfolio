@@ -91,9 +91,11 @@
       cursor: zoom-out;
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
+    }
+    #imgLightboxOverlay.open {
+      display: flex;
       animation: lb-fade-in .2s ease both;
     }
-    #imgLightboxOverlay.open { display: flex; }
     #imgLightboxImg {
       max-width: 90vw;
       max-height: 88vh;

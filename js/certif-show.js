@@ -278,16 +278,23 @@
   function openImgLightbox(src, alt) {
     const overlay = document.getElementById('imgLightboxOverlay');
     const img = document.getElementById('imgLightboxImg');
+    if (!overlay || !img) return;
     img.src = src;
     img.alt = alt || '';
-    overlay.classList.add('open');
+    overlay.style.display = 'flex';
+    requestAnimationFrame(() => overlay.classList.add('open'));
     document.body.style.overflow = 'hidden';
   }
   function closeImgLightbox() {
     const overlay = document.getElementById('imgLightboxOverlay');
+    if (!overlay) return;
     overlay.classList.remove('open');
+    overlay.style.display = 'none';
     document.body.style.overflow = '';
-    setTimeout(() => { document.getElementById('imgLightboxImg').src = ''; }, 250);
+    setTimeout(() => {
+      const img = document.getElementById('imgLightboxImg');
+      if (img) img.src = '';
+    }, 250);
   }
   window.closeImgLightbox = closeImgLightbox;
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeImgLightbox(); });
