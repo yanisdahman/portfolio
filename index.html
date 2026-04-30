@@ -2050,5 +2050,13 @@
       <span>Assistant Yanis</span>
     </button>
   </div>
+  <!-- ══ IMAGE LIGHTBOX (Certif Pix, MOOC) ══════════════════════════════ -->
+  <div id="imgLightboxOverlay" aria-modal="true" role="dialog" aria-label="Aperçu certification" onclick="closeImgLightbox()">
+    <button class="img-lb-close" onclick="closeImgLightbox()" aria-label="Fermer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img id="imgLightboxImg" src="" alt="" onclick="event.stopPropagation()">
+  </div>
+
 </body>
 </html>

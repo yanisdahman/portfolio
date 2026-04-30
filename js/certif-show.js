@@ -195,7 +195,13 @@
     issuer.textContent = (en && c.issuer_en) ? c.issuer_en : c.issuer;
     desc.textContent   = (en && c.desc_en)   ? c.desc_en   : c.desc;
 
-    if (c.link) {
+    const isImg = c.link && /\.(jpg|jpeg|png|webp|gif)$/i.test(c.link);
+    if (isImg) {
+      linkEl.href = '#';
+      linkEl.target = '';
+      linkEl.style.display = 'inline-flex';
+      linkEl.onclick = e => { e.preventDefault(); openImgLightbox(c.link, c.alt); };
+    } else if (c.link) {
       linkEl.href = c.link;
       linkEl.target = '_blank';
       linkEl.style.display = 'inline-flex';
@@ -268,6 +274,23 @@
       else        goTo((current - 1 + CERTIFS.length) % CERTIFS.length, 'prev');
     }
   }, { passive: true });
+
+  function openImgLightbox(src, alt) {
+    const overlay = document.getElementById('imgLightboxOverlay');
+    const img = document.getElementById('imgLightboxImg');
+    img.src = src;
+    img.alt = alt || '';
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImgLightbox() {
+    const overlay = document.getElementById('imgLightboxOverlay');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => { document.getElementById('imgLightboxImg').src = ''; }, 250);
+  }
+  window.closeImgLightbox = closeImgLightbox;
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeImgLightbox(); });
 
   applyContent(0);
   window.certifRefresh = () => applyContent(current);
