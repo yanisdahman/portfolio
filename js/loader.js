@@ -62,6 +62,7 @@
         clearTimeout(typeTm); clearTimeout(nextTm);
         clearInterval(progIv); cancelAnimationFrame(ldRaf);
         loader.classList.add('hidden');
+        document.body.classList.add('page-visible');
       }
 
       const progIv = setInterval(() => {
