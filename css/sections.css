@@ -70,8 +70,7 @@
     .chips { display:flex; flex-wrap:wrap; gap:.42rem; margin:1.8rem 0; }
 
     .chip {
-      display:inline-flex; align-items:center; gap:.3rem;
-      padding:.28rem .75rem;
+      display:inline-block; padding:.28rem .75rem;
       background:var(--accent-dim); border:1px solid var(--border);
       border-radius:var(--r-pill);
       font-size:.66rem; font-weight:600;
@@ -79,7 +78,6 @@
       transition:background .22s, border-color .22s;
     }
     .chip:hover { background:var(--accent-glow); border-color:var(--accent); }
-    .chip img { width:13px; height:13px; object-fit:contain; flex-shrink:0; }
 
     .about-stats {
       display:grid; grid-template-columns:repeat(3,1fr);
