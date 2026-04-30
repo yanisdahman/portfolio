@@ -1,9 +1,9 @@
 ﻿    /* â”€â”€ LOADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     #loader {
       position:fixed; inset:0; z-index:9999;
-      background:#F5F4F0;
+      background:#F5F5F0;
       display:flex; align-items:center; justify-content:center;
-      transition:opacity .9s cubic-bezier(0.22,1,0.36,1), visibility .9s;
+      transition:opacity .55s cubic-bezier(0.22,1,0.36,1), visibility .55s;
       overflow:hidden;
     }
     #loader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
@@ -95,21 +95,6 @@
       color:var(--accent); opacity:.75; min-width:2.8em; text-align:right;
     }
 
-
-    /* Fade-in du contenu page au démarrage */
-    body:not(.page-visible) #bg-particles,
-    body:not(.page-visible) #nav,
-    body:not(.page-visible) main,
-    body:not(.page-visible) footer {
-      opacity: 0;
-    }
-    body.page-visible #bg-particles,
-    body.page-visible #nav,
-    body.page-visible main,
-    body.page-visible footer {
-      opacity: 1;
-      transition: opacity .7s cubic-bezier(0.22,1,0.36,1);
-    }
 
     /* ── BACKGROUND PARTICLES ─────────────────────────────────────────── */
     #bg-particles {
