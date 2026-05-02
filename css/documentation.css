@@ -297,8 +297,10 @@
     /* Image cyber en fond du visuel */
     .veille-visual--live {
       background-image: url('../img/VeilleTechnoFluxRSS.jpg');
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
       background-position: center;
+      background-color: #0f172a;
     }
     .veille-visual--live::after {
       content:''; position:absolute; inset:0;
