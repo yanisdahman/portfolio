@@ -1,5 +1,5 @@
 (function () {
-  const FEEDS_URL = 'https://yanisdahman.github.io/veille-tech/data/feeds.json';
+  const FEEDS_URL = 'https://yanisdahman.fr/veille-tech/data/feeds.json';
 
   function relTime(iso) {
     const m = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
