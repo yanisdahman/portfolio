@@ -20,7 +20,6 @@
   async function load() {
     const grid    = document.getElementById('vliveArticles');
     const countEl = document.getElementById('vliveCount');
-    const visual  = document.querySelector('.veille-visual--live');
     if (!grid) return;
 
     try {
@@ -35,15 +34,6 @@
 
       const top4 = (data.articles || []).slice(0, 4);
       if (!top4.length) throw new Error();
-
-      /* Image de fond sur le visuel supérieur */
-      const featImg = top4.find(a => a.image);
-      if (featImg && visual) {
-        visual.style.backgroundImage  = `url('${esc(featImg.image)}')`;
-        visual.style.backgroundSize   = 'cover';
-        visual.style.backgroundPosition = 'center';
-        visual.classList.add('vlive-has-img');
-      }
 
       /* 4 articles avec miniature */
       grid.innerHTML = top4.map(a => `

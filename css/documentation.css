@@ -294,10 +294,20 @@
     .vlive-stat-sep { width:1px; height:18px; background:var(--border); }
     .veille-body--live { gap:.9rem; }
     .vlive-header { display:flex; flex-direction:column; gap:.35rem; }
-    /* Image de fond sur le visuel quand une image est disponible */
-    .veille-visual--live.vlive-has-img::before { opacity:.25; }
-    .veille-visual--live.vlive-has-img::after { background:linear-gradient(to bottom, rgba(0,0,0,.25) 0%, rgba(0,0,0,.55) 100%); opacity:1; }
-    .veille-visual--live.vlive-has-img .vlive-center { display:none; }
+    /* Image cyber en fond du visuel */
+    .veille-visual--live {
+      background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=80&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .veille-visual--live::after {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,.65) 100%);
+      z-index:0;
+    }
+    .veille-visual--live .vlive-center,
+    .veille-visual--live .vlive-stats,
+    .veille-visual--live .veille-type-badge { position:relative; z-index:1; }
 
     .vlive-articles { display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
     .vlive-article { display:flex; flex-direction:row; align-items:flex-start; gap:.6rem; padding:.6rem .75rem; background:var(--bg-card-2); border:1px solid var(--border-2); border-radius:8px; text-decoration:none; color:inherit; transition:border-color .2s, background .2s; overflow:hidden; }
