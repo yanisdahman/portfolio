@@ -35,18 +35,12 @@
       const top4 = (data.articles || []).slice(0, 4);
       if (!top4.length) throw new Error();
 
-      /* 4 articles avec miniature */
       grid.innerHTML = top4.map(a => `
         <a class="vlive-article" href="${esc(a.link)}" target="_blank" rel="noopener"
            onclick="event.stopPropagation()">
-          ${a.image
-            ? `<img class="vlive-art-img" src="${esc(a.image)}" alt="" loading="lazy" onerror="this.style.display='none'">`
-            : `<span class="vlive-art-noimg"></span>`}
-          <div class="vlive-art-text">
-            <span class="vlive-art-source">${esc(a.source)}</span>
-            <span class="vlive-art-title">${esc(a.title)}</span>
-            <span class="vlive-art-time">Il y a ${relTime(a.published)}</span>
-          </div>
+          <span class="vlive-art-source">${esc(a.source)}</span>
+          <span class="vlive-art-title">${esc(a.title)}</span>
+          <span class="vlive-art-time">Il y a ${relTime(a.published)}</span>
         </a>
       `).join('');
 
