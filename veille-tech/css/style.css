@@ -413,6 +413,30 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .li-cat-actu          { background: linear-gradient(135deg, var(--actu), var(--actu2)); }
 .li-cat-outils        { background: linear-gradient(135deg, var(--outils), var(--outils2)); }
 
+/* Miniature image list */
+.li-thumb-img { background: var(--border); }
+.li-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.li-init { position: relative; z-index: 1; }
+
+/* Image featured card */
+.fc-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.fc-has-img .fc-thumb::before { display: none; }
+.fc-has-img .fc-cat-badge,
+.fc-has-img .fc-source { z-index: 1; }
+
 .li-content { flex: 1; min-width: 0; }
 .li-top {
   display: flex;

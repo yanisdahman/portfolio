@@ -11,7 +11,6 @@ let allArticles = [];
 let activeCategory = 'all';
 let searchQuery = '';
 
-/* ── Utilities ─────────────────────────────────────────────────────── */
 function relTime(iso) {
   const m = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
   if (m < 1)  return "À l'instant";
@@ -35,7 +34,6 @@ function sourceInitial(source) {
   return source.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
 }
 
-/* ── Filtered list ─────────────────────────────────────────────────── */
 function getFiltered() {
   return allArticles.filter(a => {
     const catOk  = activeCategory === 'all' || a.category === activeCategory;
@@ -49,10 +47,14 @@ function getFiltered() {
 function renderFeatured(article, idx) {
   const cat   = article.category;
   const label = CAT_LABELS[cat] || cat;
+  const thumb = article.image
+    ? `<img src="${esc(article.image)}" alt="" class="fc-img" loading="lazy" onerror="this.style.display='none'">`
+    : '';
   return `
-    <div class="fc fc-cat-${esc(cat)}" style="animation-delay:${idx*60}ms"
+    <div class="fc fc-cat-${esc(cat)}${article.image ? ' fc-has-img' : ''}" style="animation-delay:${idx*60}ms"
          onclick="window.open('${esc(article.link)}','_blank','noopener')">
       <div class="fc-thumb">
+        ${thumb}
         <span class="fc-cat-badge">${esc(label)}</span>
         <span class="fc-source">${esc(article.source)}</span>
       </div>
@@ -77,10 +79,16 @@ function renderListItem(article, idx) {
   const cat   = article.category;
   const label = CAT_LABELS[cat] || cat;
   const init  = sourceInitial(article.source);
+  const thumb = article.image
+    ? `<img src="${esc(article.image)}" alt="" class="li-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+    : '';
   return `
     <div class="li-item" style="animation-delay:${idx*30}ms"
          onclick="window.open('${esc(article.link)}','_blank','noopener')">
-      <div class="li-thumb li-cat-${esc(cat)}">${init}</div>
+      <div class="li-thumb${article.image ? ' li-thumb-img' : ' li-cat-'+esc(cat)}">
+        ${thumb}
+        <span class="li-init"${article.image ? ' style="display:none"' : ''}>${init}</span>
+      </div>
       <div class="li-content">
         <div class="li-top">
           <span class="li-badge badge-${esc(cat)}">${esc(label)}</span>
@@ -103,8 +111,7 @@ function renderTopWidget(articles) {
   const top5 = articles.slice(0, 5);
   if (!top5.length) return '<p style="font-size:.75rem;color:#94a3b8">Aucun article disponible.</p>';
   return top5.map(a => `
-    <a class="wi-item" href="${esc(a.link)}" target="_blank" rel="noopener"
-       onclick="event.stopPropagation()">
+    <a class="wi-item" href="${esc(a.link)}" target="_blank" rel="noopener">
       <span class="wi-dot wi-dot-${esc(a.category)}"></span>
       <div class="wi-body">
         <span class="wi-source">${esc(a.source)}</span>
@@ -169,19 +176,16 @@ function render() {
   featuredGrid.innerHTML = featured.map((a,i) => renderFeatured(a, i)).join('');
 
   if (listItems.length) {
-    const label = activeCategory === 'all'
-      ? 'Derniers articles'
-      : CAT_LABELS[activeCategory] || 'Articles';
-    listLabel.textContent   = label;
-    listCount.textContent   = `${listItems.length} article${listItems.length > 1 ? 's' : ''}`;
-    listHeader.hidden       = false;
-    articleList.innerHTML   = listItems.map((a,i) => renderListItem(a,i)).join('');
+    const label = activeCategory === 'all' ? 'Derniers articles' : CAT_LABELS[activeCategory] || 'Articles';
+    listLabel.textContent = label;
+    listCount.textContent = `${listItems.length} article${listItems.length > 1 ? 's' : ''}`;
+    listHeader.hidden     = false;
+    articleList.innerHTML = listItems.map((a,i) => renderListItem(a,i)).join('');
   } else {
-    listHeader.hidden      = true;
-    articleList.innerHTML  = '';
+    listHeader.hidden     = true;
+    articleList.innerHTML = '';
   }
 
-  /* Cat rows click */
   document.querySelectorAll('.cat-row[data-filter]').forEach(row => {
     row.addEventListener('click', () => setCategory(row.dataset.filter));
   });
@@ -192,11 +196,9 @@ function renderSidebar(articles) {
   const topWidget     = document.getElementById('topWidget');
   const catsWidget    = document.getElementById('catsWidget');
   const sourcesWidget = document.getElementById('sourcesWidget');
-  const statCount     = document.getElementById('statCount');
 
-  if (statCount)     statCount.textContent = articles.length;
-  if (topWidget)     topWidget.innerHTML   = renderTopWidget(articles);
-  if (catsWidget)    catsWidget.innerHTML  = renderCatsWidget(articles);
+  if (topWidget)     topWidget.innerHTML     = renderTopWidget(articles);
+  if (catsWidget)    catsWidget.innerHTML    = renderCatsWidget(articles);
   if (sourcesWidget) sourcesWidget.innerHTML = renderSourcesWidget(articles);
 
   document.querySelectorAll('.cat-row[data-filter]').forEach(row => {
@@ -222,10 +224,10 @@ async function loadFeeds() {
     const data = await res.json();
     allArticles = data.articles || [];
 
-    const updated  = document.getElementById('statUpdated');
+    const updated   = document.getElementById('statUpdated');
     const navStatus = document.getElementById('navStatus');
-    const timeStr  = `Mise à jour il y a ${relTime(data.last_updated)}`;
-    if (updated)  updated.textContent  = timeStr;
+    const timeStr   = `Mise à jour il y a ${relTime(data.last_updated)}`;
+    if (updated)   updated.textContent   = timeStr;
     if (navStatus) navStatus.textContent = timeStr;
 
     if (loading) loading.hidden = true;

@@ -29,7 +29,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           <input type="text" id="searchInput" placeholder="Rechercher un article..." autocomplete="off" />
         </div>
-        <a class="hdr-btn" href="../#veille" target="_blank" rel="noopener">← Portfolio</a>
+        <a class="hdr-btn" onclick="history.length>1?history.back():window.location='../#veille'" style="cursor:pointer">← Portfolio</a>
       </div>
     </div>
   </header>
@@ -96,16 +96,12 @@
           </div>
           <div class="stat-grid">
             <div class="stat-box">
-              <span class="stat-n" id="statCount">—</span>
-              <span class="stat-l">articles</span>
-            </div>
-            <div class="stat-box">
               <span class="stat-n">6</span>
               <span class="stat-l">sources</span>
             </div>
             <div class="stat-box">
-              <span class="stat-n">6h</span>
-              <span class="stat-l">refresh</span>
+              <span class="stat-n">12:00</span>
+              <span class="stat-l">Quotidien</span>
             </div>
           </div>
         </div>
