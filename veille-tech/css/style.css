@@ -414,20 +414,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .li-cat-outils        { background: linear-gradient(135deg, var(--outils), var(--outils2)); }
 
 /* Logo source dans liste */
-.li-thumb-logo {
-  background: #fff;
-  border: 1px solid var(--border);
-  width: 64px;
-  height: 64px;
-  padding: 6px;
-}
-.li-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  position: relative;
-  z-index: 1;
-}
+.li-thumb-logo { background: #fff; width: 64px; height: 64px; padding: 5px; }
+.li-logo { width: 100%; height: 100%; object-fit: contain; position: relative; z-index: 1; }
 .li-init { position: relative; z-index: 1; }
 
 /* Image featured card */
@@ -442,6 +430,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .fc-has-img .fc-thumb::before { display: none; }
 .fc-has-img .fc-cat-badge { z-index: 1; }
 .fc-has-img .fc-source { display: none; }
+
+/* Logo centré sur dégradé quand pas d'image RSS */
+.fc-logo-fallback {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
 
 .li-content { flex: 1; min-width: 0; }
 .li-top {

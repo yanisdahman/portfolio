@@ -55,16 +55,22 @@ function getFiltered() {
 function renderFeatured(article, idx) {
   const cat   = article.category;
   const label = CAT_LABELS[cat] || cat;
-  const thumb = article.image
-    ? `<img src="${esc(article.image)}" alt="" class="fc-img" loading="lazy" onerror="this.style.display='none'">`
-    : '';
+  const logo  = SOURCE_LOGOS[article.source];
+
+  let thumbInner = '';
+  if (article.image) {
+    thumbInner = `<img src="${esc(article.image)}" alt="" class="fc-img" loading="lazy" onerror="this.remove()">`;
+  } else if (logo) {
+    thumbInner = `<img src="${esc(logo)}" alt="${esc(article.source)}" class="fc-logo-fallback" loading="lazy">`;
+  }
+
   return `
     <div class="fc fc-cat-${esc(cat)}${article.image ? ' fc-has-img' : ''}" style="animation-delay:${idx*60}ms"
          onclick="window.open('${esc(article.link)}','_blank','noopener')">
       <div class="fc-thumb">
-        ${thumb}
+        ${thumbInner}
         <span class="fc-cat-badge">${esc(label)}</span>
-        <span class="fc-source">${esc(article.source)}</span>
+        ${!article.image ? `<span class="fc-source">${esc(article.source)}</span>` : ''}
       </div>
       <div class="fc-body">
         <h2 class="fc-title">
