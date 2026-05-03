@@ -295,14 +295,8 @@
     .veille-body--live { gap:.9rem; }
     .vlive-header { display:flex; flex-direction:column; gap:.35rem; }
     /* Image dashboard live */
-    .veille-visual--live {
-      background-image: url('../img/veille-banner.webp');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #0f172a;
-      height: 280px;
-    }
+    .veille-visual--live { height:auto; background:none; overflow:hidden; }
+    .vlive-banner-img { width:100%; height:auto; display:block; }
     .veille-visual--live::after { display:none; }
 
     .vlive-articles { display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
