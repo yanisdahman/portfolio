@@ -75,7 +75,9 @@
       "PowerShell(Remove-Item *)",
       "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\"; git log --oneline 8030af2..HEAD 2>&1)",
       "Bash(identify \"/c/Users/yanis/OneDrive/Bureau/portfolio-yanis/img/Veilletechnofluxrss.webp\")",
-      "PowerShell(Move-Item *)"
+      "PowerShell(Move-Item *)",
+      "PowerShell(Invoke-WebRequest -Uri \"https://yanisdahman.fr/veille-tech/data/feeds.json\" -OutFile \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\\\\veille-tech\\\\data\\\\feeds.json\" 2>&1; $json = Get-Content \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\\\\veille-tech\\\\data\\\\feeds.json\" | ConvertFrom-Json; Write-Host \"OK — $\\($json.count\\) articles, mis a jour le $\\($json.last_updated\\)\")",
+      "PowerShell(Invoke-WebRequest -Uri \"https://yanisdahman.fr/veille-tech/scripts/fetch_feeds.php\" -UseBasicParsing | Select-Object -ExpandProperty Content)"
     ]
   }
 }
