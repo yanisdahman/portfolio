@@ -3,7 +3,7 @@
 html { font-size: 16px; scroll-behavior: smooth; }
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: #f1f5f9;
+  background: #F5F4F0;
   color: #0f172a;
   line-height: 1.6;
   min-height: 100vh;
@@ -18,7 +18,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   --hdr:       #0f172a;
   --hdr2:      #1e293b;
   --nav:       #1e293b;
-  --bg:        #f1f5f9;
+  --bg:        #F5F4F0;
   --card:      #ffffff;
   --text:      #0f172a;
   --text2:     #475569;
@@ -135,10 +135,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 6px 14px;
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 6px;
-  transition: color .2s, border-color .2s;
+  transition: color .2s, border-color .2s, background .2s;
   white-space: nowrap;
 }
 .hdr-btn:hover { color: #fff; border-color: rgba(255,255,255,.25); }
+.hdr-btn--primary {
+  background: #fff;
+  color: #0f172a;
+  border-color: #fff;
+  font-weight: 700;
+}
+.hdr-btn--primary:hover {
+  background: #F5F4F0;
+  color: #0f172a;
+  border-color: #F5F4F0;
+}
 
 /* ═══ CATEGORY NAV ══════════════════════════════════════════════════════ */
 .cat-nav {
@@ -507,7 +518,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--text2);
-  background: #f8fafc;
+  background: #EEECEA;
   border-bottom: 1px solid var(--border);
   padding: 10px 16px;
 }
@@ -528,7 +539,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 8px;
 }
 .stat-box {
-  background: #f8fafc;
+  background: #EEECEA;
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 10px 6px;
@@ -625,7 +636,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 9px 16px;
 }
 .cat-row:last-child { border-bottom: none; }
-.cat-row:hover { background: #f8fafc; }
+.cat-row:hover { background: #EEECEA; }
 .cat-row-left {
   display: flex;
   align-items: center;

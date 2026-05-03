@@ -1,7 +1,57 @@
 {
-  "last_updated": "2026-05-02T13:06:31.871868+00:00",
+  "last_updated": "2026-05-03T10:28:17.400936+00:00",
   "count": 50,
   "articles": [
+    {
+      "id": "2fefdfdf6af98ded59195c2496fa127a",
+      "title": "Ce jeu Steam flingue votre SSD en silence",
+      "link": "https://korben.info/ce-jeu-steam-flingue-votre-ssd-en-silence.html",
+      "summary": "108 Go par heure. C'est ce que Windrose, le RPG de pirates en Early Access publié par Kraken Express le 14 avril dernier, écrivait silencieusement sur les SSD des joueurs, sans aucune mention dans les notes de mise à ...",
+      "published": "2026-05-03T10:02:06+00:00",
+      "source": "Korben",
+      "category": "outils",
+      "image": "https://korben.info/ce-jeu-steam-flingue-votre-ssd-en-silence/ce-jeu-steam-flingue-votre-ssd-en-silence-1.jpg"
+    },
+    {
+      "id": "7a46a9461aa05c444167c151678a86da",
+      "title": "Un C-3PO grandeur nature transformé en assistant vocal qui répond pour de vrai",
+      "link": "https://korben.info/un-c-3po-grandeur-nature-transforme-en-assistant-vocal-qui-repond-pour-de-vrai.html",
+      "summary": "Un maker a transformé une réplique grandeur nature de C-3PO en assistant vocal interactif, et le résultat est franchement convaincant. Sa version du droïde papote, répond à vos questions, et tient même une conversatio...",
+      "published": "2026-05-03T08:20:45+00:00",
+      "source": "Korben",
+      "category": "outils",
+      "image": "https://korben.info/un-c-3po-grandeur-nature-transforme-en-assistant-vocal-qui-repond-pour-de-vrai/un-c-3po-grandeur-nature-transforme-en-assistant-vocal-qui-repond-pour-de-vrai-1.jpg"
+    },
+    {
+      "id": "d5189eecceaf333c7e00ef57c2008a61",
+      "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
+      "link": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a recently disclosed security flaw impacting various Linux distributions to its Known Exploited Vulnerabilities (KEV) catalog, citing ev...",
+      "published": "2026-05-03T06:26:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibNApjovicg4aFV0VPiue9cUMmH_D-GkLlWwgXunP_-fUi8cRWaNM6Kl2TV99eBRKKVdXNq-0iQ2EJLotLO_TAvIA3xW-mE-tS5BDHSKrUmTgGuGEbAp4ek6uFJk4yRTsgJu6LStR3BqJkIm4fyXgZiBKxNGI0YBLiiAneTRvem-Ydh3gbIVsz8O0VBUQy/s1600/linux-root.jpg"
+    },
+    {
+      "id": "5bd207c5b1271c89dabb4dcbbd188f34",
+      "title": "Critrical cPanel flaw mass-exploited in \"Sorry\" ransomware attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/critrical-cpanel-flaw-mass-exploited-in-sorry-ransomware-attacks/",
+      "summary": "A new disclosed cPanel flaw tracked as CVE-2026-41940 is being mass-exploited to breach websites and encrypt data in \"Sorry\" ransomware attacks. [...]",
+      "published": "2026-05-02T21:54:00+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
+    {
+      "id": "47dd4a419866e0a303f3c3f5ae3b9668",
+      "title": "ConsentFix v3 attacks target Azure with automated OAuth abuse",
+      "link": "https://www.bleepingcomputer.com/news/security/consentfix-v3-attacks-target-azure-with-automated-oauth-abuse/",
+      "summary": "A new attack type, dubbed ConsentFix v3, has been circulating on hacker forums, building on the previous technique by adding automation and scaling potential. [...]",
+      "published": "2026-05-02T14:32:25+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
     {
       "id": "1fe3dfb895e68d1a054c2d157780bf6a",
       "title": "Bruteforce de cartes bancaires",
@@ -203,16 +253,6 @@
       "image": "https://korben.info/hadopi-le-conseil-detat-eteint-la-riposte-graduee-apres-17-ans/hadopi-le-conseil-detat-eteint-la-riposte-graduee-apres-17-ans-1.jpg"
     },
     {
-      "id": "f26dfaa0c6e761b0362af6667fe7c06e",
-      "title": "US ransomware negotiators get 4 years in prison over BlackCat attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/us-ransomware-negotiators-get-4-years-in-prison-over-blackcat-attacks/",
-      "summary": "Two former employees of cybersecurity incident response companies Sygnia and DigitalMint were sentenced to four years in prison each for targeting U.S. companies in BlackCat (ALPHV) ransomware attacks. [...]",
-      "published": "2026-05-01T07:47:11+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
       "id": "b1ae3e623f45b3c8638685fb845dc62c",
       "title": "Tunarr - Recréer la télévision qu'on aime zapper dans Plex",
       "link": "https://korben.info/tunarr-chaines-tv-plex-jellyfin.html",
@@ -241,16 +281,6 @@
       "source": "Korben",
       "category": "outils",
       "image": "https://korben.info/kula-monitoring-linux-self-hosted/kula-monitoring-linux-self-hosted-1.png"
-    },
-    {
-      "id": "4b1d96b3ede8b7ea1d4aaf0ec893a139",
-      "title": "New Bluekit phishing service includes an AI assistant, 40 templates",
-      "link": "https://www.bleepingcomputer.com/news/security/new-bluekit-phishing-service-includes-an-ai-assistant-40-templates/",
-      "summary": "A new phishing kit named Bluekit offers more than 40 templates targeting popular services and includes basic AI features for generating campaign drafts. [...]",
-      "published": "2026-04-30T18:58:50+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
     },
     {
       "id": "cd2643a4ad5b1006b737d73c341afdbb",
@@ -293,26 +323,6 @@
       "image": ""
     },
     {
-      "id": "b3248d6727661a9127c5a368eeefca54",
-      "title": "Une appli Android scanne tous les Raspberry Pi de votre réseau",
-      "link": "https://korben.info/une-appli-android-scanne-tous-les-raspberry-pi-de-votre-reseau.html",
-      "summary": "Si vous avez plusieurs Raspberry Pi qui traînent chez vous, vous connaissez la galère du DHCP. Le routeur leur balance des IP différentes au gré des redémarrages, et impossible de savoir laquelle correspond à votre Pi...",
-      "published": "2026-04-30T15:29:23+00:00",
-      "source": "Korben",
-      "category": "outils",
-      "image": "https://korben.info/une-appli-android-scanne-tous-les-raspberry-pi-de-votre-reseau/une-appli-android-scanne-tous-les-raspberry-pi-de-votre-reseau-1.jpg"
-    },
-    {
-      "id": "bd8679ef41765360c87309e5dc7cfb1d",
-      "title": "Comment activer l'adblock natif de Firefox 149 ?",
-      "link": "https://korben.info/adblock-rust-manager.html",
-      "summary": "Vincent en avait parlé il y a peu : Firefox 149 embarque maintenant discrètement adblock-rust , le moteur Adblock de Brave, désactivé par défaut et contrôlé uniquement par deux prefs dans about:config. A l'origine, je...",
-      "published": "2026-04-30T13:55:13+00:00",
-      "source": "Korben",
-      "category": "outils",
-      "image": "https://korben.info/adblock-rust-manager/adblock-rust-manager-1.png"
-    },
-    {
       "id": "ed3a974471f02f1945ab6c21eeb6024a",
       "title": "ThreatsDay Bulletin: SMS Blaster Busts, OpenEMR Flaws, 600K Roblox Hacks and 25 More Stories",
       "link": "https://thehackernews.com/2026/04/threatsday-bulletin-sms-blaster-busts.html",
@@ -331,16 +341,6 @@
       "source": "IT-Connect",
       "category": "reseau",
       "image": ""
-    },
-    {
-      "id": "6fc014d0c93f3615e6a95db9a827d6f7",
-      "title": "New Python Backdoor Uses Tunneling Service to Steal Browser and Cloud Credentials",
-      "link": "https://thehackernews.com/2026/04/new-python-backdoor-uses-tunneling.html",
-      "summary": "Cybersecurity researchers have disclosed details of a stealthy Python-based backdoor framework called DEEP#DOOR that comes with capabilities to establish persistent access and harvest a wide range of sensitive informa...",
-      "published": "2026-04-30T12:36:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnv1KtLLlZSnm9a16bN-o_szrBiAIN_QljTfe09K4RzFxSqhFADtuXmRzOPZ_Poazif-VadFAnRnboCWX5yZtc5JntGopn5Fy6T1X2BexXelFOxYtEA7qULoTCkAMwEybLf42JJ_yGjSPf_T-tjYvbqxscVgZ6OyL65yKcTjC0KQL48pgYLZUmLjxfBBhd/s1600/malware-data.jpg"
     },
     {
       "id": "053856ee9c56cb0bd8fbce9e3dc2851f",
