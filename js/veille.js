@@ -1,5 +1,5 @@
 (function () {
-  const FEEDS_URL = 'https://yanisdahman.fr/veille-tech/data/feeds.json';
+  const FEEDS_URL = './veille-tech/data/feeds.json';
 
   const DEMO = [
     { source: 'The Hacker News', title: 'Vulnérabilité critique découverte dans OpenSSL 3.x', published: new Date(Date.now() - 3600000).toISOString(), link: '#' },

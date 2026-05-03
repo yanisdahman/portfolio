@@ -67,7 +67,15 @@
       "Bash(wc -l styles.css)",
       "Bash(GIT_EDITOR=true git rebase --continue)",
       "Bash(git stash *)",
-      "Bash(git rebase *)"
+      "Bash(git rebase *)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\"; Get-ChildItem .git\\\\rebase-merge -ErrorAction SilentlyContinue; Get-ChildItem .git\\\\rebase-apply -ErrorAction SilentlyContinue; git log --oneline -5 2>&1)",
+      "PowerShell(git add *)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\"; git diff HEAD -- index.html | Select-String \"vlive|veille-card--live|Dashboard Live\" | Select-Object -First 5 2>&1)",
+      "PowerShell(git *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\"; git log --oneline 8030af2..HEAD 2>&1)",
+      "Bash(identify \"/c/Users/yanis/OneDrive/Bureau/portfolio-yanis/img/Veilletechnofluxrss.webp\")",
+      "PowerShell(Move-Item *)"
     ]
   }
 }
