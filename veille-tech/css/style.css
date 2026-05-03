@@ -242,7 +242,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: transform .3s var(--ease), box-shadow .3s var(--ease);
   cursor: pointer;
 }
-.fc:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.fc:hover { box-shadow: var(--shadow-lg); }
 
 /* Colored thumb */
 .fc-thumb {
@@ -392,7 +392,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .li-item:hover {
   background: #fff;
   box-shadow: var(--shadow);
-  transform: translateX(3px);
 }
 .li-thumb {
   width: 46px;
