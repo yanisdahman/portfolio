@@ -239,7 +239,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow);
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+  transition: box-shadow .3s var(--ease);
   cursor: pointer;
 }
 .fc:hover { box-shadow: var(--shadow-lg); }
@@ -386,7 +386,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  transition: background .18s, box-shadow .18s, transform .2s var(--ease);
+  transition: background .18s, box-shadow .18s;
   cursor: pointer;
 }
 .li-item:hover {
