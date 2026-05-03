@@ -276,37 +276,80 @@
     }
     /* ── Veille — Dashboard Live card ──────────────────────────────── */
     .veille-card--live { grid-column:1/-1; cursor:pointer; }
-    .veille-badge-live { display:flex; align-items:center; gap:.5rem; }
-    .vlive-dot { width:7px; height:7px; background:#22C55E; border-radius:50%; animation:vlivepulse 2s infinite; }
-    @keyframes vlivepulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.45; transform:scale(.75); } }
-    .veille-visual--live { height:160px; }
-    .vlive-center { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; }
-    .vlive-ring { position:absolute; border-radius:50%; border:1px solid rgba(26,26,28,.09); pointer-events:none; animation:vring 3s ease-in-out infinite; }
-    .vlive-ring--1 { width:88px; height:88px; }
-    .vlive-ring--2 { width:130px; height:130px; animation-delay:.6s; }
-    @keyframes vring { 0%,100% { transform:scale(.96); opacity:.85; } 50% { transform:scale(1.04); opacity:.25; } }
-    .vlive-icon { width:56px; height:56px; background:var(--bg-card); border:1px solid var(--border); border-radius:14px; display:flex; align-items:center; justify-content:center; position:relative; z-index:1; box-shadow:0 4px 20px rgba(0,0,0,.10); transition:transform .38s var(--ease); }
-    .veille-card--live:hover .vlive-icon { transform:scale(1.1); }
-    .vlive-stats { position:absolute; bottom:.9rem; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:1rem; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-pill); padding:.4rem 1.1rem; box-shadow:var(--shadow); z-index:2; white-space:nowrap; }
-    .vlive-stat { display:flex; flex-direction:column; align-items:center; gap:.05rem; }
-    .vlive-stat-n { font-size:.76rem; font-weight:700; color:var(--text); font-family:'Oswald',sans-serif; }
-    .vlive-stat-l { font-size:.56rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--text-3); }
-    .vlive-stat-sep { width:1px; height:18px; background:var(--border); }
-    .veille-body--live { gap:.9rem; }
-    .vlive-header { display:flex; flex-direction:column; gap:.35rem; }
-    /* Image dashboard live */
-    .veille-visual--live { height:auto; background:none; overflow:hidden; }
-    .vlive-banner-img { width:100%; height:auto; display:block; }
-    .veille-visual--live::after { display:none; }
 
-    .vlive-articles { display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
-    .vlive-article { display:flex; flex-direction:column; gap:.28rem; padding:.65rem .85rem; background:var(--bg-card-2); border:1px solid var(--border-2); border-radius:8px; text-decoration:none; color:inherit; transition:border-color .2s, background .2s; overflow:hidden; }
-    .vlive-article:hover { border-color:var(--accent); background:var(--accent-dim); }
+    /* Image + overlay */
+    .veille-visual--live {
+      position:relative; height:auto;
+      background:none; overflow:hidden;
+    }
+    .vlive-banner-img { width:100%; height:auto; display:block; }
+    .veille-visual--live::after {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(to bottom, transparent 40%, rgba(0,0,0,.45) 100%);
+      pointer-events:none;
+    }
+
+    /* Badge "En direct" */
+    .vlive-overlay {
+      position:absolute; top:1rem; left:1.2rem; z-index:2;
+    }
+    .vlive-live-pill {
+      display:inline-flex; align-items:center; gap:.45rem;
+      background:rgba(0,0,0,.55); backdrop-filter:blur(6px);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:var(--r-pill);
+      padding:.3rem .75rem;
+      font-size:.65rem; font-weight:700;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:#fff;
+    }
+    .vlive-dot {
+      width:7px; height:7px; background:#22C55E;
+      border-radius:50%; flex-shrink:0;
+      animation:vlivepulse 2s infinite;
+    }
+    @keyframes vlivepulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.75)} }
+
+    /* Body */
+    .veille-body--live { gap:1rem; padding:1.6rem 2rem 2rem; }
+    .vlive-header { display:flex; flex-direction:column; gap:.3rem; }
+
+    /* Articles 2x2 */
+    .vlive-articles { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; }
+    .vlive-article {
+      display:flex; flex-direction:column; gap:.3rem;
+      padding:.65rem .85rem .65rem 1rem;
+      background:var(--bg-card-2);
+      border:1px solid var(--border-2);
+      border-left:3px solid var(--accent);
+      border-radius:8px;
+      text-decoration:none; color:inherit;
+      transition:border-color .2s, background .2s, transform .2s var(--ease);
+    }
+    .vlive-article:hover {
+      background:var(--accent-dim);
+      border-color:var(--accent);
+      border-left-color:var(--accent);
+      transform:translateX(3px);
+    }
     .vlive-art-source { font-size:.59rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--text-3); }
-    .vlive-art-title { font-size:.77rem; font-weight:500; line-height:1.42; color:var(--text); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .vlive-art-title { font-size:.77rem; font-weight:600; line-height:1.42; color:var(--text); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
     .vlive-art-time { font-size:.63rem; color:var(--text-3); }
-    .vlive-skeleton { height:68px; background:linear-gradient(90deg, var(--bg-card-2) 25%, var(--border-2) 50%, var(--bg-card-2) 75%); background-size:200% 100%; border-radius:8px; border:1px solid var(--border-2); animation:vskeletonwave 1.6s ease-in-out infinite; }
-    @keyframes vskeletonwave { 0% { background-position:200% 0; } 100% { background-position:-200% 0; } }
+
+    /* CTA pleine largeur */
+    .veille-body--live .veille-cta {
+      width:100%; justify-content:center;
+      padding:.85rem 1.5rem;
+      font-size:.75rem;
+    }
+    .veille-card--live:hover .veille-cta {
+      background:var(--accent-glow); border-color:var(--border);
+      box-shadow:0 4px 14px rgba(0,0,0,.08); gap:.85rem;
+    }
+
+    /* Skeleton */
+    .vlive-skeleton { height:72px; background:linear-gradient(90deg, var(--bg-card-2) 25%, var(--border-2) 50%, var(--bg-card-2) 75%); background-size:200% 100%; border-radius:8px; border:1px solid var(--border-2); animation:vskeletonwave 1.6s ease-in-out infinite; }
+    @keyframes vskeletonwave { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
     @media (max-width:768px) { .veille-grid { grid-template-columns:1fr; } }
 
