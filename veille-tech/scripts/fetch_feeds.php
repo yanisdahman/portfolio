@@ -13,16 +13,20 @@ $FEEDS = [
 $MAX_PER_FEED = 10;
 
 function fetchUrl(string $url, int $timeout = 12): ?string {
-    $ctx = stream_context_create([
-        'http' => [
-            'timeout'         => $timeout,
-            'user_agent'      => 'Mozilla/5.0 (compatible; VeilleTechBot/1.0)',
-            'follow_location' => true,
-        ],
-        'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT        => $timeout,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_MAXREDIRS      => 5,
+        CURLOPT_USERAGENT      => 'Mozilla/5.0 (compatible; VeilleTechBot/1.0)',
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_SSL_VERIFYHOST => false,
+        CURLOPT_ENCODING       => 'gzip, deflate',
     ]);
-    $data = @file_get_contents($url, false, $ctx);
-    return $data ?: null;
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return ($data && strlen($data) > 0) ? $data : null;
 }
 
 function clean(string $s): string {
