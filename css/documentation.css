@@ -296,11 +296,12 @@
     .vlive-header { display:flex; flex-direction:column; gap:.35rem; }
     /* Image cyber en fond du visuel */
     .veille-visual--live {
-      background-image: url('../img/VeilleTechnoFluxRSS.jpg');
-      background-size: contain;
+      background-image: url('../img/Veilletechnofluxrss.webp');
+      background-size: cover;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center center;
       background-color: #0f172a;
+      height: 200px;
     }
     .veille-visual--live::after {
       content:''; position:absolute; inset:0;
