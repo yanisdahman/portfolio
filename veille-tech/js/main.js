@@ -184,7 +184,9 @@ function render() {
   }
 
   emptyState.hidden = true;
-  featuredGrid.innerHTML = featured.map((a,i) => renderFeatured(a, i)).join('');
+  const withImg = filtered.filter(a => a.image);
+  const featured2 = withImg.slice(0, 2);
+  featuredGrid.innerHTML = featured2.map((a,i) => renderFeatured(a, i)).join('');
 
   if (listItems.length) {
     const label = activeCategory === 'all' ? 'Derniers articles' : CAT_LABELS[activeCategory] || 'Articles';
