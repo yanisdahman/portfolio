@@ -12,10 +12,10 @@ $FEEDS = [
 
 $MAX_PER_FEED = 10;
 
-function fetchUrl(string $url): ?string {
+function fetchUrl(string $url, int $timeout = 12): ?string {
     $ctx = stream_context_create([
         'http' => [
-            'timeout'         => 12,
+            'timeout'         => $timeout,
             'user_agent'      => 'Mozilla/5.0 (compatible; VeilleTechBot/1.0)',
             'follow_location' => true,
         ],
@@ -35,6 +35,45 @@ function parseDate(string $d): string {
     if (!$d) return date('c');
     $ts = strtotime($d);
     return $ts ? date('c', $ts) : date('c');
+}
+
+function extractRssImage(SimpleXMLElement $item): string {
+    $media = $item->children('media', true);
+    if ($media && isset($media->content)) {
+        $a = $media->content->attributes();
+        if (!empty($a['url'])) return (string)$a['url'];
+    }
+    if ($media && isset($media->thumbnail)) {
+        $a = $media->thumbnail->attributes();
+        if (!empty($a['url'])) return (string)$a['url'];
+    }
+    if (isset($item->enclosure)) {
+        $a = $item->enclosure->attributes();
+        if (!empty($a['url']) && strpos((string)($a['type'] ?? ''), 'image') !== false) {
+            return (string)$a['url'];
+        }
+    }
+    $html = '';
+    $content = $item->children('content', true);
+    if ($content && isset($content->encoded)) {
+        $html = (string)$content->encoded;
+    } elseif (isset($item->description)) {
+        $html = (string)$item->description;
+    }
+    if ($html && preg_match('/<img[^>]+src=["\']([^"\']+)["\']/', $html, $m)) {
+        return $m[1];
+    }
+    return '';
+}
+
+function fetchOGImage(string $url): string {
+    $html = fetchUrl($url, 5);
+    if (!$html) return '';
+    if (preg_match('/<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']/', $html, $m)) return $m[1];
+    if (preg_match('/<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']/', $html, $m)) return $m[1];
+    if (preg_match('/<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']/', $html, $m)) return $m[1];
+    if (preg_match('/<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']/', $html, $m)) return $m[1];
+    return '';
 }
 
 $articles = [];
@@ -59,10 +98,7 @@ foreach ($FEEDS as $feed) {
             $link = '';
             foreach ($item->link as $l) {
                 $a = $l->attributes();
-                if (!$a['rel'] || (string)$a['rel'] === 'alternate') {
-                    $link = (string)$a['href'];
-                    break;
-                }
+                if (!$a['rel'] || (string)$a['rel'] === 'alternate') { $link = (string)$a['href']; break; }
             }
             $title   = clean((string)($item->title   ?? ''));
             $summary = clean((string)($item->summary  ?? $item->content ?? ''));
@@ -81,6 +117,13 @@ foreach ($FEEDS as $feed) {
 
         if (strlen($summary) > 220) $summary = substr($summary, 0, 217) . '...';
 
+        $image = extractRssImage($item);
+
+        if (!$image && $link) {
+            $image = fetchOGImage($link);
+            if ($image) echo "  OG: " . substr($title, 0, 60) . "\n";
+        }
+
         $articles[] = [
             'id'        => $id,
             'title'     => $title,
@@ -89,7 +132,7 @@ foreach ($FEEDS as $feed) {
             'published' => parseDate($date),
             'source'    => $feed['source'],
             'category'  => $feed['category'],
-            'image'     => '',
+            'image'     => $image,
         ];
         $count++;
     }
