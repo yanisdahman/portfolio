@@ -239,10 +239,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow);
-  transition: border-color .2s, opacity .2s;
+  outline: 2px solid transparent;
+  transition: outline-color .2s;
   cursor: pointer;
 }
-.fc:hover { border-color: rgba(0,0,0,.18); opacity: .92; }
+.fc:hover { outline-color: rgba(0,0,0,.12); }
 
 /* Colored thumb */
 .fc-thumb {
@@ -386,13 +387,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  transition: border-color .18s, opacity .18s;
+  outline: 2px solid transparent;
+  transition: outline-color .18s;
   cursor: pointer;
 }
-.li-item:hover {
-  border-color: rgba(0,0,0,.18);
-  opacity: .88;
-}
+.li-item:hover { outline-color: rgba(0,0,0,.10); }
 .li-thumb {
   width: 46px;
   height: 60px;
