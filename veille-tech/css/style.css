@@ -413,14 +413,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .li-cat-actu          { background: linear-gradient(135deg, var(--actu), var(--actu2)); }
 .li-cat-outils        { background: linear-gradient(135deg, var(--outils), var(--outils2)); }
 
-/* Miniature image list */
-.li-thumb-img { background: var(--border); }
-.li-img {
+/* Logo source dans liste */
+.li-thumb-logo { background: #fff; border: 1px solid var(--border); }
+.li-logo {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  inset: 7px;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  object-fit: contain;
 }
 .li-init { position: relative; z-index: 1; }
 
@@ -434,8 +434,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 0;
 }
 .fc-has-img .fc-thumb::before { display: none; }
-.fc-has-img .fc-cat-badge,
-.fc-has-img .fc-source { z-index: 1; }
+.fc-has-img .fc-cat-badge { z-index: 1; }
+.fc-has-img .fc-source { display: none; }
 
 .li-content { flex: 1; min-width: 0; }
 .li-top {

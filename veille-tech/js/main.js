@@ -7,6 +7,14 @@ const CAT_LABELS = {
   outils:        'Outils',
 };
 
+const SOURCE_LOGOS = {
+  'CERT-FR':           '../logo/Cert-fr.png',
+  'The Hacker News':   '../logo/thehackernews_logo.jpg',
+  'Bleeping Computer': '../logo/BleepingComputer.jpg',
+  'Korben':            '../logo/Korben.avif',
+  'IT-Connect':        '../logo/Itconnect.jpg',
+};
+
 let allArticles = [];
 let activeCategory = 'all';
 let searchQuery = '';
@@ -79,15 +87,16 @@ function renderListItem(article, idx) {
   const cat   = article.category;
   const label = CAT_LABELS[cat] || cat;
   const init  = sourceInitial(article.source);
-  const thumb = article.image
-    ? `<img src="${esc(article.image)}" alt="" class="li-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-    : '';
+  const logo  = SOURCE_LOGOS[article.source];
+  const thumbContent = logo
+    ? `<img src="${esc(logo)}" alt="${esc(article.source)}" class="li-logo" loading="lazy">`
+    : `<span class="li-init">${init}</span>`;
+  const thumbClass = logo ? 'li-thumb li-thumb-logo' : `li-thumb li-cat-${esc(cat)}`;
   return `
     <div class="li-item" style="animation-delay:${idx*30}ms"
          onclick="window.open('${esc(article.link)}','_blank','noopener')">
-      <div class="li-thumb${article.image ? ' li-thumb-img' : ' li-cat-'+esc(cat)}">
-        ${thumb}
-        <span class="li-init"${article.image ? ' style="display:none"' : ''}>${init}</span>
+      <div class="${thumbClass}">
+        ${thumbContent}
       </div>
       <div class="li-content">
         <div class="li-top">
