@@ -181,11 +181,9 @@
       border-radius:var(--r); overflow:hidden;
       display:flex; flex-direction:column;
       text-decoration:none; color:inherit;
-      transition:transform .38s var(--ease), box-shadow .38s var(--ease), border-color .28s;
+      transition:border-color .28s;
     }
     .veille-card:hover {
-      transform:translateY(-10px);
-      box-shadow:var(--shadow), var(--shadow-glow);
       border-color:var(--accent);
     }
 
