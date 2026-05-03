@@ -239,10 +239,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow);
-  transition: box-shadow .3s var(--ease);
+  transition: border-color .2s, opacity .2s;
   cursor: pointer;
 }
-.fc:hover { box-shadow: var(--shadow-lg); }
+.fc:hover { border-color: rgba(0,0,0,.18); opacity: .92; }
 
 /* Colored thumb */
 .fc-thumb {
@@ -386,12 +386,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  transition: background .18s, box-shadow .18s;
+  transition: border-color .18s, opacity .18s;
   cursor: pointer;
 }
 .li-item:hover {
-  background: #fff;
-  box-shadow: var(--shadow);
+  border-color: rgba(0,0,0,.18);
+  opacity: .88;
 }
 .li-thumb {
   width: 46px;
