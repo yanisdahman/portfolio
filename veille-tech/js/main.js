@@ -57,20 +57,16 @@ function renderFeatured(article, idx) {
   const label = CAT_LABELS[cat] || cat;
   const logo  = SOURCE_LOGOS[article.source];
 
-  let thumbInner = '';
-  if (article.image) {
-    thumbInner = `<img src="${esc(article.image)}" alt="" class="fc-img" loading="lazy" onerror="this.remove()">`;
-  } else if (logo) {
-    thumbInner = `<img src="${esc(logo)}" alt="${esc(article.source)}" class="fc-logo-fallback" loading="lazy">`;
-  }
+  const imgTag = article.image
+    ? `<img src="${esc(article.image)}" alt="" class="fc-img" loading="lazy" onerror="this.remove()">`
+    : '';
 
   return `
     <div class="fc fc-cat-${esc(cat)}${article.image ? ' fc-has-img' : ''}" style="animation-delay:${idx*60}ms"
          onclick="window.open('${esc(article.link)}','_blank','noopener')">
       <div class="fc-thumb">
-        ${thumbInner}
+        ${imgTag}
         <span class="fc-cat-badge">${esc(label)}</span>
-        ${!article.image ? `<span class="fc-source">${esc(article.source)}</span>` : ''}
       </div>
       <div class="fc-body">
         <h2 class="fc-title">

@@ -431,18 +431,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .fc-has-img .fc-cat-badge { z-index: 1; }
 .fc-has-img .fc-source { display: none; }
 
-/* Logo centré sur dégradé quand pas d'image RSS */
-.fc-logo-fallback {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  background: #fff;
-  border-radius: 12px;
-  padding: 8px;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 4px 20px rgba(0,0,0,.15);
-}
 
 .li-content { flex: 1; min-width: 0; }
 .li-top {
