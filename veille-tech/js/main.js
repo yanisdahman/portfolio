@@ -250,7 +250,11 @@ async function loadFeeds() {
 
   } catch (err) {
     if (loading) {
-      loading.innerHTML = `<p style="color:#ef4444;font-size:.85rem">Erreur de chargement — vérifiez que feeds.json est à jour.</p>`;
+      loading.innerHTML = `
+        <div style="text-align:center;padding:2rem 1rem">
+          <p style="color:#94a3b8;font-size:.85rem;margin:0 0 .75rem">Les actualités sont temporairement indisponibles.</p>
+          <button onclick="loadFeeds()" style="background:#1e293b;color:#94a3b8;border:1px solid #334155;border-radius:6px;padding:.4rem .9rem;font-size:.78rem;cursor:pointer">Réessayer</button>
+        </div>`;
     }
     console.error(err);
   }

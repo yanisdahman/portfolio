@@ -28,8 +28,15 @@
     if (lang === 'fr') {
       resetFr();
     } else {
-      const mod = await import('./lang/en.js');
-      applyTranslations(mod.default);
+      try {
+        const mod = await import('./lang/en.js');
+        applyTranslations(mod.default);
+      } catch {
+        current = 'fr';
+        window.i18nLang = 'fr';
+        localStorage.setItem('lang', 'fr');
+        return;
+      }
     }
     document.documentElement.lang = lang;
     const label = document.getElementById('langCurrent');
