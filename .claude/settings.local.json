@@ -77,7 +77,15 @@
       "Bash(identify \"/c/Users/yanis/OneDrive/Bureau/portfolio-yanis/img/Veilletechnofluxrss.webp\")",
       "PowerShell(Move-Item *)",
       "PowerShell(Invoke-WebRequest -Uri \"https://yanisdahman.fr/veille-tech/data/feeds.json\" -OutFile \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\\\\veille-tech\\\\data\\\\feeds.json\" 2>&1; $json = Get-Content \"C:\\\\Users\\\\yanis\\\\OneDrive\\\\Bureau\\\\portfolio-yanis\\\\veille-tech\\\\data\\\\feeds.json\" | ConvertFrom-Json; Write-Host \"OK — $\\($json.count\\) articles, mis a jour le $\\($json.last_updated\\)\")",
-      "PowerShell(Invoke-WebRequest -Uri \"https://yanisdahman.fr/veille-tech/scripts/fetch_feeds.php\" -UseBasicParsing | Select-Object -ExpandProperty Content)"
+      "PowerShell(Invoke-WebRequest -Uri \"https://yanisdahman.fr/veille-tech/scripts/fetch_feeds.php\" -UseBasicParsing | Select-Object -ExpandProperty Content)",
+      "Bash(cat .gitignore)",
+      "Bash(find . -name \".nojekyll\")",
+      "Bash(find . -name \"CNAME\")",
+      "Bash(cat .git/rebase-merge/head-name)",
+      "Bash(cat .git/rebase-apply/head-name)",
+      "Bash(git show *)",
+      "Bash(rm -rf .git/rebase-merge)",
+      "Bash(rm -f .git/REBASE_HEAD)"
     ]
   }
 }
