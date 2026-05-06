@@ -7,6 +7,8 @@ import re
 import time
 import socket
 from datetime import datetime, timezone
+from urllib.request import urlopen, Request
+from urllib.parse import urlparse, urljoin
 
 # Timeout réseau global (secondes)
 socket.setdefaulttimeout(15)
@@ -20,10 +22,12 @@ FEEDS = [
     {"url": "https://www.lemagit.fr/rss/actualites",        "source": "LeMagIT",          "category": "actu"},
 ]
 
-MAX_PER_FEED = 10
-# Délais entre chaque tentative (secondes) — 5 tentatives au total
-RETRY_DELAYS = [0, 15, 45, 90, 180]
+MAX_PER_FEED  = 10
+RETRY_DELAYS  = [0, 15, 45, 90, 180]
+USER_AGENT    = "Mozilla/5.0 (compatible; RSSBot/2.0; +https://yanisdahman.fr)"
 
+
+# ── Helpers ──────────────────────────────────────────────────────────────────
 
 def clean_html(text):
     if not text:
@@ -62,41 +66,111 @@ def get_image(entry):
     return ""
 
 
-def fetch_feed(feed_cfg):
-    """Récupère un flux RSS avec retry automatique jusqu'à obtenir des entrées."""
-    source = feed_cfg["source"]
-    url    = feed_cfg["url"]
+def base_url(url):
+    p = urlparse(url)
+    return f"{p.scheme}://{p.netloc}"
 
-    for attempt, delay in enumerate(RETRY_DELAYS, start=1):
-        if delay > 0:
-            print(f"  [{source}] Tentative {attempt}/{len(RETRY_DELAYS)} dans {delay}s...")
-            time.sleep(delay)
-        else:
-            print(f"  [{source}] Tentative {attempt}/{len(RETRY_DELAYS)}...")
 
-        try:
-            feed = feedparser.parse(url)
-        except Exception as e:
-            print(f"  [{source}] Erreur parse : {e}")
-            continue
+# ── Auto-discovery ────────────────────────────────────────────────────────────
 
-        # Succès : le flux a renvoyé des entrées
-        if feed.entries:
-            status = getattr(feed, "status", "?")
-            print(f"  [{source}] OK (HTTP {status}, {len(feed.entries)} entrées)")
-            return feed
+def autodiscover(feed_url):
+    """
+    Cherche l'URL du flux RSS/Atom sur la homepage du site.
+    Retourne la nouvelle URL ou None si introuvable.
+    """
+    home = base_url(feed_url)
+    print(f"    Auto-discovery sur {home} ...")
+    try:
+        req = Request(home, headers={"User-Agent": USER_AGENT})
+        with urlopen(req, timeout=10) as resp:
+            content = resp.read().decode("utf-8", errors="ignore")
+    except Exception as e:
+        print(f"    Auto-discovery : impossible de charger {home} ({e})")
+        return None
 
-        # Échec détecté : status HTTP ou flux vide
-        status  = getattr(feed, "status", None)
-        bozo_ex = getattr(feed, "bozo_exception", None)
-        reason  = f"HTTP {status}" if status else str(bozo_ex) if bozo_ex else "flux vide"
-        print(f"  [{source}] Échec : {reason}")
+    # Patterns RSS et Atom, attributs dans les deux ordres possibles
+    patterns = [
+        r'<link[^>]+type=["\']application/rss\+xml["\'][^>]*href=["\']([^"\']+)["\']',
+        r'<link[^>]+href=["\']([^"\']+)["\'][^>]*type=["\']application/rss\+xml["\']',
+        r'<link[^>]+type=["\']application/atom\+xml["\'][^>]*href=["\']([^"\']+)["\']',
+        r'<link[^>]+href=["\']([^"\']+)["\'][^>]*type=["\']application/atom\+xml["\']',
+    ]
+    for pattern in patterns:
+        m = re.search(pattern, content, re.IGNORECASE)
+        if m:
+            discovered = urljoin(home, m.group(1))
+            print(f"    Auto-discovery : nouvelle URL trouvée → {discovered}")
+            return discovered
 
-    print(f"  [{source}] ABANDON après {len(RETRY_DELAYS)} tentatives.")
+    print(f"    Auto-discovery : aucun flux trouvé sur {home}")
     return None
 
 
-# ── Collecte ────────────────────────────────────────────────────────────────
+# ── Fetch avec retry ──────────────────────────────────────────────────────────
+
+def try_url(url, source, label=""):
+    """Tente de récupérer un flux avec retry. Retourne le feed ou None."""
+    tag = f"[{source}]{' ' + label if label else ''}"
+    for attempt, delay in enumerate(RETRY_DELAYS, start=1):
+        if delay > 0:
+            print(f"  {tag} Tentative {attempt}/{len(RETRY_DELAYS)} dans {delay}s...")
+            time.sleep(delay)
+        else:
+            print(f"  {tag} Tentative {attempt}/{len(RETRY_DELAYS)}...")
+
+        try:
+            feed = feedparser.parse(url, agent=USER_AGENT)
+        except Exception as e:
+            print(f"  {tag} Erreur parse : {e}")
+            continue
+
+        if feed.entries:
+            status = getattr(feed, "status", "?")
+            print(f"  {tag} OK (HTTP {status}, {len(feed.entries)} entrées)")
+            return feed
+
+        status  = getattr(feed, "status", None)
+        bozo_ex = getattr(feed, "bozo_exception", None)
+        reason  = f"HTTP {status}" if status else str(bozo_ex) if bozo_ex else "flux vide"
+        print(f"  {tag} Échec : {reason}")
+
+    return None
+
+
+def fetch_feed(feed_cfg):
+    """
+    1. Essaie l'URL principale avec retry.
+    2. Si échec → auto-discovery sur la homepage.
+    3. Si une nouvelle URL est trouvée → réessaie avec retry.
+    """
+    source = feed_cfg["source"]
+    url    = feed_cfg["url"]
+
+    # Étape 1 — URL principale
+    feed = try_url(url, source)
+    if feed:
+        return feed
+
+    print(f"  [{source}] URL principale épuisée — tentative auto-discovery...")
+
+    # Étape 2 — Auto-discovery
+    discovered = autodiscover(url)
+    if not discovered or discovered == url:
+        print(f"  [{source}] ABANDON — aucune alternative trouvée.")
+        return None
+
+    # Étape 3 — Nouvelle URL découverte
+    feed = try_url(discovered, source, label="(découverte)")
+    if feed:
+        print(f"  [{source}] Succès via auto-discovery !")
+        return feed
+
+    print(f"  [{source}] ABANDON — URL découverte aussi en échec.")
+    return None
+
+
+# ── Collecte ──────────────────────────────────────────────────────────────────
+
 articles = []
 seen     = set()
 failed   = []
@@ -136,13 +210,14 @@ for feed_cfg in FEEDS:
 
     print(f"  [{feed_cfg['source']}] {count} articles retenus")
 
-# ── Résumé ──────────────────────────────────────────────────────────────────
+# ── Résumé ────────────────────────────────────────────────────────────────────
+
 print(f"\n{'='*50}")
 print(f"Résultat : {len(articles)} articles — {len(FEEDS) - len(failed)}/{len(FEEDS)} flux OK")
 if failed:
     print(f"Flux en échec : {', '.join(failed)}")
 
-# Échec total : on garde l'ancien feeds.json intact plutôt que d'écraser avec 0 articles
+# Échec total : on ne touche pas au feeds.json existant
 if not articles:
     print("ERREUR CRITIQUE : aucun article récupéré. feeds.json non modifié.")
     raise SystemExit(1)
