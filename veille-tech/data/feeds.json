@@ -1,12 +1,322 @@
 {
-  "last_updated": "2026-05-11T13:54:45.421637+00:00",
+  "last_updated": "2026-05-12T13:11:14.111767+00:00",
   "count": 50,
   "articles": [
+    {
+      "id": "47a569615bad53fea218b9dd2e077f1f",
+      "title": "Nouveautés Intune : SSO pour Linux, meilleur inventaire des applis sur Windows, etc…",
+      "link": "https://www.it-connect.fr/microsoft-intune-les-nouveautes-avril-2026/",
+      "summary": "Parmi les nouveautés d'avril 2026 pour Intune : l'amélioration de l'inventaire d'applis Windows, l'authentification unique (SSO) pour Linux, mais pas seulement. Le post Nouveautés Intune : SSO pour Linux, meilleur inv...",
+      "published": "2026-05-12T13:01:02+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "7713ad0b4e94e31678e4302409352975",
+      "title": "Webinar: What the Riskiest SOC Alerts Go Unanswered - and How Radiant Security Can Help",
+      "link": "https://thehackernews.com/2026/05/webinar-what-riskiest-soc-alerts-go.html",
+      "summary": "Why do the Riskiest SOC Alerts Go Unanswered? Security operations teams are drowning in alerts. But the real problem isn't always alert volume; it's the blind spots. The most dangerous alerts are the ones no one is in...",
+      "published": "2026-05-12T11:58:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjA12ieHY1fiDaLvgyhGriQgzyEXJlSwwkQvcJXqP10JFEOcbwVa_EZD9H26tzLJovmlGHDHLL37-0H4y3ePSn5qDwRu6-X6I2StjAFHkiZ4_mgZOnjiKHdg2KId0sJ5OuxxWGeL7ULdNA3X_PTGcdv8_QJ4KS9RCtN-Oe3nLiOLWFwbDB46beV8jRaKG4/s1600/Radiant-webinar.jpg"
+    },
+    {
+      "id": "a64d643b4e48f2c6b730b70c8e27e3d6",
+      "title": "Mini Shai-Hulud Worm Compromises TanStack, Mistral AI, Guardrails AI & More Packages",
+      "link": "https://thehackernews.com/2026/05/mini-shai-hulud-worm-compromises.html",
+      "summary": "TeamPCP, the threat actor behind the recent supply chain attack spree, has been linked to the compromise of the npm and PyPI packages from TanStack, UiPath, Mistral AI, OpenSearch, and Guardrails AI as part of a fresh...",
+      "published": "2026-05-12T11:46:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXIhs2kZt0YGdDcd-Io67mq1GIN_iI_71LYhuin4qqmlgUgCuZ3fGUvglg_5nh5DK8kfPP8RHki86yMyqh4rTE27PGgPBh4RQjkh91-QGoB8cav5NUsYAwcV3ZJ7aEf-uEoH3pLGQ2eWuCh8lZSWAlTIa2U5I6eeB3HZmYMn4q-YoV7Ytmkpr1tN0lC2rG/s1600/mistral.jpg"
+    },
+    {
+      "id": "5184302d4838c8840e6d7e4bdadf6d47",
+      "title": "Shai Hulud attack ships signed malicious TanStack, Mistral npm packages",
+      "link": "https://www.bleepingcomputer.com/news/security/shai-hulud-attack-ships-signed-malicious-tanstack-mistral-npm-packages/",
+      "summary": "Hundreds of packages across npm and PyPI have been compromised in a new Shai-Hulud supply-chain campaign delivering credential-stealing malware targeting developers. [...]",
+      "published": "2026-05-12T11:29:36+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
+    {
+      "id": "efef087f281513fe30e6fa2f9c370b03",
+      "title": "SAP fixes critical vulnerabilities in Commerce Cloud and S/4HANA",
+      "link": "https://www.bleepingcomputer.com/news/security/sap-fixes-critical-vulnerabilities-in-commerce-cloud-and-s-4hana/",
+      "summary": "SAP has released the May 2026 security updates addressing 15 vulnerabilities across multiple products, including two critical flaws in the Commerce Cloud enterprise-grade e-commerce platform and the S/4HANA ERP suite....",
+      "published": "2026-05-12T11:04:55+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
+    {
+      "id": "11f380113636a764307aaedfada2b6fb",
+      "title": "Why Agentic AI Is Security's Next Blind Spot",
+      "link": "https://thehackernews.com/2026/05/why-agentic-ai-is-securitys-next-blind.html",
+      "summary": "Agentic AI is already running in production environments across many organizations today. It is executing tasks, consuming data, and taking actions — most likely without meaningful involvement from the security team. ...",
+      "published": "2026-05-12T10:30:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzo1TUnQJpFnJbrO50dvjG14LDr2L6gKHsIIr5P73rSCgksrt2B9eVmRGKxPVvJ1qVMF63ka4So6vj5ln9T1nBIt2MV2DcH_dnYyQp1RREL4nbtnPghY7q5SAwZCwv0bN1ZV58DyTZSLw3UN00nP7uUcX_3ZqFQmAjufAvNRFshC5AJCuMdHb2n9kzC3w/s1600/ai-agents.jpg"
+    },
+    {
+      "id": "752a0619eff193a4324929bb7be948ac",
+      "title": "Plus de confort de lecture sur Korben",
+      "link": "https://korben.info/accessibilite-confort-lecture-dyslexie.html",
+      "summary": "Je viens de pousser en prod une fonctionnalité sur laquelle je bosse depuis quelques temps et comme je suis content du résultat, c'est le moment de partager ça avec vous. En haut à gauche du site, juste à côté de l'ic...",
+      "published": "2026-05-12T10:14:45+00:00",
+      "source": "Korben",
+      "category": "outils",
+      "image": "https://korben.info/accessibilite-confort-lecture-dyslexie/accessibilite-confort-lecture-dyslexie-1.png"
+    },
+    {
+      "id": "e1c5c64c31cb341c9282eb6e4f2cf207",
+      "title": "Instructure reaches 'agreement' with ShinyHunters to stop data leak",
+      "link": "https://www.bleepingcomputer.com/news/security/instructure-reaches-agreement-with-shinyhunters-to-stop-data-leak/",
+      "summary": "Instructure, the edtech giant behind the widely popular Canvas learning management system (LMS), has reached an \"agreement\" with the ShinyHunters extortion group to prevent the data stolen in a recent breach from bein...",
+      "published": "2026-05-12T09:23:56+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
+    {
+      "id": "e001878a3abc8cdd7fbe526afbd90459",
+      "title": "Termix - L'alternative open source et gratuite à Termius",
+      "link": "https://korben.info/termix-lalternative-open-source-et-gratuite-a-termius.html",
+      "summary": "Si vous cherchez une alternative à Termius qui ne vous coûte pas une petite couille, je crois que j'ai trouvé ce qu'il vous faut ! C'est vrai qu'il y a quelque chose de carrément agréable à pouvoir ouvrir un navigateu...",
+      "published": "2026-05-12T08:24:28+00:00",
+      "source": "Korben",
+      "category": "outils",
+      "image": "https://korben.info/termix-lalternative-open-source-et-gratuite-a-termius/termix-lalternative-open-source-et-gratuite-a-termius-1.png"
+    },
+    {
+      "id": "c3306e513aa05956a1098606889d0ce4",
+      "title": "Des faux installateurs Claude Code se baladent dans Google",
+      "link": "https://korben.info/des-faux-installateurs-claude-code-se-baladent-dans-google.html",
+      "summary": "Des faux installateurs Claude Code se baladent dans Google Les chercheurs d'Ontinue, une boîte de cybersécurité, ont publié une analyse d'une campagne de vol de données qui vise directement les développeurs. La méthod...",
+      "published": "2026-05-12T08:09:20+00:00",
+      "source": "Korben",
+      "category": "outils",
+      "image": "https://korben.info/des-faux-installateurs-claude-code-se-baladent-dans-google/des-faux-installateurs-claude-code-se-baladent-dans-google-1.jpg"
+    },
+    {
+      "id": "20924558339855ca932aeebbe022a5d1",
+      "title": "Taggez vos photos avec de l'IA en local",
+      "link": "https://korben.info/photo-folder-tagger.html",
+      "summary": "Tagger des milliers de photos à la main, c'est le genre de corvée qu'on remet tous à plus tard depuis des années. Mais c'était sans compter sur photo-folder-tagger de Laurent Voillot qui règle ça grâce à 6 modes IA sp...",
+      "published": "2026-05-12T08:08:19+00:00",
+      "source": "Korben",
+      "category": "outils",
+      "image": "https://korben.info/photo-folder-tagger/photo-folder-tagger-1.png"
+    },
+    {
+      "id": "bb38ccf8b8fd6aad9637f0deec536df4",
+      "title": "pstop - Le vrai htop natif pour Windows",
+      "link": "https://korben.info/pstop-le-vrai-htop-natif-pour-windows.html",
+      "summary": "Y'a des gens trop habitués à Linux, qui tapent htop par réflexe alors que sous Windows, la commande ne fait rien. Pour que ça fonctionne, faut installer WSL, configurer un sous-système Linux entier, et tout ça juste p...",
+      "published": "2026-05-12T07:49:36+00:00",
+      "source": "Korben",
+      "category": "outils",
+      "image": "https://korben.info/pstop-le-vrai-htop-natif-pour-windows/pstop-le-vrai-htop-natif-pour-windows-1.png"
+    },
+    {
+      "id": "4495079a3c02a8e4f04a6c9112b1ed73",
+      "title": "Instructure Reaches Ransom Agreement with ShinyHunters to Stop 3.65TB Canvas Leak",
+      "link": "https://thehackernews.com/2026/05/instructure-reaches-ransom-agreement.html",
+      "summary": "American educational technology company Instructure, the parent company of Canvas, said it reached an \"agreement\" with a decentralized cybercrime extortion group after it breached its network and threatened to leak st...",
+      "published": "2026-05-12T07:37:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq_FVhPeK2Y77CmHxc0azDelzWwpgSb4m8GZPLeJlsr2QvCZU5ChGQK37bJ_2XsGQRaNszalreV1iNyYDzeLt1I8iqafNTvFCPFQ0czKwX3Q6Q23TqdavunyJJsy6X8vxG_jSz__X5BnFZc4AIIqr-kd0XiNcYgx3UnYaahiViFKAywuQ98a7bbtCPnwgo/s1600/ransom-breach.jpg"
+    },
+    {
+      "id": "795a6f483b5a593cad022b24d4e0bfbe",
+      "title": "CopyFail, Dirty Frag : un mainteneur propose d’ajouter un kill switch à Linux",
+      "link": "https://www.it-connect.fr/copyfail-dirty-frag-un-mainteneur-propose-dajouter-un-kill-switch-a-linux/",
+      "summary": "Un kill switch dans le noyau Linux pourrait désactiver des fonctions vulnérables, renforçant la sécurité en attendant un correctif pour une faille de sécurité. Le post CopyFail, Dirty Frag : un mainteneur propose d’aj...",
+      "published": "2026-05-12T07:19:09+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "e9c44cd7fa42234aafe7525e3bc0b383",
+      "title": "OpenAI Launches Daybreak for AI-Powered Vulnerability Detection and Patch Validation",
+      "link": "https://thehackernews.com/2026/05/openai-launches-daybreak-for-ai-powered.html",
+      "summary": "OpenAI has launched Daybreak, a new cybersecurity initiative that brings together frontier artificial intelligence (AI) model capabilities and Codex Security to help organizations identify and patch vulnerabilities be...",
+      "published": "2026-05-12T06:55:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLWuBkkGzJLNmcxzqkKdh6dI6X-juFjpMWr-k6VGVTL6G1XZUH1sna06RS5PQY0e4A1VpUjvR-dpWMCx0yQJBdjFyjnoyOek-ysMpU7cgWBkUHChyADdRozT1XHNIvUhU_ibCkggQaGESD7St4aCfyx4SWOfLjUSuoeWiJQmmb1EkimfKA27g_tVHdV-G-/s1600/openai-daybreak.jpg"
+    },
+    {
+      "id": "0001dd8d3e30d8bb2d25c8c753c51fd8",
+      "title": "Mozilla Firefox : 423 failles de sécurité corrigées en avril 2026, merci l’IA !",
+      "link": "https://www.it-connect.fr/mozilla-firefox-423-failles-de-securite-corrigees-en-avril-2026-merci-lia/",
+      "summary": "423 failles de sécurité ont été corrigées dans le navigateur web Mozilla Firefox en avril 2026, grâce à l'utilisation de l'IA, notamment Claude Mythos. Le post Mozilla Firefox : 423 failles de sécurité corrigées en av...",
+      "published": "2026-05-12T06:22:53+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "8023e3cb58da547645184efbe626f3f4",
+      "title": "iOS 26.5 Brings Default End-to-End Encrypted RCS Messaging Between iPhone and Android",
+      "link": "https://thehackernews.com/2026/05/ios-265-brings-default-end-to-end.html",
+      "summary": "Apple on Monday officially released iOS 26.5 with support for end-to-end encryption (E2EE) to Rich Communication Services (RCS) in beta as part of a \"cross-industry effort\" to replace traditional SMS with a more secur...",
+      "published": "2026-05-12T05:18:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8hWB1CFFk1cxzc9VF7NI2QB-oCzrDMhxoIeajumiDRPkGyEt1wzhH3A3awM8uAZlRb2OXf33nd2O4Ug_IwHlCRNED92zQwFnDvyi9ypYQgQ8gRLCzkA6pHfJ2rfKfl-mTo5ha7KH2Jnwp9S6qIYx_6H4DnUSvVGM6k-yZfPQtKkO0pcGdhC4yVwI8-NEk/s1600/e2ee-rcs.jpg"
+    },
+    {
+      "id": "0b2035be4858967fe4301a2df95b6b18",
+      "title": "macOS 27 menace les Time Capsule d’Apple, mais TimeCapsuleSMB est là pour les sauver !",
+      "link": "https://www.it-connect.fr/macos-27-menace-les-time-capsule-timecapsulesmb-est-la-pour-les-sauver/",
+      "summary": "macOS 27 sonne la fin de l'AFP, menaçant vos Apple Time Capsules. Découvrez TimeCapsuleSMB, le projet open source qui va sauver vos boîtiers de sauvegardes. Le post macOS 27 menace les Time Capsule d’Apple, mais TimeC...",
+      "published": "2026-05-12T04:55:52+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "99d6da537ade4ebb1af843d1295ac359",
+      "title": "GM agrees to $12.75M California settlement over sale of drivers’ data",
+      "link": "https://www.bleepingcomputer.com/news/legal/gm-agrees-to-1275m-california-settlement-over-sale-of-drivers-data/",
+      "summary": "California Attorney General Rob Bonta announced a proposed $12.75 million settlement agreement with General Motors (GM) over allegations that the company violated the California Consumer Privacy Act (CCPA). [...]",
+      "published": "2026-05-11T22:40:34+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
+    {
+      "id": "71694a1c429e388c5facbfda21ed5eac",
+      "title": "Official CheckMarx Jenkins package compromised with infostealer",
+      "link": "https://www.bleepingcomputer.com/news/security/official-checkmarx-jenkins-package-compromised-with-infostealer/",
+      "summary": "Checkmarx warned over the weekend that a rogue version of its Jenkins Application Security Testing (AST) plugin had been published on the Jenkins Marketplace. [...]",
+      "published": "2026-05-11T22:03:06+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
+    {
+      "id": "5544b541a4a24180baca73aee629217f",
+      "title": "New GhostLock tool abuses Windows API to block file access",
+      "link": "https://www.bleepingcomputer.com/news/security/new-ghostlock-tool-abuses-windows-api-to-block-file-access/",
+      "summary": "A security researcher has released a proof-of-concept tool named GhostLock that demonstrates how a legitimate Windows file API can be abused in attacks to block access to files stored locally or on SMB network shares....",
+      "published": "2026-05-11T22:02:00+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
+    {
+      "id": "f5ce0745ea1e86fa8e3dc4b2d9bccb34",
+      "title": "Google Chrome 148 : cette version historique corrige 127 vulnérabilités",
+      "link": "https://www.it-connect.fr/google-chrome-148-cette-version-historique-corrige-127-vulnerabilites/",
+      "summary": "Google a publié Chrome 148, la nouvelle version stable de son navigateur web, et elle a une particularité : elle permet de corriger 127 failles de sécurité. Le post Google Chrome 148 : cette version historique corrige...",
+      "published": "2026-05-11T21:00:00+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "7a40a8bd8a4bcbbf8de901e43fa0d3ce",
+      "title": "ClaudeBleed : la faille dans l’extension Chrome d’Anthropic qui menace vos données",
+      "link": "https://www.it-connect.fr/claudebleed-la-faille-dans-extension-chrome-anthropic-qui-menace-vos-donnees/",
+      "summary": "ClaudeBleed, c'est le nom d'une faille critique découverte dans l'extension \"Claude in Chrome\" d'Anthropic. Quels sont les risques ? Voici l'essentiel à savoir. Le post ClaudeBleed : la faille dans l’extension Chrome ...",
+      "published": "2026-05-11T18:54:41+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "6a3c9c72e133ee978e02b4b255f8dee4",
+      "title": "TeamPCP Compromises Checkmarx Jenkins AST Plugin Weeks After KICS Supply Chain Attack",
+      "link": "https://thehackernews.com/2026/05/teampcp-compromises-checkmarx-jenkins.html",
+      "summary": "Checkmarx has confirmed that a modified version of the Jenkins AST plugin was published to the Jenkins Marketplace. \"If you are using Checkmarx Jenkins AST plugin, you need to ensure that you are using the version 2.0...",
+      "published": "2026-05-11T18:30:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq0A3_8O89uC968dpFnFxE4v3J4fpr5nEqC-2QiSJ_rtZlgPocPYIaowCvCMeONhcrFiaoSdBVeNsuTa2ipAZZ3HBMUDcfO8DZ06pughteYJItHhMLeBr_jnfLL-5WX6xBE_EjIfPDGjCYyDCa6aImjimPNl7FtM1evdnTUVEk54x9pczRaFlmEZy1Cv8B/s1600/Jenkins.jpg"
+    },
+    {
+      "id": "d5bf3a7d9f74496a5c7d092aec428d77",
+      "title": "cPanel CVE-2026-41940 Under Active Exploitation to Deploy Filemanager Backdoor",
+      "link": "https://thehackernews.com/2026/05/cpanel-cve-2026-41940-under-active.html",
+      "summary": "A threat actor named Mr_Rot13 has been attributed to the exploitation of a recently disclosed critical cPanel flaw to deploy a backdoor codenamed Filemanager on compromised environments. The attack exploits CVE-2026-4...",
+      "published": "2026-05-11T17:54:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgInpdPoL0Kf1i9D6daAAGB1QPCR3E0d_ArELz-ks1Y6cJ_low0jdZYqamKMKMxC12OC-XMwUrDIWdh_xK_d7zLLQfH-rDl0-Vi_VSsFswAuJL0mEtQg-FW66c_1it8d59p2An-T3_oQJ_Q_yHLiX0PHtEq2OdLcGXwxniVKGJGLusWdjJfP7M-H9ADm8cK/s1600/cpcp.jpg"
+    },
+    {
+      "id": "dd7420a20c789b02c836416913256103",
+      "title": "Vente flash chez GoDeal24 : Windows 11 à partir de 12.25€",
+      "link": "https://www.it-connect.fr/bon-plan-les-licences-office-2021-et-windows-11-en-promotion/",
+      "summary": "Notre partenaire GoDeal24 propose une nouvelle salve de promotions sur les licences de produits Microsoft (Windows, Office, etc.) et d'autres logiciels. Le post Vente flash chez GoDeal24 : Windows 11 à partir de 12.25...",
+      "published": "2026-05-11T17:00:00+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "07fffeeac4f742d1b463798edc6d8202",
+      "title": "Le site officiel de JDownloader compromis pour diffuser un malware sur Windows et Linux",
+      "link": "https://www.it-connect.fr/le-site-officiel-de-jdownloader-compromis-pour-diffuser-un-malware-sur-windows-et-linux/",
+      "summary": "JDownloader a été victime d'une cyberattaque : les pirates sont parvenus à modifier les liens de téléchargements pour pointer vers des versions infectées. Le post Le site officiel de JDownloader compromis pour diffuse...",
+      "published": "2026-05-11T16:40:23+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "9400fdba24456e92b1cb8a2da242f2cf",
+      "title": "Migration sur-place vers Windows Server 2025 via Windows Update : comment faire ?",
+      "link": "https://www.it-connect.fr/migration-sur-place-vers-windows-server-2025-via-windows-update-comment-faire/",
+      "summary": "Ce tutoriel explique comment migrer de Windows Server 2022 (ou 2019) vers Windows Server 2025 en effectuant la mise à niveau via Windows Update. Le post Migration sur-place vers Windows Server 2025 via Windows Update ...",
+      "published": "2026-05-11T16:00:00+00:00",
+      "source": "IT-Connect",
+      "category": "reseau",
+      "image": ""
+    },
+    {
+      "id": "abd9bac425bf8c85803f1c9e9cd64e38",
+      "title": "Hackers Used AI to Develop First Known Zero-Day 2FA Bypass for Mass Exploitation",
+      "link": "https://thehackernews.com/2026/05/hackers-used-ai-to-develop-first-known.html",
+      "summary": "Google on Monday disclosed that it identified an unknown threat actor using a zero-day exploit that it said was likely developed with an artificial intelligence (AI) system, marking the first time the technology has b...",
+      "published": "2026-05-11T15:45:00+00:00",
+      "source": "The Hacker News",
+      "category": "cybersecurite",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgF329-zAoI4gwIW3h3gRYiDJjcRSyWPM4DLHFQwNNGfLTVaROqIfQZ0QB1FwWGmvMGuyNAF9Q6QBYcwLsqMsCka5Lqu82CzUbrBULnUDQwtY_4z6KiOEKSETes6as77XfUCaJVBUOCovZz8jajp6vBp9AAjHiS7BEviANEH0FxmzZwdrTapD3R-gPQWKJ1/s1600/ai-hacker.jpg"
+    },
+    {
+      "id": "a352b15a3de37e0ce330bc6369bd6596",
+      "title": "Instructure confirms hackers used Canvas flaw to deface portals",
+      "link": "https://www.bleepingcomputer.com/news/security/instructure-confirms-hackers-used-canvas-flaw-to-deface-portals/",
+      "summary": "Education technology giant Instructure has confirmed that a security vulnerability allowed hackers to modify Canvas login portals and leave an extortion message. [...]",
+      "published": "2026-05-11T15:26:26+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
+    {
+      "id": "c2c7b7164ccb85b6c601cda83f7d9278",
+      "title": "Why Changing Passwords Doesn’t End an Active Directory Breach",
+      "link": "https://www.bleepingcomputer.com/news/security/why-changing-passwords-doesnt-end-an-active-directory-breach/",
+      "summary": "Resetting a password doesn't always remove attackers from Active Directory. Specops Software explains how cached credentials and Kerberos tickets can keep attackers authenticated after a reset. [...]",
+      "published": "2026-05-11T13:53:56+00:00",
+      "source": "Bleeping Computer",
+      "category": "cybersecurite",
+      "image": ""
+    },
     {
       "id": "154750fe64e2af120f43744993985bab",
       "title": "Robots chiens Unitree - La backdoor que personne ne corrige",
       "link": "https://korben.info/unitree-robots-chiens-backdoor.html",
-      "summary": "Si vous croisez un robot-chien Unitree dans un hall d'HLM, sur un parking, un chantier, ou en train de patrouiller dansv otre ville, faut que vous sachiez 2 trucs quand même : Un, n'importe qui peut le rooter en moins...",
+      "summary": "Si vous croisez un robot-chien Unitree dans un hall d'HLM, sur un parking, un chantier, ou en train de patrouiller dans votre ville, faut que vous sachiez 2 trucs quand même : Un, n'importe qui peut le rooter en moins...",
       "published": "2026-05-11T13:40:38+00:00",
       "source": "Korben",
       "category": "outils",
@@ -63,16 +373,6 @@
       "image": "https://korben.info/myaudi-app-failles-securite/myaudi-app-failles-securite-1.png"
     },
     {
-      "id": "c999b276e295c3530e656239061e3cd2",
-      "title": "Your Purple Team Isn't Purple — It's Just Red and Blue in the Same Room",
-      "link": "https://thehackernews.com/2026/05/your-purple-team-isnt-purple-its-just.html",
-      "summary": "Defending a network at 2 am looks a lot like this: an analyst copy-pasting a hash from a PDF into a SIEM query. A red team script is being rewritten by hand so the blue team can use it. A patch waiting on a change-app...",
-      "published": "2026-05-11T11:30:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0dlupn761jekig7BbPagwo6DtccMFQV8oESHiCBIs04DdhvoVtfwhe7OVEh8VvyFpa-VFo9GKWL8tx2ZKTSn3qA7iAFCvTfoevjyPFYNb3eAmpp4pkWk3mcQd_AulszHJoxUa6z_k_Nr_KB9Ny_hoZWy1VVA-U9BV2nPvESGGqPE5r4_AbNlid_BK-M8/s1600/picus.jpg"
-    },
-    {
       "id": "32133bfe65b48b3532bcc81f21ff208f",
       "title": "JDownloader a diffusé des versions piégées, votre PC est peut-être compromis",
       "link": "https://korben.info/jdownloader-a-diffuse-des-versions-piegees-votre-pc-est-peut-etre-compromis.html",
@@ -93,311 +393,11 @@
       "image": "https://korben.info/dusk-port-natif-zelda-twilight-princess/dusk-port-natif-zelda-twilight-princess-1.jpeg"
     },
     {
-      "id": "be0d5fa266263d348b1cffdc4e7bbfb7",
-      "title": "TrickMo Android banker adopts TON blockchain for covert comms",
-      "link": "https://www.bleepingcomputer.com/news/security/trickmo-android-banker-adopts-ton-blockchain-for-covert-comms/",
-      "summary": "A new variant of the TrickMo Android banking malware, delivered in campaigns targeting users across Europe, introduces new commands and uses The Open Network (TON) for stealthy command-and-control communications. [...]",
-      "published": "2026-05-11T09:03:02+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
-      "id": "cbac691d6738622180300be637137d2d",
-      "title": "Spotify génère maintenant vos podcasts tout seul",
-      "link": "https://korben.info/spotify-personal-podcasts-ia.html",
-      "summary": "Spotify vient d'annoncer un truc intéressant je trouve, qui s'appelle les Personal Podcasts. Le principe c'est de demander absolument tout ce que vous voulez, par exemple un podcast sur un cours que vous venez de suiv...",
-      "published": "2026-05-11T08:48:27+00:00",
-      "source": "Korben",
-      "category": "outils",
-      "image": "https://korben.info/spotify-personal-podcasts-ia/spotify-personal-podcasts-ia-1.jpeg"
-    },
-    {
-      "id": "390996e4edfd2ea17a7f58d48011d802",
-      "title": "DATO Ares Q4 - Le SSD aimanté qui se colle partout",
-      "link": "https://korben.info/dato-ares-q4-ssd-externe-4to-usb4-magnetique-backup.html",
-      "summary": "Le truc cool avec un disque de backup, c'est quand vous arrêtez de le sortir du tiroir. Et c'est ce que permet de faire le DATO Ares Q4 (lien affilié) qui se trouve être aimanté et que je peux donc coller direct sur l...",
-      "published": "2026-05-11T08:09:59+00:00",
-      "source": "Korben",
-      "category": "outils",
-      "image": "https://korben.info/dato-ares-q4-ssd-externe-4to-usb4-magnetique-backup/dato-ares-q4-ssd-externe-4to-usb4-magnetique-backup-1.jpg"
-    },
-    {
       "id": "04256b79b0c415c4a919f7f7ed19581b",
       "title": "Claude Mythos et la faille FreeBSD : l’IA a-t-elle vraiment fait une découverte inédite ?",
       "link": "https://www.it-connect.fr/claude-mythos-et-la-faille-freebsd-ia-a-t-elle-vraiment-fait-une-decouverte-inedite/",
       "summary": "La vulnérabilité CVE-2026-4747 de FreeBSD, vieille de décennies, suggère que l’IA peut aussi recycler des failles existantes notamment via le pattern-matching. Le post Claude Mythos et la faille FreeBSD : l’IA a-t-ell...",
       "published": "2026-05-11T07:57:37+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "f83f1293db9579306740711fd122df31",
-      "title": "Fake OpenAI Privacy Filter Repo Hits #1 on Hugging Face, Draws 244K Downloads",
-      "link": "https://thehackernews.com/2026/05/fake-openai-privacy-filter-repo-hits-1.html",
-      "summary": "A malicious Hugging Face repository managed to take a spot in the platform's trending list by impersonating OpenAI's Privacy Filter open-weight model to deliver a Rust-based information stealer to Windows users. The p...",
-      "published": "2026-05-11T07:05:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPtLFShq_XoM9Nzsl5kmSsF2UGsm6VhRoLNodcqRCdq45zqy4ekFVtamokNzEFifQknD502Wc0uFTBUdvLsBsYn4QAeVHSWLmhF2ROBMXutev8T6JjCGrrarzLhkSTUHLBq-nEWrF0WTb2epkX_3Ba5a6Gv_21R7PPQ_zCjhk7OU702Y10tJkcJiYG52D4/s1600/hugging-face-malware.jpg"
-    },
-    {
-      "id": "6a9f6520fc8542a4a96e84bb0e5d088c",
-      "title": "Linux : Dell et Lenovo rejoignent le projet Linux Vendor Firmware Service",
-      "link": "https://www.it-connect.fr/linux-dell-et-lenovo-rejoignent-le-projet-linux-vendor-firmware-service/",
-      "summary": "L'adhésion de Lenovo et Dell au Linux Vendor Firmware Service est un nouveau signal positif aux utilisateurs de Linux envoyé par deux géants du PC. Le post Linux : Dell et Lenovo rejoignent le projet Linux Vendor Firm...",
-      "published": "2026-05-11T06:52:32+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "1a03553a70aa6c71fa2f692ba67bed28",
-      "title": "Documents OVNI déclassifiés - 161 fichiers et zéro preuve",
-      "link": "https://korben.info/ovnis-declassifies-pentagone-mai-2026.html",
-      "summary": "J'sais pas si vous avez vu mais le Pentagone vient de balancer 161 documents OVNI déclassifiés sur ordre de ce bon vieux Trump ! Pete Hegseth, le secrétaire à la Défense (ou à la Guerre, j'sais plus comment on dit) a ...",
-      "published": "2026-05-10T18:45:03+00:00",
-      "source": "Korben",
-      "category": "outils",
-      "image": "https://korben.info/ovnis-declassifies-pentagone-mai-2026/ovnis-declassifies-pentagone-mai-2026-1.png"
-    },
-    {
-      "id": "1b7ffe155571c1b73c9f19cbf977eda3",
-      "title": "Hackers abuse Google ads, Claude.ai chats to push Mac malware",
-      "link": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-claudeai-chats-to-push-mac-malware/",
-      "summary": "Attackers are abusing Google Ads and legitimate Claude.ai shared chats in an active malvertising campaign. Users searching for \"Claude mac download\" may come across sponsored search results that list claude.ai as the ...",
-      "published": "2026-05-10T17:52:15+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
-      "id": "1890d2e8f4d50cd7ddaf14493d859a06",
-      "title": "GitHub commit spoofing - Quand n'importe qui peut être Linus",
-      "link": "https://korben.info/github-commit-spoofing-tutoriel.html",
-      "summary": "Vous avez confiance dans le nom qui est affiché à côté d'un commit GitHub ? Bah vous pouvez arrêter tout de suite car le chercheur Shani Lavi a documenté il y a quelques années ce que les devs Git sérieux savent depui...",
-      "published": "2026-05-10T16:06:20+00:00",
-      "source": "Korben",
-      "category": "outils",
-      "image": "https://korben.info/github-commit-spoofing-tutoriel/github-commit-spoofing-tutoriel-1.png"
-    },
-    {
-      "id": "1a75c2816f603ccee1ca17e7922a2288",
-      "title": "Police shut down reboot of Crimenetwork marketplace, arrest admin",
-      "link": "https://www.bleepingcomputer.com/news/security/police-shut-down-reboot-of-crimenetwork-marketplace-arrest-admin/",
-      "summary": "German authorities have shut down a relaunch version of the criminal marketplace 'Crimenetwork' that generated more than 3.6 million euros, and arrested its operator. [...]",
-      "published": "2026-05-10T14:16:47+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
-      "id": "0799b1d0a43ca47e1d807e94dc15f727",
-      "title": "Ollama Out-of-Bounds Read Vulnerability Allows Remote Process Memory Leak",
-      "link": "https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html",
-      "summary": "Cybersecurity researchers have disclosed a critical security vulnerability in Ollama that, if successfully exploited, could allow a remote, unauthenticated attacker to leak its entire process memory. The out-of-bounds...",
-      "published": "2026-05-10T12:41:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj92eUjjTTMJPizvUJGwq7Ych7nrXHwGRNt3hS9yjNGRJk5d3pdIKjeZhQDVuFp0DnKjP4qoieGWFjswm7nHDLBaxWC3DxFIfLfRjMSEXd0Ta04vcTrbCpS9PEXebUUbMBxBt0VOb-PKVk-7Cq0FjuMXl4VtKneb5a3ujCo872goPN22GBFFhReJtWsQJLK/s1600/oll.jpg"
-    },
-    {
-      "id": "b2d4ac66b1656fbcb69507582158a263",
-      "title": "JDownloader site hacked to replace installers with Python RAT malware",
-      "link": "https://www.bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware/",
-      "summary": "The website for the popular JDownloader download manager was compromised earlier this week to distribute malicious Windows and Linux installers, with the Windows payload found deploying a Python-based remote access tr...",
-      "published": "2026-05-09T19:27:58+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
-      "id": "0c1e58039c984fa416e114682be1263b",
-      "title": "Forensic Windows – Partie 3 : surveiller l’exécution des programmes avec Prefetch",
-      "link": "https://www.it-connect.fr/forensic-windows-partie-3-surveiller-lexecution-des-programmes-avec-prefetch/",
-      "summary": "Maîtrisez l’utilisation du Prefetch dans Windows pour identifier les programmes exécutés, en exploitant des outils comme WinPrefetchView et PECmd. Le post Forensic Windows – Partie 3 : surveiller l’exécution des progr...",
-      "published": "2026-05-09T15:00:00+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "4c60c8567b7ddc4f88e16b7779471ad0",
-      "title": "Fake OpenAI repository on Hugging Face pushes infostealer malware",
-      "link": "https://www.bleepingcomputer.com/news/security/fake-openai-repository-on-hugging-face-pushes-infostealer-malware/",
-      "summary": "A malicious Hugging Face repository that reached the platform's trending list impersonated OpenAI's \"Privacy Filter\" project to deliver information-stealing malware to Windows users. [...]",
-      "published": "2026-05-09T14:26:03+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
-      "id": "cb24025d9fcfd497853b664863b2d0c1",
-      "title": "cPanel, WHM Release Fixes for Three New Vulnerabilities — Patch Now",
-      "link": "https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html",
-      "summary": "cPanel has released updates to address three vulnerabilities in cPanel and Web Host Manager (WHM) that could be exploited to achieve privilege escalation, code execution, and denial-of-service. The list of vulnerabili...",
-      "published": "2026-05-09T07:16:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8HLwOMzo20kbZmflPvJJmY7su6wWOWgDLV-dJNx-k76m5ivbwVoCkFrnsLXkyO4PHAyLSkPXinjK71SDmWabyOcTlKb3juZgkXTzOVuMvZk6-LUFMhoJ-UGFvv0qEby7QmYcjTWn1m1L19VTKeB7CdmKvpvIP5ifniLO92ARSLjtf8rcXIbm8AFMZei-M/s1600/cpanel-3.jpg"
-    },
-    {
-      "id": "62dcd344e5e0fe4cf19831bf91613306",
-      "title": "TCLBANKER Banking Trojan Targets Financial Platforms via WhatsApp and Outlook Worms",
-      "link": "https://thehackernews.com/2026/05/tclbanker-banking-trojan-targets.html",
-      "summary": "Threat hunters have flagged a previously undocumented Brazilian banking trojan dubbed TCLBANKER that's capable of targeting 59 banking, fintech, and cryptocurrency platforms. The activity is being tracked by Elastic S...",
-      "published": "2026-05-08T18:12:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWchpptUYeW4vXSUXfGq-uMzB1mr_dzsvX8XIWssIKzaWa4_eYbaLwec5Zos3xCoD0s8-LDcGI7Vj8DjFq6RtUY68HP21YudHYdsFS2xdyzQE7OPyuTlqyO2X9uwlSCRuVl9tAUwq0mvGuXlYkxjdmC7ynyAcIDpbejkR45ucf_L3VCDupSZMteOby7BUp/s1600/banking.jpg"
-    },
-    {
-      "id": "e001a1879b31d152c79b525690dd5b58",
-      "title": "Google Workspace CLI - Pour piloter tous les services Google avec votre IA",
-      "link": "https://korben.info/google-workspace-cli-gws-rust.html",
-      "summary": "Justin Poehnelt, Senior Developer Relations Engineer chez Google, vient de balancer sur Github un outil en ligne de commande (CLI), codé en Rust qui permet de faire un truc trop pratique, à savoir piloter entièrement ...",
-      "published": "2026-05-08T16:52:48+00:00",
-      "source": "Korben",
-      "category": "outils",
-      "image": "https://korben.info/google-workspace-cli-gws-rust/google-workspace-cli-gws-rust-1.png"
-    },
-    {
-      "id": "97572ef8a97f1a91d1e27d66cd767a4a",
-      "title": "NVIDIA confirms GeForce NOW data breach affecting Armenian users",
-      "link": "https://www.bleepingcomputer.com/news/security/nvidia-confirms-geforce-now-data-breach-affecting-armenian-users/",
-      "summary": "NVIDIA has confirmed in a statement for BleepingComputer that GeForce NOW user information has been exposed in a data breach. [...]",
-      "published": "2026-05-08T16:18:31+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
-      "id": "93f26edef037e0ce695ed0bd5e3a4bd5",
-      "title": "Comment installer Sync-in sur un NAS Synology ?",
-      "link": "https://www.it-connect.fr/tuto-installer-sync-in-sur-nas-synology/",
-      "summary": "Ce tutoriel explique comment installer Sync-in sur un NAS Synology à l'aide de Docker, en effectuant le lien avec les données existantes sur le NAS. Le post Comment installer Sync-in sur un NAS Synology ? a été publié...",
-      "published": "2026-05-08T16:00:00+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "222f76c94d005ace8115389c9754ec42",
-      "title": "Fake Call History Apps Stole Payments From Users After 7.3 Million Play Store Downloads",
-      "link": "https://thehackernews.com/2026/05/fake-call-history-apps-stole-payments.html",
-      "summary": "Cybersecurity researchers have discovered fraudulent apps on the official Google Play Store for Android that falsely claimed to offer access to call histories for any phone number, only to trick users into joining a s...",
-      "published": "2026-05-08T15:08:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBMXgW6K0BZvt0-jhZ_smX3Uy-nsd9wb9g7Gs7d3G7uH-HIlEcNhEt9xpaKD_62iJol_LK5Expt-6qCuvIf7llqtQclB64I9zZm_i8CIC0lMJiIz8nx6r4C-Nj4cUgd3cQEtu3_lGFa7wcmR6q9otQhCLoB1Mbnmn7NgH6-djLs_ScqanZFNC-EVOwYyO7/s1600/android-calls.jpg"
-    },
-    {
-      "id": "66b7b017fa4ebbb12ff9e53059e7dc4f",
-      "title": "Why More Analysts Won’t Solve Your SOC’s Alert Problem",
-      "link": "https://www.bleepingcomputer.com/news/security/why-more-analysts-wont-solve-your-socs-alert-problem/",
-      "summary": "Attackers move faster than overwhelmed SOC teams can realistically investigate alerts. Prophet Security breaks down how AI can help analysts investigate alerts faster and focus on real threats. [...]",
-      "published": "2026-05-08T14:02:12+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
-      "id": "7131751416cdf923f58aa0b8c9dca444",
-      "title": "One Click, Total Shutdown: The \"Patient Zero\" Webinar on Killing Stealth Breaches",
-      "link": "https://thehackernews.com/2026/05/one-click-total-shutdown-patient-zero.html",
-      "summary": "The hardest part of cybersecurity isn't the technology, it’s the people. Every major breach you’ve read about lately usually starts the same way: one employee, one clever email, and one \"Patient Zero\" infection. In 20...",
-      "published": "2026-05-08T14:01:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz_1BMhUux9JB2X26ToAMnW32GttimEIwRX1fG4_LrlZjedjkjzps_Ad-eiSX-2LlJ1FFIw3g1kvH1kKrgwETmSgTk8wal5a7AJQNIY2IH3317GaUYEj-_3tko2hxjKBc1ms0WQ7UjHHTst0aKtjFz1jOPasyD8x5U_GQW4KdhKxDPHhlmYVOY9TM6vLy_/s1600/zz-webinar.jpg"
-    },
-    {
-      "id": "b0769a6b144533edd474c41fa53b5115",
-      "title": "Trellix source code breach claimed by RansomHouse hackers",
-      "link": "https://www.bleepingcomputer.com/news/security/trellix-source-code-breach-claimed-by-ransomhouse-hackers/",
-      "summary": "The attack on the Trellix source code repository disclosed last week has been claimed by the RansomHouse threat group, which leaked a small set of images as proof of the intrusion. [...]",
-      "published": "2026-05-08T13:23:23+00:00",
-      "source": "Bleeping Computer",
-      "category": "cybersecurite",
-      "image": ""
-    },
-    {
-      "id": "918c2a145a658bee5cb59688ea58d375",
-      "title": "Quasar Linux RAT Steals Developer Credentials for Software Supply Chain Compromise",
-      "link": "https://thehackernews.com/2026/05/quasar-linux-rat-steals-developer.html",
-      "summary": "A previously undocumented Linux implant codenamed Quasar Linux RAT (QLNX) is targeting developers' systems to establish a silent foothold as well as facilitate a broad range of post-compromise functionality, such as c...",
-      "published": "2026-05-08T11:00:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiholjenZRIykmReErkRiguk5xd9RV4BIEEPM0nT-o3LvMvDkCTLpd3G0NpqDGEFHp-f6QyvGRMip6CBhGlllYVlp9wS3XBVoV6xW47CDka7Ig8S_aotcuNlmAv3SYgS4hJzxjLp2nrV4SzqlTXnQLG_w68Cq0Bf5hiOoV6CaN9QZliRDa-StzsvIkJAdSF/s1600/kube.jpg"
-    },
-    {
-      "id": "fe17b24eddbfaa00db9e689ec5a44ddb",
-      "title": "Test UGREEN Maxidok 10-en-1 : une station d’accueil pour tout brancher avec un seul câble",
-      "link": "https://www.it-connect.fr/test-ugreen-maxidok-10-en-1-station-accueil-avis/",
-      "summary": "Découvrez le Maxidok 10-en-1 d'UGREEN : une station d'accueil robuste, offrant une connectivité étendue pour MacBook et laptops Windows. Le post Test UGREEN Maxidok 10-en-1 : une station d’accueil pour tout brancher a...",
-      "published": "2026-05-08T11:00:00+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "36f87d5021386c77b4bd8d96ecab614c",
-      "title": "One Missed Threat Per Week: What 25M Alerts Reveal About Low-Severity Risk",
-      "link": "https://thehackernews.com/2026/05/one-missed-threat-per-week-what-25m.html",
-      "summary": "The dark secret of enterprise security operations is that defenders have quietly institutionalized the practice of not looking. This is not just anecdotal, but rather backed by a recent report investigating more than ...",
-      "published": "2026-05-08T10:30:00+00:00",
-      "source": "The Hacker News",
-      "category": "cybersecurite",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUaPw5V89Ez9z5x8eFLFOhwPphGqXDQVGfd2sI-pX9Q1XTcpYlWEhFiZ6o12fzAyvtCFDQ0zs4AFlHl4HJNnjWH8hUXM9r_-oBl7YMEnU1F41Ho7DL23NJbgG4M3eoqF6CTZWqFtFcw0gOB8QfkCPW1_xQ-HwmvWr3GMzEeRFbC8SLgG5LsdnopTAHDOs/s1600/ai-soc.jpg"
-    },
-    {
-      "id": "bd486c4efda3c99b14021070f47381c0",
-      "title": "Dirty Frag : cette faille zero-day donne les droits root sur Linux",
-      "link": "https://www.it-connect.fr/dirty-frag-cette-faille-zero-day-donne-les-droits-root-sur-linux/",
-      "summary": "Alerte Zero-Day : la faille critique Dirty Frag permet d'obtenir les droits root sur Linux. Les patchs sont en attente : voici comment se protéger. Le post Dirty Frag : cette faille zero-day donne les droits root sur ...",
-      "published": "2026-05-08T05:41:53+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "86a3f87377e4f24b88fb359e08a954eb",
-      "title": "vm2 : la célèbre sandbox Node.js affectée par une faille critique (CVE-2026-26956)",
-      "link": "https://www.it-connect.fr/vm2-la-celebre-sandbox-node-js-affectee-par-une-faille-critique-cve-2026-26956/",
-      "summary": "Nouvelle alerte du côté de Node.js : une faille de sécurité critique a été découverte dans la bibliothèque vm2 : protégez vos applications de la CVE-2026-26956. Le post vm2 : la célèbre sandbox Node.js affectée par un...",
-      "published": "2026-05-07T15:00:00+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "364e568189b226dfd4a636d8f0c0aa97",
-      "title": "Le Mac Mini M4 est disponible à 654 euros : profitez-en !",
-      "link": "https://www.it-connect.fr/le-mac-mini-m4-est-disponible-a-654-euros-profitez-en/",
-      "summary": "Le Mac Mini d'entrée de gamme (M4, 16 Go de mémoire unifiée, 256 Go de stockage) est disponible à 654 euros : un bon plan vu la conjoncture actuelle. Le post Le Mac Mini M4 est disponible à 654 euros : profitez-en ! a...",
-      "published": "2026-05-07T11:15:38+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "e1d5ce30a61945e3f38f3b6231367e14",
-      "title": "La Ville de Quiberon nouvelle victime du ransomware Qilin",
-      "link": "https://www.it-connect.fr/la-ville-de-quiberon-nouvelle-victime-du-ransomware-qilin/",
-      "summary": "Le dimanche 3 mai 2026, le système informatique de la municipalité de Quiberon a été frappé par une cyberattaque orchestrée par le ransomware Qilin. Le post La Ville de Quiberon nouvelle victime du ransomware Qilin a ...",
-      "published": "2026-05-07T07:46:58+00:00",
-      "source": "IT-Connect",
-      "category": "reseau",
-      "image": ""
-    },
-    {
-      "id": "c04ddd420b928c652d0013172930e2ee",
-      "title": "Gemini Nano : Google Chrome déploie une IA de 4 Go, sans rien vous demander",
-      "link": "https://www.it-connect.fr/gemini-nano-google-chrome-deploie-une-ia-de-4-go-sans-rien-vous-demander/",
-      "summary": "Que ce soit sur macOS, Windows ou Linux, Google Chrome télécharge un modèle d'intelligence artificielle : Gemini Nano, d'une taille de 4 Go, sans votre accord. Le post Gemini Nano : Google Chrome déploie une IA de 4 G...",
-      "published": "2026-05-07T07:25:18+00:00",
       "source": "IT-Connect",
       "category": "reseau",
       "image": ""
