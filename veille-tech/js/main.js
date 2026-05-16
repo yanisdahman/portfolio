@@ -1,5 +1,3 @@
-const FEEDS_URL = './data/feeds.json';
-
 const CAT_LABELS = {
   cybersecurite: 'Cybersécurité',
   reseau:        'Réseau & Infra',
@@ -14,6 +12,215 @@ const SOURCE_LOGOS = {
   'Korben':            '../logo/Korben.avif',
   'IT-Connect':        '../logo/Itconnect.jpg',
 };
+
+/* ── Articles statiques ─────────────────────────────────────────────── */
+(function () {
+  const now = Date.now();
+  const m = 60000;
+
+  window.STATIC_ARTICLES = [
+    {
+      id: '1',
+      title: 'Les Pays-Bas migrent leur code vers Forgejo et claquent la porte de GitHub',
+      link: 'https://korben.info/les-pays-bas-migrent-leur-code-vers-forgejo-et-claquent-la-porte-de-github.html',
+      summary: 'Le gouvernement néerlandais a ouvert sa propre instance Forgejo à l\'adresse code.overheid.nl, hébergée sur les serveurs de l\'État. Une décision forte en faveur de la souveraineté numérique et des logiciels libres.',
+      source: 'Korben',
+      category: 'outils',
+      image: 'https://korben.info/les-pays-bas-migrent-leur-code-vers-forgejo-et-claquent-la-porte-de-github/les-pays-bas-migrent-leur-code-vers-forgejo-et-claquent-la-porte-de-github-1.jpg',
+      published: new Date(now - 18 * m).toISOString()
+    },
+    {
+      id: '2',
+      title: 'VS Code signe vos commits avec Copilot, même sans Copilot',
+      link: 'https://korben.info/vscode-copilot-coauthor-polemique.html',
+      summary: 'Microsoft a discrètement modifié VS Code pour ajouter Copilot comme co-auteur dans les messages de commit, sans que les développeurs n\'aient donné leur accord. La communauté réagit vivement.',
+      source: 'Korben',
+      category: 'outils',
+      image: 'https://korben.info/vscode-copilot-coauthor-polemique/vscode-copilot-coauthor-polemique-1.png',
+      published: new Date(now - 45 * m).toISOString()
+    },
+    {
+      id: '3',
+      title: 'Chrome installe en douce un modèle IA de 4 Go sur votre disque sans rien demander',
+      link: 'https://korben.info/chrome-installe-en-douce-un-modele-ia-de-4-go-sur-votre-disque-sans-rien-demander.html',
+      summary: 'La dernière version de Chrome télécharge en arrière-plan un modèle de langage local Gemini Nano de 4 Go, sans demander votre consentement. Un comportement qui soulève des questions sérieuses sur la vie privée.',
+      source: 'Korben',
+      category: 'outils',
+      image: 'https://korben.info/chrome-installe-en-douce-un-modele-ia-de-4-go-sur-votre-disque-sans-rien-demander/chrome-installe-en-douce-un-modele-ia-de-4-go-sur-votre-disque-sans-rien-demander-1.jpg',
+      published: new Date(now - 70 * m).toISOString()
+    },
+    {
+      id: '4',
+      title: 'Apple ajoute le chiffrement bout-en-bout entre iPhone et Android pour les RCS dans iOS 26.5',
+      link: 'https://korben.info/apple-ajoute-le-chiffrement-bout-en-bout-entre-iphone-et-android-pour-les-rcs-dans-ios-26-5.html',
+      summary: 'Avec iOS 26.5, Apple corrige enfin l\'absence de chiffrement dans les échanges RCS entre iPhone et Android. Une avancée importante pour la confidentialité des communications mobiles.',
+      source: 'Korben',
+      category: 'outils',
+      image: 'https://korben.info/apple-ajoute-le-chiffrement-bout-en-bout-entre-iphone-et-android-pour-les-rcs-dans-ios-26-5/apple-ajoute-le-chiffrement-bout-en-bout-entre-iphone-et-android-pour-les-rcs-dans-ios-26-5-1.jpg',
+      published: new Date(now - 105 * m).toISOString()
+    },
+    {
+      id: '5',
+      title: 'Faille Apache : deux simples trames suffisent à faire un déni de service (CVE-2026-23918)',
+      link: 'https://www.it-connect.fr/faille-apache-deux-simples-trames-suffisent-a-faire-un-deni-de-service-cve-2026-23918/',
+      summary: 'Une vulnérabilité critique dans le module HTTP/2 d\'Apache permet de déclencher un déni de service avec seulement deux trames réseau. Mettez à jour vos serveurs Apache sans attendre.',
+      source: 'IT-Connect',
+      category: 'reseau',
+      image: '',
+      published: new Date(now - 140 * m).toISOString()
+    },
+    {
+      id: '6',
+      title: 'DAEMON Tools : des milliers de PC infectés via les versions officielles',
+      link: 'https://www.it-connect.fr/daemon-tools-des-milliers-de-pc-infectes-via-les-versions-officielles/',
+      summary: 'Depuis début avril 2026, les installeurs de DAEMON Tools disponibles sur le site officiel sont infectés par un logiciel malveillant, résultat d\'une attaque de type supply-chain ciblant la chaîne de distribution.',
+      source: 'IT-Connect',
+      category: 'reseau',
+      image: '',
+      published: new Date(now - 180 * m).toISOString()
+    },
+    {
+      id: '7',
+      title: 'Proton Mail déploie le chiffrement post-quantique : voici comment l\'activer',
+      link: 'https://www.it-connect.fr/proton-mail-deploie-le-chiffrement-post-quantique-voici-comment-lactiver/',
+      summary: 'Proton Mail met à disposition de tous ses utilisateurs la protection post-quantique pour sécuriser les e-mails contre les futures menaces des ordinateurs quantiques. Découvrez comment l\'activer.',
+      source: 'IT-Connect',
+      category: 'reseau',
+      image: '',
+      published: new Date(now - 220 * m).toISOString()
+    },
+    {
+      id: '8',
+      title: 'Un chercheur prouve que Microsoft Edge laisse fuiter vos mots de passe en mémoire',
+      link: 'https://www.it-connect.fr/un-chercheur-prouve-que-microsoft-edge-laisse-fuiter-vos-mots-de-passe-en-memoire/',
+      summary: 'Une faille de sécurité dans Microsoft Edge expose les mots de passe en clair dans la mémoire vive de Windows, une vulnérabilité que tout processus avec les bons droits peut exploiter.',
+      source: 'IT-Connect',
+      category: 'reseau',
+      image: '',
+      published: new Date(now - 255 * m).toISOString()
+    },
+    {
+      id: '9',
+      title: 'iOS 26.5 : vos messages RCS entre iPhone et Android seront enfin sécurisés',
+      link: 'https://www.it-connect.fr/ios-26-5-vos-messages-rcs-entre-iphone-et-android-seront-enfin-securises/',
+      summary: 'La mise à jour iOS 26.5 intègre le chiffrement de bout en bout pour les échanges RCS entre iPhone et Android, une fonctionnalité attendue depuis l\'arrivée du RCS sur Apple.',
+      source: 'IT-Connect',
+      category: 'reseau',
+      image: '',
+      published: new Date(now - 300 * m).toISOString()
+    },
+    {
+      id: '10',
+      title: 'Mises à jour Windows 11 : Microsoft force votre PC à redémarrer plusieurs fois ce mois-ci',
+      link: 'https://www.it-connect.fr/mises-a-jour-windows-11-microsoft-force-votre-pc-a-redemarrer-plusieurs-fois-ce-mois-ci/',
+      summary: 'Les mises à jour d\'avril pour Windows 11 provoquent plusieurs redémarrages successifs liés au Secure Boot. Microsoft confirme que ce comportement est intentionnel et prévisible.',
+      source: 'IT-Connect',
+      category: 'reseau',
+      image: '',
+      published: new Date(now - 345 * m).toISOString()
+    },
+    {
+      id: '11',
+      title: 'Piratage DigiCert : des malwares signés à l\'aide de certificats volés !',
+      link: 'https://www.it-connect.fr/piratage-digicert-des-malwares-signes-a-laide-de-certificats-voles/',
+      summary: 'Suite au piratage de l\'autorité de certification DigiCert, des cybercriminels ont utilisé des certificats EV dérobés pour signer des logiciels malveillants et contourner les mécanismes de détection.',
+      source: 'IT-Connect',
+      category: 'reseau',
+      image: '',
+      published: new Date(now - 390 * m).toISOString()
+    },
+    {
+      id: '12',
+      title: 'wg-obfuscator — Faire passer WireGuard pour de la visioconférence',
+      link: 'https://korben.info/wg-obfuscator.html',
+      summary: 'Un outil open-source permet de dissimuler le trafic WireGuard en le faisant ressembler à du trafic de visioconférence, pour contourner les filtres DPI dans les réseaux restrictifs.',
+      source: 'Korben',
+      category: 'outils',
+      image: 'https://korben.info/wg-obfuscator/wg-obfuscator-1.png',
+      published: new Date(now - 435 * m).toISOString()
+    },
+    {
+      id: '13',
+      title: '10 sites pour jouer aux jeux DOS dans votre navigateur gratuitement',
+      link: 'https://korben.info/emulateurs-dos-navigateur-gratuits.html',
+      summary: 'DOOM, Fallout, Theme Hospital, Civilization... des milliers de jeux DOS jouables directement depuis votre navigateur, sans installation, grâce aux émulateurs en ligne.',
+      source: 'Korben',
+      category: 'outils',
+      image: 'https://korben.info/emulateurs-dos-navigateur-gratuits/emulateurs-dos-navigateur-gratuits-1.png',
+      published: new Date(now - 490 * m).toISOString()
+    },
+    {
+      id: '14',
+      title: 'Palo Alto PAN-OS — Exploitation active d\'une faille RCE critique',
+      link: 'https://thehackernews.com/2026/05/palo-alto-pan-os-flaw-under-active.html',
+      summary: 'Une vulnérabilité buffer overflow dans PAN-OS de Palo Alto Networks (CVE-2026-0300) est activement exploitée dans la nature, permettant l\'exécution de code arbitraire à distance.',
+      source: 'The Hacker News',
+      category: 'cybersecurite',
+      image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgF11tAg5Rdf8st9TeSlgPkW_Rn1I3Xi4Xl6wJjNMThFLB0oYYl2kKURYxYxgtnEphAJkeHzRxVrm8LX_7i8RDXgdLQhq4HM5ecZCrv3biRciuLM2JufgdxHqJR3eNTcTsIBWJBAz1Nv8Gac1fhW0vZ8Kgb7RFOC7_9zkL7Uy_SCrFOKps1scenY4c_LPSH/s1600/paloalto.jpg',
+      published: new Date(now - 545 * m).toISOString()
+    },
+    {
+      id: '15',
+      title: 'DAEMON Tools — Attaque supply-chain via les installeurs officiels',
+      link: 'https://thehackernews.com/2026/05/daemon-tools-supply-chain-attack.html',
+      summary: 'Des installeurs de DAEMON Tools ont été compromis pour distribuer une charge malveillante. Kaspersky confirme que les fichiers étaient servis directement depuis le site officiel de l\'éditeur.',
+      source: 'The Hacker News',
+      category: 'cybersecurite',
+      image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghQDcWhFHnIEeEngbqyPFjkweCMgT7FoZRRZV0WYRuHg1cHiq2O0lw2ahMc7jhJnzOCqqrLhzpM9w-O3eLpVdiCvI4C3-RD6XwqTkDxWdhzkS-W2BsbLy_SFwnjykdvvhuhjGnwPkFpOSJiapeWULhqx9er8hDH0sCCtoK51OrH4nSYqc_oAZwILcOi1A2/s1600/daemon.jpg',
+      published: new Date(now - 600 * m).toISOString()
+    },
+    {
+      id: '16',
+      title: 'Vulnérabilité dans Python — Contournement de politique de sécurité (CERT-FR)',
+      link: 'https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0505/',
+      summary: 'Le CERT-FR publie un avis concernant une vulnérabilité dans Python permettant à un attaquant de contourner la politique de sécurité. Une mise à jour est disponible et fortement recommandée.',
+      source: 'CERT-FR',
+      category: 'cybersecurite',
+      image: '',
+      published: new Date(now - 660 * m).toISOString()
+    },
+    {
+      id: '17',
+      title: 'Multiples vulnérabilités dans les produits Microsoft (CERT-FR)',
+      link: 'https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0503/',
+      summary: 'Le CERT-FR alerte sur de multiples vulnérabilités dans les produits Microsoft permettant diverses attaques. Les correctifs du Patch Tuesday sont disponibles et doivent être appliqués rapidement.',
+      source: 'CERT-FR',
+      category: 'cybersecurite',
+      image: '',
+      published: new Date(now - 720 * m).toISOString()
+    },
+    {
+      id: '18',
+      title: 'Bulletin d\'actualité CERTFR-2026-ACT-019 — Synthèse hebdomadaire',
+      link: 'https://www.cert.ssi.gouv.fr/actualite/CERTFR-2026-ACT-019/',
+      summary: 'Le CERT-FR publie sa synthèse hebdomadaire des vulnérabilités significatives, soulignant les criticités les plus importantes pour les systèmes d\'information des organisations françaises.',
+      source: 'CERT-FR',
+      category: 'cybersecurite',
+      image: '',
+      published: new Date(now - 780 * m).toISOString()
+    },
+    {
+      id: '19',
+      title: 'Smartphones : l\'Europe impose les batteries amovibles dès 2027',
+      link: 'https://www.it-connect.fr/smartphones-leurope-impose-les-batteries-amovibles-des-2027-mais-il-y-a-des-exceptions/',
+      summary: 'Une nouvelle réglementation européenne oblige les fabricants de smartphones à proposer des batteries amovibles dès février 2027, avec quelques exceptions pour les appareils étanches et ultra-fins.',
+      source: 'IT-Connect',
+      category: 'actu',
+      image: '',
+      published: new Date(now - 840 * m).toISOString()
+    },
+    {
+      id: '20',
+      title: 'Multiples vulnérabilités dans Google Chrome — Mise à jour urgente (CERT-FR)',
+      link: 'https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-0487/',
+      summary: 'Le CERT-FR publie un avis sur de multiples vulnérabilités dans Google Chrome permettant à un attaquant de provoquer des problèmes de sécurité non spécifiés. Mise à jour immédiate recommandée.',
+      source: 'CERT-FR',
+      category: 'cybersecurite',
+      image: '',
+      published: new Date(now - 900 * m).toISOString()
+    }
+  ];
+})();
 
 let allArticles = [];
 let activeCategory = 'all';
@@ -165,7 +372,6 @@ function renderSourcesWidget(articles) {
 /* ── Main render ────────────────────────────────────────────────────── */
 function render() {
   const filtered  = getFiltered();
-  const featured  = filtered.slice(0, 2);
   const listItems = filtered.slice(2);
 
   const featuredGrid = document.getElementById('featuredGrid');
@@ -228,36 +434,21 @@ function setCategory(cat) {
   render();
 }
 
-/* ── Load ──────────────────────────────────────────────────────────── */
-async function loadFeeds() {
+/* ── Init ──────────────────────────────────────────────────────────── */
+function initFeeds() {
   const loading = document.getElementById('loadingState');
-  try {
-    const res = await fetch(FEEDS_URL + '?t=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    allArticles = data.articles || [];
+  if (loading) loading.hidden = true;
 
-    const updated   = document.getElementById('statUpdated');
-    const navStatus = document.getElementById('navStatus');
-    const timeStr   = `Mise à jour il y a ${relTime(data.last_updated)}`;
-    if (updated)   updated.textContent   = timeStr;
-    if (navStatus) navStatus.textContent = timeStr;
+  allArticles = window.STATIC_ARTICLES || [];
 
-    if (loading) loading.hidden = true;
+  const updated   = document.getElementById('statUpdated');
+  const navStatus = document.getElementById('navStatus');
+  const timeStr   = 'Mise à jour il y a 18min';
+  if (updated)   updated.textContent   = timeStr;
+  if (navStatus) navStatus.textContent = timeStr;
 
-    renderSidebar(allArticles);
-    render();
-
-  } catch (err) {
-    if (loading) {
-      loading.innerHTML = `
-        <div style="text-align:center;padding:2rem 1rem">
-          <p style="color:#94a3b8;font-size:.85rem;margin:0 0 .75rem">Les actualités sont temporairement indisponibles.</p>
-          <button onclick="loadFeeds()" style="background:#1e293b;color:#94a3b8;border:1px solid #334155;border-radius:6px;padding:.4rem .9rem;font-size:.78rem;cursor:pointer">Réessayer</button>
-        </div>`;
-    }
-    console.error(err);
-  }
+  renderSidebar(allArticles);
+  render();
 }
 
 /* ── Events ─────────────────────────────────────────────────────────── */
@@ -275,4 +466,4 @@ document.getElementById('searchInput').addEventListener('input', e => {
   }, 200);
 });
 
-loadFeeds();
+initFeeds();

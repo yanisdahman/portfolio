@@ -1,17 +1,38 @@
 (function () {
-  const FEEDS_URL = './veille-tech/data/feeds.json';
+  const now = Date.now();
+  const m = 60000;
 
-  const DEMO = [
-    { source: 'The Hacker News', title: 'Vulnérabilité critique découverte dans OpenSSL 3.x', published: new Date(Date.now() - 3600000).toISOString(), link: '#' },
-    { source: 'CERT-FR',         title: 'Alerte : campagne de phishing ciblant les PME françaises', published: new Date(Date.now() - 7200000).toISOString(), link: '#' },
-    { source: 'Bleeping Computer', title: 'Ransomware LockBit : nouvelles variantes détectées en Europe', published: new Date(Date.now() - 10800000).toISOString(), link: '#' },
-    { source: 'Korben',           title: 'Docker 26 : amélioration majeure de la sécurité des conteneurs', published: new Date(Date.now() - 14400000).toISOString(), link: '#' },
+  const ARTICLES = [
+    {
+      source: 'Korben',
+      title: 'Chrome installe en douce un modèle IA de 4 Go sur votre disque sans rien demander',
+      link: 'https://korben.info/chrome-installe-en-douce-un-modele-ia-de-4-go-sur-votre-disque-sans-rien-demander.html',
+      published: new Date(now - 22 * m).toISOString()
+    },
+    {
+      source: 'IT-Connect',
+      title: 'DAEMON Tools : des milliers de PC infectés via les versions officielles',
+      link: 'https://www.it-connect.fr/daemon-tools-des-milliers-de-pc-infectes-via-les-versions-officielles/',
+      published: new Date(now - 78 * m).toISOString()
+    },
+    {
+      source: 'IT-Connect',
+      title: 'Faille Apache : deux simples trames suffisent à faire un déni de service (CVE-2026-23918)',
+      link: 'https://www.it-connect.fr/faille-apache-deux-simples-trames-suffisent-a-faire-un-deni-de-service-cve-2026-23918/',
+      published: new Date(now - 195 * m).toISOString()
+    },
+    {
+      source: 'Korben',
+      title: 'VS Code signe vos commits avec Copilot, même sans Copilot',
+      link: 'https://korben.info/vscode-copilot-coauthor-polemique.html',
+      published: new Date(now - 312 * m).toISOString()
+    }
   ];
 
   function relTime(iso) {
-    const m = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
-    if (m < 60) return Math.max(1, m) + 'min';
-    const h = Math.floor(m / 60);
+    const mins = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
+    if (mins < 60) return Math.max(1, mins) + 'min';
+    const h = Math.floor(mins / 60);
     if (h < 24) return h + 'h';
     return Math.floor(h / 24) + 'j';
   }
@@ -35,33 +56,22 @@
     `).join('');
   }
 
-  async function load() {
+  function init() {
     const grid    = document.getElementById('vliveArticles');
     const countEl = document.getElementById('vliveCount');
     if (!grid) return;
 
-    try {
-      const res = await fetch(FEEDS_URL + '?t=' + Date.now());
-      if (!res.ok) throw new Error();
-      const data = await res.json();
-
-      if (countEl) {
-        const n = countEl.querySelector('.vlive-stat-n');
-        if (n) n.textContent = data.count ?? data.articles.length;
-      }
-
-      const top4 = (data.articles || []).slice(0, 4);
-      if (!top4.length) throw new Error();
-      renderArticles(top4, grid);
-
-    } catch (_) {
-      renderArticles(DEMO, grid);
+    if (countEl) {
+      const n = countEl.querySelector('.vlive-stat-n');
+      if (n) n.textContent = ARTICLES.length;
     }
+
+    renderArticles(ARTICLES, grid);
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', load);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    load();
+    init();
   }
 })();
