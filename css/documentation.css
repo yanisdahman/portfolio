@@ -453,7 +453,7 @@
     .ap-avatar-inner img {
       width:100%; height:100%;
       object-fit:cover;
-      object-position:center 15%;
+      object-position:center 25%;
       border-radius:50%;
       image-rendering:auto;
       display:block;
