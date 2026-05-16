@@ -457,7 +457,7 @@
       border-radius:50%;
       image-rendering:auto;
       display:block;
-      transform:scale(1.08);
+      transform:scale(1.03);
       transition:transform .6s var(--ease), filter .6s;
     }
     .ap-profile:hover .ap-avatar-inner img {
