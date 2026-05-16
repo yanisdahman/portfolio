@@ -428,7 +428,7 @@
       background:linear-gradient(145deg, rgba(26,26,28,.10) 0%, rgba(26,26,28,.04) 50%, rgba(26,26,28,.14) 100%);
       border:none;
       animation:none;
-      overflow:visible;
+      overflow:hidden;
       box-shadow:
         0 0 0 1px rgba(255,255,255,0.75) inset,
         0 0 0 1.5px rgba(0,0,0,.06),
@@ -453,7 +453,7 @@
     .ap-avatar-inner img {
       width:100%; height:100%;
       object-fit:cover;
-      object-position:center top;
+      object-position:center 15%;
       border-radius:50%;
       image-rendering:auto;
       display:block;
