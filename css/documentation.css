@@ -420,11 +420,11 @@
       transform:translateY(-4px);
     }
 
-    /* Avatar — encadré rectangulaire 220px */
+    /* Avatar — cercle */
     .ap-avatar-ring {
-      width:220px; height:220px;
-      border-radius:16px;
-      padding:5px; margin-bottom:.7rem; flex-shrink:0;
+      width:175px; height:175px;
+      border-radius:50%;
+      padding:4px; margin-bottom:.7rem; flex-shrink:0;
       background:linear-gradient(145deg, rgba(26,26,28,.10) 0%, rgba(26,26,28,.04) 50%, rgba(26,26,28,.14) 100%);
       border:none;
       animation:none;
@@ -445,7 +445,7 @@
       transform:translateY(-2px);
     }
     .ap-avatar-inner {
-      width:100%; height:100%; border-radius:11px;
+      width:100%; height:100%; border-radius:50%;
       background:var(--bg-card-2);
       overflow:hidden;
       animation:none;
@@ -454,7 +454,7 @@
       width:100%; height:100%;
       object-fit:cover;
       object-position:center top;
-      border-radius:11px;
+      border-radius:50%;
       image-rendering:auto;
       display:block;
       transition:transform .6s var(--ease), filter .6s;

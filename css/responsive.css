@@ -79,7 +79,7 @@
     .hero-cta { flex-direction:column; align-items:center; }
     .btn { width:100%; justify-content:center; }
     .about-stats { grid-template-columns:1fr 1fr; }
-    .ap-avatar-ring { width:155px; height:155px; }
+    .ap-avatar-ring { width:130px; height:130px; }
     .ap-bottom { grid-template-columns:1fr; }
     .footer-inner { grid-template-columns:1fr; }
     .footer-bottom { flex-direction:column; gap:6px; text-align:center; }
