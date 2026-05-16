@@ -453,14 +453,15 @@
     .ap-avatar-inner img {
       width:100%; height:100%;
       object-fit:cover;
-      object-position:center 25%;
+      object-position:center top;
       border-radius:50%;
       image-rendering:auto;
       display:block;
+      transform:scale(1.18);
       transition:transform .6s var(--ease), filter .6s;
     }
     .ap-profile:hover .ap-avatar-inner img {
-      transform:scale(1.05);
+      transform:scale(1.23);
       filter:brightness(1.06) contrast(1.03);
     }
     .ap-name {
